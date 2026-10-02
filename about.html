@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Про компанію — Діагностика плюс</title>
+  <link rel="stylesheet" href="./css/main.css">
+  <script src="./js/main.js" defer></script>
+</head>
+<body>
+		<div class="topbar">
+			<div class="container">
+				<div class="topbar__inner">
+					<div class="topbar__info">
+						<p>Пн–Сб 07:00–19:00, Нд&nbsp;08:00&#65279;–&#65279;14:00</p>
+						<p class="topbar__address">м. Харків, майдан Захисників України, 15</p>
+					</div>
+					<div class="topbar__lang">
+						<a href="./index.html" hreflang="uk" aria-current="true">UA</a>
+						<a href="#" hreflang="en">EN</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<header class="header">
+			<div class="container">
+				<div class="header__main">
+					<div class="header__brand logo">
+						<a href="./index.html">
+							<img src="./images/logo-diagnostikaplus.svg" width="238" height="49" alt="Діагностика плюс">
+						</a>
+					</div>
+					<div class="header__search-wrap">
+						<form class="header__search" id="site-search-form" action="#" role="search">
+							<label class="visually-hidden" for="site-search">Пошук аналізу</label>
+							<input id="site-search" type="search" name="s" placeholder="Пошук аналізу…" autocomplete="off">
+							<button class="btn" type="submit" aria-label="Search">
+								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+									<circle cx="11" cy="11" r="7"></circle>
+									<path d="M16.5 16.5 21 21"></path>
+								</svg>
+							</button>
+						</form>
+					</div>
+					<div class="header__actions">
+						<div class="header__phone">
+							<p><a href="tel:0800331212">0 800 33 12 12</a></p>
+							<span class="header__callback">Зв’язатися з нами</span>
+						</div>
+						<div class="header__cta">
+							<button class="btn btn--sm" type="button" data-modal-open>Записатись</button>
+						</div>
+						<div class="header__controls">
+							<button class="btn header__search-toggle" type="button" aria-controls="site-search-form" aria-expanded="false" aria-label="Open search" data-search-toggle>
+								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+									<circle cx="11" cy="11" r="7"></circle>
+									<path d="M16.5 16.5 21 21"></path>
+								</svg>
+							</button>
+							<button class="btn header__burger" type="button" aria-controls="site-menu" aria-expanded="false" aria-label="Menu" data-menu-toggle>
+								<span></span>
+								<span></span>
+								<span></span>
+							</button>
+						</div>
+					</div>
+				</div>
+				<nav class="header__nav" id="site-menu" aria-label="Main navigation">
+					<div class="header__menu">
+						<ul>
+							<li><a href="./index.html">Головна</a></li>
+							<li><a href="./consultation.html">Консультація лікарів</a></li>
+							<li><a href="./appointment.html">Запис на прийом</a></li>
+							<li><a href="./prices.html">Аналізи та ціни</a></li>
+							<li>
+								<a href="#">Пацієнтам</a>
+								<ul>
+									<li><a href="./preparation.html">Підготовка до аналізів</a></li>
+									<li><a href="./results.html">Результати онлайн</a></li>
+									<li><a href="./faq.html">Питання та відповіді</a></li>
+								</ul>
+							</li>
+							<li><a href="./partners.html">Партнерам</a></li>
+							<li><a href="./contacts.html">Зв’язок</a></li>
+							<li><a href="./about.html">Про компанію</a></li>
+						</ul>
+					</div>
+					<div class="header__nav-actions">
+						<div class="header__phone header__phone--menu">
+							<p><a href="tel:0800331212">0 800 33 12 12</a></p>
+							<span class="header__callback">Зв’язатися з нами</span>
+						</div>
+						<div>
+							<button class="btn btn--sm" type="button" data-modal-open>Записатись</button>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</header>
+		<dialog class="modal" aria-labelledby="booking-title" data-modal>
+			<div class="modal__box">
+				<button class="modal__close" type="button" aria-label="Close dialog" data-modal-close>
+					<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+						<path d="m7 7 10 10M17 7 7 17"></path>
+					</svg>
+				</button>
+				<div class="modal__head">
+					<h2 id="booking-title">Запис на прийом</h2>
+					<p>Залиште контакти — ми передзвонимо в робочий час, підберемо аналізи та зручний час візиту.</p>
+				</div>
+				<form class="modal__form" action="#" method="post">
+					<div class="modal__field">
+						<label for="booking-name">Ім’я</label>
+						<input type="text" id="booking-name" name="name" autocomplete="given-name" required minlength="2" maxlength="60" placeholder="Ваше ім’я">
+					</div>
+					<div class="modal__field">
+						<label for="booking-phone">Телефон</label>
+						<input type="tel" id="booking-phone" name="phone" autocomplete="tel" required maxlength="19" pattern="\+38 \(0\d{2}\) \d{3}-\d{2}-\d{2}" title="Формат: +38 (0XX) XXX-XX-XX" placeholder="+38 (0__) ___-__-__" data-phone>
+					</div>
+					<div class="modal__consent">
+						<input type="checkbox" id="booking-consent" name="consent" required>
+						<label for="booking-consent">Погоджуюсь на обробку персональних даних згідно з <a href="#">політикою конфіденційності</a></label>
+					</div>
+					<button class="btn" type="submit">Записатись</button>
+				</form>
+			</div>
+		</dialog>
+	
+		<main>
+			<section class="intro">
+				<div class="container">
+					<h1>Про компанію</h1>
+					<p>Сторінка в роботі — тут буде історія лабораторії, ліцензії та обладнання.</p>
+				</div>
+			</section>
+		</main>
+	
+		<footer class="footer">
+			<div class="container">
+				<div class="footer__inner">
+					<div class="footer__brand">
+						<div class="logo">
+							<a href="./index.html">
+								<img src="./images/logo-diagnostikaplus-white.svg" width="218" height="44" alt="Діагностика плюс">
+							</a>
+						</div>
+						<div class="footer__about">
+							<p>«Діагностика плюс» — лабораторні дослідження та пункт прийому аналізів. Ліцензія МОЗ України, акредитація ISO 15189.</p>
+						</div>
+						<div class="footer__helsi">
+							<div class="footer__helsi-logo">
+								<img src="./images/logo-helsi.webp" width="428" height="274" alt="Helsi">
+							</div>
+							<div class="footer__helsi-text">
+								<span>Ми в системі Helsi</span>
+								<span>Онлайн-запис на аналізи</span>
+							</div>
+						</div>
+					</div>
+					<div class="footer__col">
+						<button class="btn footer__toggle" type="button" aria-expanded="false" aria-controls="footer-sections" data-footer-toggle>
+							<span>Розділи</span>
+							<svg class="footer__toggle-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+								<line x1="3" y1="8" x2="13" y2="8"></line>
+								<line x1="8" y1="3" x2="8" y2="13"></line>
+							</svg>
+						</button>
+						<div class="footer__panel" id="footer-sections">
+							<ul class="footer__links">
+								<li><a href="./index.html">Головна</a></li>
+								<li><a href="./prices.html">Аналізи та ціни</a></li>
+								<li><a href="./consultation.html">Консультація лікарів</a></li>
+								<li><a href="./appointment.html">Запис на прийом</a></li>
+								<li><a href="./about.html">Про компанію</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="footer__col">
+						<button class="btn footer__toggle" type="button" aria-expanded="false" aria-controls="footer-info" data-footer-toggle>
+							<span>Інформація</span>
+							<svg class="footer__toggle-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+								<line x1="3" y1="8" x2="13" y2="8"></line>
+								<line x1="8" y1="3" x2="8" y2="13"></line>
+							</svg>
+						</button>
+						<div class="footer__panel" id="footer-info">
+							<ul class="footer__links">
+								<li><a href="#">Пацієнтам</a></li>
+								<li><a href="./partners.html">Партнерам</a></li>
+								<li><a href="./preparation.html">Підготовка до аналізів</a></li>
+								<li><a href="./about.html">Ліцензії та сертифікати</a></li>
+								<li><a href="./contacts.html">Зв’язок</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="footer__col">
+						<button class="btn footer__toggle" type="button" aria-expanded="false" aria-controls="footer-contacts" data-footer-toggle>
+							<span>Контакти</span>
+							<svg class="footer__toggle-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+								<line x1="3" y1="8" x2="13" y2="8"></line>
+								<line x1="8" y1="3" x2="8" y2="13"></line>
+							</svg>
+						</button>
+						<div class="footer__panel" id="footer-contacts">
+							<div class="footer__contacts">
+								<div class="footer__contacts-text">
+									<p class="footer__phone"><a href="tel:0800331212">0 800 33 12 12</a></p>
+									<p class="footer__address">м. Київ, вул. Медична 14<br>Пн–Сб 07:00–19:00, Нд 08:00–14:00</p>
+									<p><a href="mailto:info@mtm-lab.ua">info@mtm-lab.ua</a></p>
+								</div>
+								<ul class="footer__social">
+									<li>
+										<a href="#" aria-label="Facebook">
+											<img src="./images/ico-facebook.svg" width="24" height="24" alt="">
+										</a>
+									</li>
+									<li>
+										<a href="#" aria-label="Instagram">
+											<img src="./images/ico-instagram.svg" width="24" height="24" alt="">
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="footer__bottom">
+					<p>&copy; 2026 ТОВ «МЦ «МТМ»». Усі права захищено.</p>
+					<ul class="footer__legal">
+						<li><a href="#">Політика конфіденційності</a></li>
+						<li><a href="#">Публічна угода</a></li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+</body>
+</html>
