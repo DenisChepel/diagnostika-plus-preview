@@ -99,7 +99,7 @@
 		</header>
 		<dialog class="modal" aria-labelledby="booking-title" data-modal>
 			<div class="modal__box">
-				<button class="modal__close" type="button" aria-label="Close dialog" data-modal-close>
+				<button class="btn modal__close" type="button" aria-label="Close dialog" data-modal-close>
 					<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
 						<path d="m7 7 10 10M17 7 7 17"></path>
 					</svg>
@@ -108,14 +108,14 @@
 					<h2 id="booking-title">Запис на прийом</h2>
 					<p>Залиште контакти — ми передзвонимо в робочий час, підберемо аналізи та зручний час візиту.</p>
 				</div>
-				<form class="modal__form" action="#" method="post">
+				<form class="modal__form" action="#" method="post" data-validate>
 					<div class="modal__field">
 						<label for="booking-name">Ім’я</label>
 						<input type="text" id="booking-name" name="name" autocomplete="given-name" required minlength="2" maxlength="60" placeholder="Ваше ім’я">
 					</div>
 					<div class="modal__field">
 						<label for="booking-phone">Телефон</label>
-						<input type="tel" id="booking-phone" name="phone" autocomplete="tel" required maxlength="19" pattern="\+38 \(0\d{2}\) \d{3}-\d{2}-\d{2}" title="Формат: +38 (0XX) XXX-XX-XX" placeholder="+38 (0__) ___-__-__" data-phone>
+						<input type="tel" id="booking-phone" name="phone" autocomplete="tel" required maxlength="19" pattern="\+38 \(0\d{2}\) \d{3}-\d{2}-\d{2}" placeholder="+38 (0__) ___-__-__" data-phone>
 					</div>
 					<div class="modal__consent">
 						<input type="checkbox" id="booking-consent" name="consent" required>

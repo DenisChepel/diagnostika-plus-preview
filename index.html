@@ -100,7 +100,7 @@
 		</header>
 		<dialog class="modal" aria-labelledby="booking-title" data-modal>
 			<div class="modal__box">
-				<button class="modal__close" type="button" aria-label="Close dialog" data-modal-close>
+				<button class="btn modal__close" type="button" aria-label="Close dialog" data-modal-close>
 					<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
 						<path d="m7 7 10 10M17 7 7 17"></path>
 					</svg>
@@ -109,14 +109,14 @@
 					<h2 id="booking-title">Запис на прийом</h2>
 					<p>Залиште контакти — ми передзвонимо в робочий час, підберемо аналізи та зручний час візиту.</p>
 				</div>
-				<form class="modal__form" action="#" method="post">
+				<form class="modal__form" action="#" method="post" data-validate>
 					<div class="modal__field">
 						<label for="booking-name">Ім’я</label>
 						<input type="text" id="booking-name" name="name" autocomplete="given-name" required minlength="2" maxlength="60" placeholder="Ваше ім’я">
 					</div>
 					<div class="modal__field">
 						<label for="booking-phone">Телефон</label>
-						<input type="tel" id="booking-phone" name="phone" autocomplete="tel" required maxlength="19" pattern="\+38 \(0\d{2}\) \d{3}-\d{2}-\d{2}" title="Формат: +38 (0XX) XXX-XX-XX" placeholder="+38 (0__) ___-__-__" data-phone>
+						<input type="tel" id="booking-phone" name="phone" autocomplete="tel" required maxlength="19" pattern="\+38 \(0\d{2}\) \d{3}-\d{2}-\d{2}" placeholder="+38 (0__) ___-__-__" data-phone>
 					</div>
 					<div class="modal__consent">
 						<input type="checkbox" id="booking-consent" name="consent" required>
@@ -535,38 +535,40 @@
 			</section>
 			<section class="about">
 				<div class="container">
-					<div class="about__media">
-						<img src="./images/img-05.webp" width="1144" height="1144" alt="Приміщення лабораторії з аналізаторами">
-					</div>
-					<div class="about__content">
-						<div class="section-head">
-							<div class="section-head__text">
-								<span class="eyebrow">Про компанію</span>
-								<h2>Чому пацієнти обирають «Діагностика плюс»</h2>
-								<p>«Діагностика плюс» (ТОВ «МЦ «МТМ») — незалежна медична лабораторія з власним пунктом прийому. Ми даємо точні дані, на які спираються ваші лікарі.</p>
-							</div>
+					<div class="about__inner">
+						<div class="about__media">
+							<img src="./images/img-05.webp" width="1144" height="1144" alt="Приміщення лабораторії з аналізаторами">
 						</div>
-						<ul class="about__stats">
-							<li class="about__stat">
-								<span class="about__value">99,8%</span>
-								<span>точність за міжнародним контролем якості</span>
-							</li>
-							<li class="about__stat about__stat--green">
-								<span class="about__value">4 роки</span>
-								<span>термін cito-досліджень</span>
-							</li>
-							<li class="about__stat about__stat--red">
-								<span class="about__value">180 000</span>
-								<span>досліджень щороку</span>
-							</li>
-							<li class="about__stat">
-								<span class="about__value">ISO</span>
-								<span>15189 — акредитація лабораторії</span>
-							</li>
-						</ul>
-						<div class="actions">
-							<a class="btn btn--sm" href="./about.html">Про лабораторію</a>
-							<a class="btn btn--outline btn--sm" href="./about.html">Ліцензії та сертифікати</a>
+						<div class="about__content">
+							<div class="section-head">
+								<div class="section-head__text">
+									<span class="eyebrow">Про компанію</span>
+									<h2>Чому пацієнти обирають «Діагностика плюс»</h2>
+									<p>«Діагностика плюс» (ТОВ «МЦ «МТМ») — незалежна медична лабораторія з власним пунктом прийому. Ми даємо точні дані, на які спираються ваші лікарі.</p>
+								</div>
+							</div>
+							<ul class="about__stats">
+								<li class="about__stat">
+									<span class="about__value">99,8%</span>
+									<span>точність за міжнародним контролем якості</span>
+								</li>
+								<li class="about__stat about__stat--green">
+									<span class="about__value">4 роки</span>
+									<span>термін cito-досліджень</span>
+								</li>
+								<li class="about__stat about__stat--red">
+									<span class="about__value">180 000</span>
+									<span>досліджень щороку</span>
+								</li>
+								<li class="about__stat">
+									<span class="about__value">ISO</span>
+									<span>15189 — акредитація лабораторії</span>
+								</li>
+							</ul>
+							<div class="actions">
+								<a class="btn btn--sm" href="./about.html">Про лабораторію</a>
+								<a class="btn btn--outline btn--sm" href="./about.html">Ліцензії та сертифікати</a>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -586,23 +588,23 @@
 						<li class="points__card">
 							<div class="points__text">
 								<h3>Міська поліклініка №11</h3>
-								<p class="points__address">м. Харків, вул. Медична 14,<br>1-й поверх, вхід з боку двору</p>
+								<p class="points__address">м. Київ, вул. Медична 14,<br>1-й поверх, вхід з боку двору</p>
 								<p class="points__hours">Пн–Сб 07:00–19:00<br>Нд 08:00–14:00</p>
 								<a class="text-link points__route" href="#">Прокласти маршрут →</a>
 							</div>
 							<div class="points__map">
-								<img src="./images/img-10.webp" width="618" height="618" alt="Карта: м. Харків, вул. Медична 14">
+								<img src="./images/img-10.webp" width="618" height="618" alt="Карта: м. Київ, вул. Медична 14">
 							</div>
 						</li>
 						<li class="points__card">
 							<div class="points__text">
 								<h3>Поліклініка №3 Дарницького району</h3>
-								<p class="points__address">м. Харків, просп. Харківський 5,<br>кабінет 112</p>
+								<p class="points__address">м. Київ, просп. Харківський 5,<br>кабінет 112</p>
 								<p class="points__hours">Пн–Пт 07:30–14:00<br>Сб 08:00–12:00</p>
 								<a class="text-link points__route" href="#">Прокласти маршрут →</a>
 							</div>
 							<div class="points__map">
-								<img src="./images/img-11.webp" width="618" height="618" alt="Карта: м. Харків, просп. Харківський 5">
+								<img src="./images/img-11.webp" width="618" height="618" alt="Карта: м. Київ, просп. Харківський 5">
 							</div>
 						</li>
 					</ul>
@@ -627,7 +629,7 @@
 								</div>
 								<div class="reviews__person">
 									<span class="reviews__name">Марина Т.</span>
-									<span class="reviews__city">Харків</span>
+									<span class="reviews__city">Київ</span>
 								</div>
 							</div>
 						</li>
@@ -657,7 +659,7 @@
 								</div>
 								<div class="reviews__person">
 									<span class="reviews__name">Наталія Р.</span>
-									<span class="reviews__city">Харків</span>
+									<span class="reviews__city">Київ</span>
 								</div>
 							</div>
 						</li>
@@ -927,12 +929,7 @@
 							<div class="footer__contacts">
 								<div class="footer__contacts-text">
 									<p class="footer__phone"><a href="tel:0800331212">0 800 33 12 12</a></p>
-									<p class="footer__address">
-										м. Харків,<br>
-										майдан Захисників України, 15
-										<br>
-										Пн–Сб 07:00–19:00, Нд 08:00–14:00
-									</p>
+									<p class="footer__address">м. Київ, вул. Медична 14<br>Пн–Сб 07:00–19:00, Нд 08:00–14:00</p>
 									<p><a href="mailto:info@mtm-lab.ua">info@mtm-lab.ua</a></p>
 								</div>
 								<ul class="footer__social">
