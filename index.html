@@ -32,9 +32,9 @@
 						</a>
 					</div>
 					<div class="header__search-wrap">
-						<form class="header__search" id="site-search-form" action="#" role="search">
+						<form class="header__search" id="site-search-form" action="./prices.html" role="search">
 							<label class="visually-hidden" for="site-search">Пошук аналізу</label>
-							<input id="site-search" type="search" name="s" placeholder="Пошук аналізу…" autocomplete="off">
+							<input id="site-search" type="search" name="q" placeholder="Пошук аналізу…" autocomplete="off" aria-controls="site-search-results" data-suggest-field>
 							<button class="btn" type="submit" aria-label="Search">
 								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
 									<circle cx="11" cy="11" r="7"></circle>
@@ -42,6 +42,22 @@
 								</svg>
 							</button>
 						</form>
+						<div class="header__suggest" id="site-search-results" data-suggest hidden>
+							<ul class="header__suggest-list" data-suggest-list></ul>
+							<div class="header__suggest-all" data-suggest-all>
+								<a href="./prices.html">
+									<span>Переглянути всі результати (<span data-suggest-count></span>)</span>
+								</a>
+							</div>
+							<template data-suggest-item>
+								<li>
+									<a href="./prices.html">
+										<span data-suggest-name></span>
+										<span class="header__suggest-price" data-suggest-price></span>
+									</a>
+								</li>
+							</template>
+						</div>
 					</div>
 					<div class="header__actions">
 						<div class="header__phone">
@@ -153,7 +169,7 @@
 								</div>
 								<div class="hero__media">
 									<div class="hero__photo">
-										<img src="./images/img-01.webp" width="1180" height="885" alt="Медична працівниця з пробірками в лабораторії">
+										<img src="./images/img-01.webp" width="1180" height="885" fetchpriority="high" alt="Медична працівниця з пробірками в лабораторії">
 									</div>
 									<div class="hero__note">
 										<div class="hero__note-icon">
@@ -184,10 +200,10 @@
 								</div>
 								<div class="hero__media hero__media--grid">
 									<div class="hero__photo">
-										<img src="./images/img-02.webp" width="384" height="576" alt="Пробірки зі зразками крові в аналізаторі">
+										<img src="./images/img-02.webp" width="384" height="576" fetchpriority="low" alt="Пробірки зі зразками крові в аналізаторі">
 									</div>
 									<div class="hero__photo">
-										<img src="./images/img-03.webp" width="576" height="432" alt="Лікар-лаборант за роботою">
+										<img src="./images/img-03.webp" width="576" height="432" fetchpriority="low" alt="Лікар-лаборант за роботою">
 									</div>
 									<div class="hero__tile">
 										<span>Досвід</span>
@@ -212,7 +228,7 @@
 								</div>
 								<div class="hero__media">
 									<div class="hero__photo">
-										<img src="./images/img-04.webp" width="1180" height="885" alt="Мама з дитиною у пункті прийому аналізів">
+										<img src="./images/img-04.webp" width="1180" height="885" fetchpriority="low" alt="Мама з дитиною у пункті прийому аналізів">
 									</div>
 								</div>
 							</div>
@@ -472,7 +488,7 @@
 							</div>
 						</div>
 						<div class="banner__media">
-							<img src="./images/img-06.webp" width="1200" height="902" alt="Медична працівниця тримає в долонях червоне серце">
+							<img src="./images/img-06.webp" width="1200" height="902" loading="lazy" alt="Медична працівниця тримає в долонях червоне серце">
 						</div>
 					</div>
 				</div>
@@ -492,7 +508,7 @@
 					<ul class="doctors__list">
 						<li class="doctors__card">
 							<div class="doctors__photo">
-								<img src="./images/photo-01.webp" width="596" height="596" alt="Олена Ковальчук">
+								<img src="./images/photo-01.webp" width="596" height="596" loading="lazy" alt="Олена Ковальчук">
 							</div>
 							<div class="doctors__body">
 								<h3>Олена Ковальчук</h3>
@@ -502,7 +518,7 @@
 						</li>
 						<li class="doctors__card">
 							<div class="doctors__photo">
-								<img src="./images/photo-02.webp" width="596" height="596" alt="Андрій Мельник">
+								<img src="./images/photo-02.webp" width="596" height="596" loading="lazy" alt="Андрій Мельник">
 							</div>
 							<div class="doctors__body">
 								<h3>Андрій Мельник</h3>
@@ -512,7 +528,7 @@
 						</li>
 						<li class="doctors__card">
 							<div class="doctors__photo">
-								<img src="./images/photo-03.webp" width="596" height="596" alt="Ірина Гриценко">
+								<img src="./images/photo-03.webp" width="596" height="596" loading="lazy" alt="Ірина Гриценко">
 							</div>
 							<div class="doctors__body">
 								<h3>Ірина Гриценко</h3>
@@ -522,7 +538,7 @@
 						</li>
 						<li class="doctors__card">
 							<div class="doctors__photo">
-								<img src="./images/photo-04.webp" width="596" height="596" alt="Сергій Литвин">
+								<img src="./images/photo-04.webp" width="596" height="596" loading="lazy" alt="Сергій Литвин">
 							</div>
 							<div class="doctors__body">
 								<h3>Сергій Литвин</h3>
@@ -537,7 +553,7 @@
 				<div class="container">
 					<div class="about__inner">
 						<div class="about__media">
-							<img src="./images/img-05.webp" width="1144" height="1144" alt="Приміщення лабораторії з аналізаторами">
+							<img src="./images/img-05.webp" width="1144" height="1144" loading="lazy" alt="Приміщення лабораторії з аналізаторами">
 						</div>
 						<div class="about__content">
 							<div class="section-head">
@@ -593,7 +609,7 @@
 								<a class="text-link points__route" href="#">Прокласти маршрут →</a>
 							</div>
 							<div class="points__map">
-								<img src="./images/img-10.webp" width="618" height="618" alt="Карта: м. Київ, вул. Медична 14">
+								<img src="./images/img-10.webp" width="618" height="618" loading="lazy" alt="Карта: м. Київ, вул. Медична 14">
 							</div>
 						</li>
 						<li class="points__card">
@@ -604,7 +620,7 @@
 								<a class="text-link points__route" href="#">Прокласти маршрут →</a>
 							</div>
 							<div class="points__map">
-								<img src="./images/img-11.webp" width="618" height="618" alt="Карта: м. Київ, просп. Харківський 5">
+								<img src="./images/img-11.webp" width="618" height="618" loading="lazy" alt="Карта: м. Київ, просп. Харківський 5">
 							</div>
 						</li>
 					</ul>
@@ -625,7 +641,7 @@
 							</div>
 							<div class="reviews__author">
 								<div class="reviews__avatar">
-									<img src="./images/ico-01.svg" width="80" height="80" alt="">
+									<img src="./images/ico-01.svg" width="80" height="80" loading="lazy" alt="">
 								</div>
 								<div class="reviews__person">
 									<span class="reviews__name">Марина Т.</span>
@@ -640,7 +656,7 @@
 							</div>
 							<div class="reviews__author">
 								<div class="reviews__avatar">
-									<img src="./images/ico-01.svg" width="80" height="80" alt="">
+									<img src="./images/ico-01.svg" width="80" height="80" loading="lazy" alt="">
 								</div>
 								<div class="reviews__person">
 									<span class="reviews__name">Олексій В.</span>
@@ -655,7 +671,7 @@
 							</div>
 							<div class="reviews__author">
 								<div class="reviews__avatar">
-									<img src="./images/ico-01.svg" width="80" height="80" alt="">
+									<img src="./images/ico-01.svg" width="80" height="80" loading="lazy" alt="">
 								</div>
 								<div class="reviews__person">
 									<span class="reviews__name">Наталія Р.</span>
@@ -701,7 +717,7 @@
 				<div class="container">
 					<div class="faq__inner">
 						<div class="faq__media">
-							<img src="./images/img-12.webp" width="916" height="1144" alt="Медсестра консультує пацієнтку у пункті прийому">
+							<img src="./images/img-12.webp" width="916" height="1144" loading="lazy" alt="Медсестра консультує пацієнтку у пункті прийому">
 						</div>
 						<div class="faq__content">
 							<div class="section-head">
@@ -810,7 +826,7 @@
 						<li>
 							<a class="blog__card" href="#">
 								<div class="blog__media">
-									<img src="./images/img-07.webp" width="810" height="608" alt="">
+									<img src="./images/img-07.webp" width="810" height="608" loading="lazy" alt="">
 								</div>
 								<div class="blog__text">
 									<h3>Вітамін D: кому і коли перевіряти рівень</h3>
@@ -821,7 +837,7 @@
 						<li>
 							<a class="blog__card" href="#">
 								<div class="blog__media">
-									<img src="./images/img-08.webp" width="810" height="608" alt="">
+									<img src="./images/img-08.webp" width="810" height="608" loading="lazy" alt="">
 								</div>
 								<div class="blog__text">
 									<h3>Як читати загальний аналіз крові: 7 показників</h3>
@@ -832,7 +848,7 @@
 						<li>
 							<a class="blog__card" href="#">
 								<div class="blog__media">
-									<img src="./images/img-09.webp" width="810" height="752" alt="">
+									<img src="./images/img-09.webp" width="810" height="752" loading="lazy" alt="">
 								</div>
 								<div class="blog__text">
 									<h3>Щитоподібна залоза: мінімальний набір досліджень</h3>
@@ -865,7 +881,7 @@
 					<div class="footer__brand">
 						<div class="logo">
 							<a href="./index.html">
-								<img src="./images/logo-diagnostikaplus-white.svg" width="218" height="44" alt="Діагностика плюс">
+								<img src="./images/logo-diagnostikaplus-white.svg" width="218" height="44" loading="lazy" alt="Діагностика плюс">
 							</a>
 						</div>
 						<div class="footer__about">
@@ -873,7 +889,7 @@
 						</div>
 						<div class="footer__helsi">
 							<div class="footer__helsi-logo">
-								<img src="./images/logo-helsi.webp" width="428" height="274" alt="Helsi">
+								<img src="./images/logo-helsi.webp" width="428" height="274" loading="lazy" alt="Helsi">
 							</div>
 							<div class="footer__helsi-text">
 								<span>Ми в системі Helsi</span>
@@ -935,12 +951,12 @@
 								<ul class="footer__social">
 									<li>
 										<a href="#" aria-label="Facebook">
-											<img src="./images/ico-facebook.svg" width="24" height="24" alt="">
+											<img src="./images/ico-facebook.svg" width="24" height="24" loading="lazy" alt="">
 										</a>
 									</li>
 									<li>
 										<a href="#" aria-label="Instagram">
-											<img src="./images/ico-instagram.svg" width="24" height="24" alt="">
+											<img src="./images/ico-instagram.svg" width="24" height="24" loading="lazy" alt="">
 										</a>
 									</li>
 								</ul>

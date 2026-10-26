@@ -31,9 +31,9 @@
 						</a>
 					</div>
 					<div class="header__search-wrap">
-						<form class="header__search" id="site-search-form" action="#" role="search">
+						<form class="header__search" id="site-search-form" action="./prices.html" role="search">
 							<label class="visually-hidden" for="site-search">Пошук аналізу</label>
-							<input id="site-search" type="search" name="s" placeholder="Пошук аналізу…" autocomplete="off">
+							<input id="site-search" type="search" name="q" placeholder="Пошук аналізу…" autocomplete="off" aria-controls="site-search-results" data-suggest-field>
 							<button class="btn" type="submit" aria-label="Search">
 								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
 									<circle cx="11" cy="11" r="7"></circle>
@@ -41,6 +41,22 @@
 								</svg>
 							</button>
 						</form>
+						<div class="header__suggest" id="site-search-results" data-suggest hidden>
+							<ul class="header__suggest-list" data-suggest-list></ul>
+							<div class="header__suggest-all" data-suggest-all>
+								<a href="./prices.html">
+									<span>Переглянути всі результати (<span data-suggest-count></span>)</span>
+								</a>
+							</div>
+							<template data-suggest-item>
+								<li>
+									<a href="./prices.html">
+										<span data-suggest-name></span>
+										<span class="header__suggest-price" data-suggest-price></span>
+									</a>
+								</li>
+							</template>
+						</div>
 					</div>
 					<div class="header__actions">
 						<div class="header__phone">
@@ -141,7 +157,7 @@
 					<div class="footer__brand">
 						<div class="logo">
 							<a href="./index.html">
-								<img src="./images/logo-diagnostikaplus-white.svg" width="218" height="44" alt="Діагностика плюс">
+								<img src="./images/logo-diagnostikaplus-white.svg" width="218" height="44" loading="lazy" alt="Діагностика плюс">
 							</a>
 						</div>
 						<div class="footer__about">
@@ -149,7 +165,7 @@
 						</div>
 						<div class="footer__helsi">
 							<div class="footer__helsi-logo">
-								<img src="./images/logo-helsi.webp" width="428" height="274" alt="Helsi">
+								<img src="./images/logo-helsi.webp" width="428" height="274" loading="lazy" alt="Helsi">
 							</div>
 							<div class="footer__helsi-text">
 								<span>Ми в системі Helsi</span>
@@ -211,12 +227,12 @@
 								<ul class="footer__social">
 									<li>
 										<a href="#" aria-label="Facebook">
-											<img src="./images/ico-facebook.svg" width="24" height="24" alt="">
+											<img src="./images/ico-facebook.svg" width="24" height="24" loading="lazy" alt="">
 										</a>
 									</li>
 									<li>
 										<a href="#" aria-label="Instagram">
-											<img src="./images/ico-instagram.svg" width="24" height="24" alt="">
+											<img src="./images/ico-instagram.svg" width="24" height="24" loading="lazy" alt="">
 										</a>
 									</li>
 								</ul>
