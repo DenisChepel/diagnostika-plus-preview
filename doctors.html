@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Наші лікарі — Діагностика плюс</title>
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/pages/doctors.css">
+  <script src="./js/main.js" defer></script>
+</head>
+<body>
+		<div class="topbar">
+			<div class="container">
+				<div class="topbar__info">
+					<p>Пн–Сб 07:00–19:00, Нд&nbsp;08:00&#65279;–&#65279;14:00</p>
+					<p class="topbar__address">м. Харків, майдан Захисників України, 15</p>
+				</div>
+			</div>
+		</div>
+		<header class="header">
+			<div class="container">
+				<div class="header__main">
+					<div class="header__brand logo">
+						<a href="./index.html">
+							<img src="./images/logo-diagnostikaplus.svg" width="238" height="49" alt="Діагностика плюс">
+						</a>
+					</div>
+					<div class="header__search-wrap">
+						<form class="header__search" id="site-search-form" action="./prices.html" role="search">
+							<label class="visually-hidden" for="site-search">Пошук аналізу</label>
+							<input id="site-search" type="search" name="q" placeholder="Пошук аналізу…" autocomplete="off" aria-controls="site-search-results" data-suggest-field>
+							<button class="btn" type="submit" aria-label="Search">
+								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+									<circle cx="11" cy="11" r="7"></circle>
+									<path d="M16.5 16.5 21 21"></path>
+								</svg>
+							</button>
+						</form>
+						<div class="header__suggest" id="site-search-results" data-suggest hidden>
+							<ul class="header__suggest-list" data-suggest-list></ul>
+							<div class="header__suggest-all" data-suggest-all>
+								<a href="./prices.html">
+									<span>Переглянути всі результати (<span data-suggest-count></span>)</span>
+								</a>
+							</div>
+							<template data-suggest-item>
+								<li>
+									<a href="./prices.html">
+										<span data-suggest-name></span>
+										<span class="header__suggest-price" data-suggest-price></span>
+									</a>
+								</li>
+							</template>
+						</div>
+					</div>
+					<div class="header__actions">
+						<div class="header__phone">
+							<p><a href="tel:0800331212">0 800 33 12 12</a></p>
+							<span class="header__callback">Зв’язатися з нами</span>
+						</div>
+						<div class="header__cta">
+							<button class="btn btn--sm" type="button" data-modal-open>Записатись</button>
+						</div>
+						<div class="header__controls">
+							<button class="btn header__search-toggle" type="button" aria-controls="site-search-form" aria-expanded="false" aria-label="Open search" data-search-toggle>
+								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+									<circle cx="11" cy="11" r="7"></circle>
+									<path d="M16.5 16.5 21 21"></path>
+								</svg>
+							</button>
+							<button class="btn header__burger" type="button" aria-controls="site-menu" aria-expanded="false" aria-label="Menu" data-menu-toggle>
+								<span></span>
+								<span></span>
+								<span></span>
+							</button>
+						</div>
+					</div>
+				</div>
+				<nav class="header__nav" id="site-menu" aria-label="Main navigation">
+					<div class="header__menu">
+						<ul class="header__menu-list">
+							<li><a href="./index.html">Головна</a></li>
+							<li><a href="./doctors.html">Наші лікарі</a></li>
+							<li><a href="./appointment.html">Запис на прийом</a></li>
+							<li><a href="./prices.html">Аналізи та ціни</a></li>
+							<li>
+								<a href="#">Пацієнтам</a>
+								<ul class="header__submenu">
+									<li><a href="./preparation.html">Підготовка до аналізів</a></li>
+									<li><a href="./results.html">Результати онлайн</a></li>
+									<li><a href="./faq.html">Питання та відповіді</a></li>
+								</ul>
+							</li>
+							<li><a href="./partners.html">Партнерам</a></li>
+							<li><a href="./contacts.html">Зв’язок</a></li>
+							<li><a href="./about.html">Про компанію</a></li>
+						</ul>
+					</div>
+					<div class="header__nav-actions">
+						<div class="header__phone header__phone--menu">
+							<p><a href="tel:0800331212">0 800 33 12 12</a></p>
+							<span class="header__callback">Зв’язатися з нами</span>
+						</div>
+						<div>
+							<button class="btn btn--sm" type="button" data-modal-open>Записатись</button>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</header>
+		<dialog class="modal" aria-labelledby="booking-title" data-modal>
+			<div class="modal__box">
+				<button class="btn modal__close" type="button" aria-label="Close dialog" data-modal-close>
+					<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+						<path d="m7 7 10 10M17 7 7 17"></path>
+					</svg>
+				</button>
+				<div class="modal__head">
+					<h2 id="booking-title">Запис на прийом</h2>
+					<p>Залиште контакти — ми передзвонимо в робочий час, підберемо аналізи та зручний час візиту.</p>
+				</div>
+				<form class="modal__form" action="#" method="post" data-validate>
+					<div class="modal__field">
+						<label for="booking-name">Ім’я</label>
+						<input type="text" id="booking-name" name="name" autocomplete="given-name" required minlength="2" maxlength="60" placeholder="Ваше ім’я">
+					</div>
+					<div class="modal__field">
+						<label for="booking-phone">Телефон</label>
+						<input type="tel" id="booking-phone" name="phone" autocomplete="tel" required maxlength="19" pattern="\+38 \(0\d{2}\) \d{3}-\d{2}-\d{2}" placeholder="+38 (0__) ___-__-__" data-phone>
+					</div>
+					<div class="modal__consent">
+						<input type="checkbox" id="booking-consent" name="consent" required>
+						<label for="booking-consent">Погоджуюсь на обробку персональних даних згідно з <a href="#">політикою конфіденційності</a></label>
+					</div>
+					<button class="btn" type="submit">Записатись</button>
+				</form>
+			</div>
+		</dialog>
+	
+		<main>
+			<section class="doctors-hero">
+				<div class="container">
+					<div class="doctors-hero__text">
+						<h1>Наші лікарі</h1>
+						<p>Фахівці, які консультують у «Діагностика плюс»: допоможуть обрати аналізи, розтлумачать результати та підберуть лікування.</p>
+					</div>
+				</div>
+			</section>
+			<section class="doctors-list">
+				<div class="container">
+					<ul class="doctors-list__grid" data-bio-fit>
+						<li class="doctors-list__card">
+							<div class="doctors-list__photo">
+								<img src="./images/photo-01.webp" width="600" height="600" alt="Шимбарьова Тетяна Анатоліївна">
+							</div>
+							<div class="doctors-list__text">
+								<p class="doctors-list__speciality">Акушер-гінеколог</p>
+								<h2>Шимбарьова Тетяна Анатоліївна</h2>
+								<ul>
+									<li>Стаж — 15+ років</li>
+									<li>Вища категорія</li>
+								</ul>
+								<p class="doctors-list__bio" data-bio>Піклується про жіноче здоровʼя на кожному етапі життя — від першого огляду гінеколога до планування вагітності.</p>
+							</div>
+							<div class="doctors-list__more">
+								<a class="btn" href="./doctor-shymbarova.html">
+									Детальніше
+									<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+										<path d="M4 10h12M11 5l5 5-5 5"></path>
+									</svg>
+								</a>
+							</div>
+						</li>
+						<li class="doctors-list__card">
+							<div class="doctors-list__photo">
+								<img src="./images/photo-02.webp" width="600" height="600" alt="Ломанов Андрій Анатолійович">
+							</div>
+							<div class="doctors-list__text">
+								<p class="doctors-list__speciality">Дермато&shy;венеролог, уролог, хірург</p>
+								<h2>Ломанов Андрій Анатолійович</h2>
+								<ul>
+									<li>Стаж — 25 років</li>
+									<li>Вища категорія</li>
+								</ul>
+								<p class="doctors-list__bio" data-bio>Лікар вищої категорії з 25-річним стажем. Спеціалізується на дерматології, урології та венерології. Проводить лікування та видалення новоутворень шкіри.</p>
+							</div>
+							<div class="doctors-list__more">
+								<a class="btn" href="./doctor-lomanov.html">
+									Детальніше
+									<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+										<path d="M4 10h12M11 5l5 5-5 5"></path>
+									</svg>
+								</a>
+							</div>
+						</li>
+						<li class="doctors-list__card">
+							<div class="doctors-list__photo">
+								<img src="./images/photo-03.webp" width="600" height="600" alt="Бережна Оксана Василівна">
+							</div>
+							<div class="doctors-list__text">
+								<p class="doctors-list__speciality">Гінеколог, гінеколог-ендокринолог</p>
+								<h2>Бережна Оксана Василівна</h2>
+								<ul>
+									<li>Стаж — 20+ років</li>
+									<li>Вища категорія</li>
+								</ul>
+								<p class="doctors-list__bio" data-bio>Лікар-гінеколог-ендокринолог із понад 20-річним стажем. Спеціалізується на лікуванні гінекологічних захворювань, гормональних порушень та безпліддя.</p>
+							</div>
+							<div class="doctors-list__more">
+								<a class="btn" href="./doctor-berezhna.html">
+									Детальніше
+									<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+										<path d="M4 10h12M11 5l5 5-5 5"></path>
+									</svg>
+								</a>
+							</div>
+						</li>
+						<li class="doctors-list__card">
+							<div class="doctors-list__photo">
+								<img src="./images/photo-04.webp" width="600" height="600" alt="Кущ Павло Іванович">
+							</div>
+							<div class="doctors-list__text">
+								<p class="doctors-list__speciality">Лікар УЗД, рентгенолог</p>
+								<h2>Кущ Павло Іванович</h2>
+								<ul>
+									<li>Стаж — 30 років</li>
+									<li>Вища категорія</li>
+								</ul>
+								<p class="doctors-list__bio" data-bio>Лікар вищої категорії з 30-річним стажем. Спеціалізується на УЗД та рентгенодіагностиці внутрішніх органів, судин і суглобів.</p>
+							</div>
+							<div class="doctors-list__more">
+								<a class="btn" href="./doctor-kushch.html">
+									Детальніше
+									<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+										<path d="M4 10h12M11 5l5 5-5 5"></path>
+									</svg>
+								</a>
+							</div>
+						</li>
+						<li class="doctors-list__card">
+							<div class="doctors-list__photo">
+								<img src="./images/photo-05.webp" width="600" height="600" alt="Кузина Алла Василівна">
+							</div>
+							<div class="doctors-list__text">
+								<p class="doctors-list__speciality">Акушер-гінеколог</p>
+								<h2>Кузина Алла Василівна</h2>
+								<ul>
+									<li>Стаж — 43 роки</li>
+									<li>Перша категорія</li>
+								</ul>
+								<p class="doctors-list__bio" data-bio>Лікар акушер-гінеколог першої категорії зі стажем 43 роки. Спеціалізується на лікуванні гінекологічних захворювань, порушень менструального циклу та менопаузи.</p>
+							</div>
+							<div class="doctors-list__more">
+								<a class="btn" href="./doctor-kuzyna.html">
+									Детальніше
+									<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+										<path d="M4 10h12M11 5l5 5-5 5"></path>
+									</svg>
+								</a>
+							</div>
+						</li>
+						<li class="doctors-list__card">
+							<div class="doctors-list__photo">
+								<img src="./images/photo-06.webp" width="600" height="600" alt="Ковтун Наталія Валентинівна">
+							</div>
+							<div class="doctors-list__text">
+								<p class="doctors-list__speciality">Уролог</p>
+								<h2>Ковтун Наталія Валентинівна</h2>
+								<ul>
+									<li>Стаж — 26 років</li>
+									<li>Вища категорія</li>
+								</ul>
+								<p class="doctors-list__bio" data-bio>Лікар-уролог вищої категорії зі стажем 26 років. Спеціалізується на лікуванні захворювань сечостатевої системи, простатиту та чоловічого безпліддя.</p>
+							</div>
+							<div class="doctors-list__more">
+								<a class="btn" href="./doctor-kovtun.html">
+									Детальніше
+									<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+										<path d="M4 10h12M11 5l5 5-5 5"></path>
+									</svg>
+								</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</section>
+		</main>
+	
+		<footer class="footer">
+			<div class="container">
+				<div class="footer__inner">
+					<div class="footer__brand">
+						<div class="logo">
+							<a href="./index.html">
+								<img src="./images/logo-diagnostikaplus-white.svg" width="218" height="44" loading="lazy" alt="Діагностика плюс">
+							</a>
+						</div>
+						<div class="footer__about">
+							<p>«Діагностика плюс» — лабораторні дослідження та пункт прийому аналізів. Ліцензія МОЗ України, акредитація ISO 15189.</p>
+						</div>
+						<div class="footer__helsi">
+							<div class="footer__helsi-logo">
+								<img src="./images/logo-helsi.webp" width="428" height="274" loading="lazy" alt="Helsi">
+							</div>
+							<div class="footer__helsi-text">
+								<span>Ми в системі Helsi</span>
+								<span>Онлайн-запис на аналізи</span>
+							</div>
+						</div>
+					</div>
+					<div class="footer__col">
+						<button class="btn footer__toggle" type="button" aria-expanded="false" aria-controls="footer-sections" data-footer-toggle>
+							<span>Розділи</span>
+							<svg class="footer__toggle-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+								<line x1="3" y1="8" x2="13" y2="8"></line>
+								<line x1="8" y1="3" x2="8" y2="13"></line>
+							</svg>
+						</button>
+						<div class="footer__panel" id="footer-sections">
+							<ul class="footer__links">
+								<li><a href="./index.html">Головна</a></li>
+								<li><a href="./prices.html">Аналізи та ціни</a></li>
+								<li><a href="./doctors.html">Наші лікарі</a></li>
+								<li><a href="./appointment.html">Запис на прийом</a></li>
+								<li><a href="./about.html">Про компанію</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="footer__col">
+						<button class="btn footer__toggle" type="button" aria-expanded="false" aria-controls="footer-info" data-footer-toggle>
+							<span>Інформація</span>
+							<svg class="footer__toggle-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+								<line x1="3" y1="8" x2="13" y2="8"></line>
+								<line x1="8" y1="3" x2="8" y2="13"></line>
+							</svg>
+						</button>
+						<div class="footer__panel" id="footer-info">
+							<ul class="footer__links">
+								<li><a href="#">Пацієнтам</a></li>
+								<li><a href="./partners.html">Партнерам</a></li>
+								<li><a href="./preparation.html">Підготовка до аналізів</a></li>
+								<li><a href="./about.html">Ліцензії та сертифікати</a></li>
+								<li><a href="./contacts.html">Зв’язок</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="footer__col">
+						<button class="btn footer__toggle" type="button" aria-expanded="false" aria-controls="footer-contacts" data-footer-toggle>
+							<span>Контакти</span>
+							<svg class="footer__toggle-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+								<line x1="3" y1="8" x2="13" y2="8"></line>
+								<line x1="8" y1="3" x2="8" y2="13"></line>
+							</svg>
+						</button>
+						<div class="footer__panel" id="footer-contacts">
+							<div class="footer__contacts">
+								<div class="footer__contacts-text">
+									<p class="footer__phone"><a href="tel:0800331212">0 800 33 12 12</a></p>
+									<p class="footer__address">м. Київ, вул. Медична 14<br>Пн–Сб 07:00–19:00, Нд 08:00–14:00</p>
+									<p><a href="mailto:info@mtm-lab.ua">info@mtm-lab.ua</a></p>
+								</div>
+								<ul class="footer__social">
+									<li>
+										<a href="#" aria-label="Facebook">
+											<img src="./images/ico-facebook.svg" width="24" height="24" loading="lazy" alt="">
+										</a>
+									</li>
+									<li>
+										<a href="#" aria-label="Instagram">
+											<img src="./images/ico-instagram.svg" width="24" height="24" loading="lazy" alt="">
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="footer__bottom">
+					<p>&copy; 2026 ТОВ «МЦ «МТМ»». Усі права захищено.</p>
+					<ul class="footer__legal">
+						<li><a href="#">Політика конфіденційності</a></li>
+						<li><a href="#">Публічна угода</a></li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+</body>
+</html>

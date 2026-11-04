@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Шимбарьова Тетяна Анатоліївна — Діагностика плюс</title>
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/pages/doctor-berezhna.css">
+  <script src="./js/main.js" defer></script>
+</head>
+<body>
+		<div class="topbar">
+			<div class="container">
+				<div class="topbar__info">
+					<p>Пн–Сб 07:00–19:00, Нд&nbsp;08:00&#65279;–&#65279;14:00</p>
+					<p class="topbar__address">м. Харків, майдан Захисників України, 15</p>
+				</div>
+			</div>
+		</div>
+		<header class="header">
+			<div class="container">
+				<div class="header__main">
+					<div class="header__brand logo">
+						<a href="./index.html">
+							<img src="./images/logo-diagnostikaplus.svg" width="238" height="49" alt="Діагностика плюс">
+						</a>
+					</div>
+					<div class="header__search-wrap">
+						<form class="header__search" id="site-search-form" action="./prices.html" role="search">
+							<label class="visually-hidden" for="site-search">Пошук аналізу</label>
+							<input id="site-search" type="search" name="q" placeholder="Пошук аналізу…" autocomplete="off" aria-controls="site-search-results" data-suggest-field>
+							<button class="btn" type="submit" aria-label="Search">
+								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+									<circle cx="11" cy="11" r="7"></circle>
+									<path d="M16.5 16.5 21 21"></path>
+								</svg>
+							</button>
+						</form>
+						<div class="header__suggest" id="site-search-results" data-suggest hidden>
+							<ul class="header__suggest-list" data-suggest-list></ul>
+							<div class="header__suggest-all" data-suggest-all>
+								<a href="./prices.html">
+									<span>Переглянути всі результати (<span data-suggest-count></span>)</span>
+								</a>
+							</div>
+							<template data-suggest-item>
+								<li>
+									<a href="./prices.html">
+										<span data-suggest-name></span>
+										<span class="header__suggest-price" data-suggest-price></span>
+									</a>
+								</li>
+							</template>
+						</div>
+					</div>
+					<div class="header__actions">
+						<div class="header__phone">
+							<p><a href="tel:0800331212">0 800 33 12 12</a></p>
+							<span class="header__callback">Зв’язатися з нами</span>
+						</div>
+						<div class="header__cta">
+							<button class="btn btn--sm" type="button" data-modal-open>Записатись</button>
+						</div>
+						<div class="header__controls">
+							<button class="btn header__search-toggle" type="button" aria-controls="site-search-form" aria-expanded="false" aria-label="Open search" data-search-toggle>
+								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+									<circle cx="11" cy="11" r="7"></circle>
+									<path d="M16.5 16.5 21 21"></path>
+								</svg>
+							</button>
+							<button class="btn header__burger" type="button" aria-controls="site-menu" aria-expanded="false" aria-label="Menu" data-menu-toggle>
+								<span></span>
+								<span></span>
+								<span></span>
+							</button>
+						</div>
+					</div>
+				</div>
+				<nav class="header__nav" id="site-menu" aria-label="Main navigation">
+					<div class="header__menu">
+						<ul class="header__menu-list">
+							<li><a href="./index.html">Головна</a></li>
+							<li><a href="./doctors.html">Наші лікарі</a></li>
+							<li><a href="./appointment.html">Запис на прийом</a></li>
+							<li><a href="./prices.html">Аналізи та ціни</a></li>
+							<li>
+								<a href="#">Пацієнтам</a>
+								<ul class="header__submenu">
+									<li><a href="./preparation.html">Підготовка до аналізів</a></li>
+									<li><a href="./results.html">Результати онлайн</a></li>
+									<li><a href="./faq.html">Питання та відповіді</a></li>
+								</ul>
+							</li>
+							<li><a href="./partners.html">Партнерам</a></li>
+							<li><a href="./contacts.html">Зв’язок</a></li>
+							<li><a href="./about.html">Про компанію</a></li>
+						</ul>
+					</div>
+					<div class="header__nav-actions">
+						<div class="header__phone header__phone--menu">
+							<p><a href="tel:0800331212">0 800 33 12 12</a></p>
+							<span class="header__callback">Зв’язатися з нами</span>
+						</div>
+						<div>
+							<button class="btn btn--sm" type="button" data-modal-open>Записатись</button>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</header>
+		<dialog class="modal" aria-labelledby="booking-title" data-modal>
+			<div class="modal__box">
+				<button class="btn modal__close" type="button" aria-label="Close dialog" data-modal-close>
+					<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+						<path d="m7 7 10 10M17 7 7 17"></path>
+					</svg>
+				</button>
+				<div class="modal__head">
+					<h2 id="booking-title">Запис на прийом</h2>
+					<p>Залиште контакти — ми передзвонимо в робочий час, підберемо аналізи та зручний час візиту.</p>
+				</div>
+				<form class="modal__form" action="#" method="post" data-validate>
+					<div class="modal__field">
+						<label for="booking-name">Ім’я</label>
+						<input type="text" id="booking-name" name="name" autocomplete="given-name" required minlength="2" maxlength="60" placeholder="Ваше ім’я">
+					</div>
+					<div class="modal__field">
+						<label for="booking-phone">Телефон</label>
+						<input type="tel" id="booking-phone" name="phone" autocomplete="tel" required maxlength="19" pattern="\+38 \(0\d{2}\) \d{3}-\d{2}-\d{2}" placeholder="+38 (0__) ___-__-__" data-phone>
+					</div>
+					<div class="modal__consent">
+						<input type="checkbox" id="booking-consent" name="consent" required>
+						<label for="booking-consent">Погоджуюсь на обробку персональних даних згідно з <a href="#">політикою конфіденційності</a></label>
+					</div>
+					<button class="btn" type="submit">Записатись</button>
+				</form>
+			</div>
+		</dialog>
+	
+		<main>
+			<section class="doctor">
+				<div class="container">
+					<div class="doctor__back">
+						<a class="btn btn--outline" href="./doctors.html" data-menu-parent>
+							<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+								<path d="M16 10H4M9 5l-5 5 5 5"></path>
+							</svg>
+							Повернутись
+						</a>
+					</div>
+					<div class="doctor__inner">
+						<div class="doctor__main">
+							<div class="doctor__head">
+								<p class="doctor__speciality">Акушер-гінеколог</p>
+								<h1>Шимбарьова Тетяна Анатоліївна</h1>
+							</div>
+							<dl class="doctor__facts">
+								<div>
+									<dt>Стаж</dt>
+									<dd>понад 15 років</dd>
+								</div>
+								<div>
+									<dt>Категорія</dt>
+									<dd>Вища категорія</dd>
+								</div>
+							</dl>
+							<div class="doctor__bio">
+								<p>Піклується про жіноче здоровʼя на кожному етапі життя — від першого огляду гінеколога до планування вагітності.</p>
+							</div>
+							<div class="doctor__content">
+								<div class="doctor__list">
+									<h2>Кваліфікація</h2>
+									<ul>
+										<li>Лікар акушер-гінеколог вищої категорії</li>
+										<li>Лікар-гінеколог дитячого та підліткового віку І категорії</li>
+									</ul>
+								</div>
+								<div class="doctor__list">
+									<h2>Членство в асоціаціях</h2>
+									<ul>
+										<li>Асоціація франко-української співпраці у сфері охорони здоровʼя (ASFUDS)</li>
+										<li>Європейська асоціація дитячих і підліткових гінекологів (EURAPAG)</li>
+										<li>Українська асоціація кольпоскопії та цервікальної патології</li>
+									</ul>
+								</div>
+								<div class="doctor__procedures">
+									<div>
+										<h2>Проводить</h2>
+									</div>
+									<ul class="doctor__chips">
+										<li>Консультативний прийом з 0 років</li>
+										<li>Кольпоскопія</li>
+										<li>Введення та видалення ВМС</li>
+										<li>Біопсія шийки матки</li>
+										<li>Радіохвильова хірургія</li>
+										<li>Розʼєднання синехій у дітей</li>
+										<li>Вакцинація від ВПЛ з 9 років</li>
+									</ul>
+								</div>
+								<div class="doctor__treatment">
+									<div>
+										<h2>Діагностика та лікування</h2>
+									</div>
+									<div class="doctor__groups">
+										<div class="doctor__group">
+											<h3>Патології шийки матки</h3>
+											<ul>
+												<li>Ектропіон</li>
+												<li>Ендометріоз шийки матки</li>
+												<li>Лейкоплакія</li>
+												<li>Дисплазія</li>
+												<li>Поліп шийки матки</li>
+											</ul>
+										</div>
+										<div class="doctor__group">
+											<h3>Запальні захворювання жіночих статевих органів</h3>
+											<ul>
+												<li>Цистит</li>
+												<li>Захворювання, що передаються статевим шляхом</li>
+												<li>Оофорит, аднексит</li>
+												<li>Кольпіт</li>
+												<li>Ендометрит</li>
+												<li>Сальпінгіт</li>
+											</ul>
+										</div>
+										<div class="doctor__group">
+											<h3>Гормональні порушення</h3>
+											<ul>
+												<li>Порушення менструального циклу</li>
+												<li>Маткові кровотечі</li>
+												<li>СПКЯ (синдром полікістозних яєчників)</li>
+												<li>Гіперандрогенія</li>
+												<li>Інсулінорезистентність, метаболічний синдром</li>
+												<li>Гіперпролактинемія</li>
+												<li>Лейоміома матки, кісти яєчників</li>
+											</ul>
+										</div>
+										<div class="doctor__group">
+											<h3>Також</h3>
+											<ul>
+												<li>Клімактеричний синдром — з індивідуальним підбором замісної гормональної терапії</li>
+												<li>Різні види безпліддя</li>
+												<li>Прегравідарна підготовка (підготовка до вагітності)</li>
+												<li>Підбір контрацепції з урахуванням ваших побажань та особливостей</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="doctor__education">
+									<div>
+										<h2>Освіта та кваліфікація</h2>
+									</div>
+									<ul class="doctor__timeline">
+										<li>
+											<span class="doctor__year">2008</span>
+											<p class="doctor__course">Акушерство та гінекологія, інтернатура</p>
+											<p class="doctor__place">Національний медичний університет ім. О. О. Богомольця</p>
+										</li>
+										<li>
+											<span class="doctor__year">2016</span>
+											<p class="doctor__course">Дитяча та підліткова гінекологія, спеціалізація</p>
+											<p class="doctor__place">НУОЗ України ім. П. Л. Шупика</p>
+										</li>
+										<li>
+											<span class="doctor__year">2019</span>
+											<p class="doctor__course">Вища кваліфікаційна категорія</p>
+											<p class="doctor__place">МОЗ України</p>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="doctor__aside">
+							<div class="doctor__photo">
+								<img src="./images/photo-01.webp" width="600" height="600" alt="Шимбарьова Тетяна Анатоліївна">
+							</div>
+							<div class="doctor__schedule">
+								<div class="doctor__scroll" role="region" aria-label="Appointment schedule" tabindex="0">
+									<div class="doctor__days">
+										<div>
+											<p class="doctor__label">Дні прийому</p>
+										</div>
+										<ul class="doctor__week" aria-hidden="true">
+											<li class="doctor__day doctor__day--on">Пн</li>
+											<li class="doctor__day">Вт</li>
+											<li class="doctor__day doctor__day--on">Ср</li>
+											<li class="doctor__day">Чт</li>
+											<li class="doctor__day doctor__day--on">Пт</li>
+											<li class="doctor__day">Сб</li>
+											<li class="doctor__day">Нд</li>
+										</ul>
+										<div>
+											<ul class="doctor__hours">
+												<li><span>Пн, Пт</span> 09:00 – 15:00</li>
+												<li><span>Ср</span> 13:00 – 16:00</li>
+											</ul>
+										</div>
+									</div>
+									<div class="doctor__venue">
+										<div class="doctor__caption">
+											<span class="doctor__icon">
+												<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+													<path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"></path>
+												</svg>
+											</span>
+											<p>Місце прийому</p>
+										</div>
+										<ul class="doctor__addresses">
+											<li>
+												<p class="doctor__address">вул. Велика Васильківська, 72</p>
+												<p class="doctor__note">Кабінет 204, 2 поверх</p>
+											</li>
+										</ul>
+									</div>
+									<div class="doctor__call">
+										<div class="doctor__call-head">
+											<p class="doctor__label">Запис за телефоном</p>
+											<p class="doctor__time">
+												<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+													<circle cx="10" cy="10" r="7.5"></circle>
+													<path d="M10 6v4l2.5 1.5"></path>
+												</svg>
+												Пн–Сб 07:00–19:00
+											</p>
+										</div>
+										<div class="doctor__dial">
+											<span class="doctor__icon">
+												<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+													<path d="M6.62 10.79a15.1 15.1 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.61 21 3 13.39 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1.02l-2.2 2.2z"></path>
+												</svg>
+											</span>
+											<ul class="doctor__phones">
+												<li><a href="tel:0800331212">0 800 33 12 12</a></li>
+												<li><a href="tel:0442281212">044 228 12 12</a></li>
+												<li><a href="tel:0672281212">067 228 12 12</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+	
+		<footer class="footer">
+			<div class="container">
+				<div class="footer__inner">
+					<div class="footer__brand">
+						<div class="logo">
+							<a href="./index.html">
+								<img src="./images/logo-diagnostikaplus-white.svg" width="218" height="44" loading="lazy" alt="Діагностика плюс">
+							</a>
+						</div>
+						<div class="footer__about">
+							<p>«Діагностика плюс» — лабораторні дослідження та пункт прийому аналізів. Ліцензія МОЗ України, акредитація ISO 15189.</p>
+						</div>
+						<div class="footer__helsi">
+							<div class="footer__helsi-logo">
+								<img src="./images/logo-helsi.webp" width="428" height="274" loading="lazy" alt="Helsi">
+							</div>
+							<div class="footer__helsi-text">
+								<span>Ми в системі Helsi</span>
+								<span>Онлайн-запис на аналізи</span>
+							</div>
+						</div>
+					</div>
+					<div class="footer__col">
+						<button class="btn footer__toggle" type="button" aria-expanded="false" aria-controls="footer-sections" data-footer-toggle>
+							<span>Розділи</span>
+							<svg class="footer__toggle-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+								<line x1="3" y1="8" x2="13" y2="8"></line>
+								<line x1="8" y1="3" x2="8" y2="13"></line>
+							</svg>
+						</button>
+						<div class="footer__panel" id="footer-sections">
+							<ul class="footer__links">
+								<li><a href="./index.html">Головна</a></li>
+								<li><a href="./prices.html">Аналізи та ціни</a></li>
+								<li><a href="./doctors.html">Наші лікарі</a></li>
+								<li><a href="./appointment.html">Запис на прийом</a></li>
+								<li><a href="./about.html">Про компанію</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="footer__col">
+						<button class="btn footer__toggle" type="button" aria-expanded="false" aria-controls="footer-info" data-footer-toggle>
+							<span>Інформація</span>
+							<svg class="footer__toggle-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+								<line x1="3" y1="8" x2="13" y2="8"></line>
+								<line x1="8" y1="3" x2="8" y2="13"></line>
+							</svg>
+						</button>
+						<div class="footer__panel" id="footer-info">
+							<ul class="footer__links">
+								<li><a href="#">Пацієнтам</a></li>
+								<li><a href="./partners.html">Партнерам</a></li>
+								<li><a href="./preparation.html">Підготовка до аналізів</a></li>
+								<li><a href="./about.html">Ліцензії та сертифікати</a></li>
+								<li><a href="./contacts.html">Зв’язок</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="footer__col">
+						<button class="btn footer__toggle" type="button" aria-expanded="false" aria-controls="footer-contacts" data-footer-toggle>
+							<span>Контакти</span>
+							<svg class="footer__toggle-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+								<line x1="3" y1="8" x2="13" y2="8"></line>
+								<line x1="8" y1="3" x2="8" y2="13"></line>
+							</svg>
+						</button>
+						<div class="footer__panel" id="footer-contacts">
+							<div class="footer__contacts">
+								<div class="footer__contacts-text">
+									<p class="footer__phone"><a href="tel:0800331212">0 800 33 12 12</a></p>
+									<p class="footer__address">м. Київ, вул. Медична 14<br>Пн–Сб 07:00–19:00, Нд 08:00–14:00</p>
+									<p><a href="mailto:info@mtm-lab.ua">info@mtm-lab.ua</a></p>
+								</div>
+								<ul class="footer__social">
+									<li>
+										<a href="#" aria-label="Facebook">
+											<img src="./images/ico-facebook.svg" width="24" height="24" loading="lazy" alt="">
+										</a>
+									</li>
+									<li>
+										<a href="#" aria-label="Instagram">
+											<img src="./images/ico-instagram.svg" width="24" height="24" loading="lazy" alt="">
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="footer__bottom">
+					<p>&copy; 2026 ТОВ «МЦ «МТМ»». Усі права захищено.</p>
+					<ul class="footer__legal">
+						<li><a href="#">Політика конфіденційності</a></li>
+						<li><a href="#">Публічна угода</a></li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+</body>
+</html>
