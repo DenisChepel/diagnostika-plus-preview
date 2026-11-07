@@ -10,7 +10,7 @@
 </head>
 <body>
 		<div class="topbar">
-			<div class="container">
+			<div class="shell">
 				<div class="topbar__info">
 					<p>Пн–Сб 07:00–19:00, Нд&nbsp;08:00&#65279;–&#65279;14:00</p>
 					<p class="topbar__address">м. Харків, майдан Захисників України, 15</p>
@@ -18,7 +18,7 @@
 			</div>
 		</div>
 		<header class="header">
-			<div class="container">
+			<div class="shell">
 				<div class="header__main">
 					<div class="header__brand logo">
 						<a href="./index.html">
@@ -55,11 +55,17 @@
 					</div>
 					<div class="header__actions">
 						<div class="header__phone">
-							<p><a href="tel:0800331212">0 800 33 12 12</a></p>
+							<p><a href="tel:+380996209957">099 620-99-57</a></p>
 							<span class="header__callback">Зв’язатися з нами</span>
 						</div>
 						<div class="header__cta">
 							<button class="btn btn--sm" type="button" data-modal-open>Записатись</button>
+							<a class="btn header__login" href="https://patient-docs.com/login" aria-label="Sign in">
+								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+									<circle cx="12" cy="8" r="4"></circle>
+									<path d="M4 21a8 8 0 0 1 16 0"></path>
+								</svg>
+							</a>
 						</div>
 						<div class="header__controls">
 							<button class="btn header__search-toggle" type="button" aria-controls="site-search-form" aria-expanded="false" aria-label="Open search" data-search-toggle>
@@ -87,7 +93,7 @@
 								<a href="#">Пацієнтам</a>
 								<ul class="header__submenu">
 									<li><a href="./preparation.html">Підготовка до аналізів</a></li>
-									<li><a href="./results.html">Результати онлайн</a></li>
+									<li><a href="https://patient-docs.com/login">Результати онлайн</a></li>
 									<li><a href="./faq.html">Питання та відповіді</a></li>
 								</ul>
 							</li>
@@ -98,11 +104,18 @@
 					</div>
 					<div class="header__nav-actions">
 						<div class="header__phone header__phone--menu">
-							<p><a href="tel:0800331212">0 800 33 12 12</a></p>
+							<p><a href="tel:+380996209957">099 620-99-57</a></p>
 							<span class="header__callback">Зв’язатися з нами</span>
 						</div>
-						<div>
+						<div class="header__nav-buttons">
 							<button class="btn btn--sm" type="button" data-modal-open>Записатись</button>
+							<a class="btn btn--sm btn--outline header__login-menu" href="https://patient-docs.com/login">
+								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+									<circle cx="12" cy="8" r="4"></circle>
+									<path d="M4 21a8 8 0 0 1 16 0"></path>
+								</svg>
+								Увійти
+							</a>
 						</div>
 					</div>
 				</nav>
@@ -142,7 +155,7 @@
 				<div class="hero__viewport" data-hero-viewport>
 					<div class="hero__track">
 						<div class="hero__slide" role="group" aria-roledescription="slide" aria-label="1 of 3">
-							<div class="container">
+							<div class="shell">
 								<div class="hero__content">
 									<div class="hero__text">
 										<span class="badge badge--dot">Акредитована лабораторія · ISO 15189</span>
@@ -178,7 +191,7 @@
 							</div>
 						</div>
 						<div class="hero__slide" role="group" aria-roledescription="slide" aria-label="2 of 3">
-							<div class="container">
+							<div class="shell">
 								<div class="hero__content">
 									<div class="hero__text">
 										<span class="badge badge--green">Консультація лікаря</span>
@@ -207,7 +220,7 @@
 							</div>
 						</div>
 						<div class="hero__slide" role="group" aria-roledescription="slide" aria-label="3 of 3">
-							<div class="container">
+							<div class="shell">
 								<div class="hero__content">
 									<div class="hero__text">
 										<span class="badge badge--red">Мама і дитина</span>
@@ -230,7 +243,7 @@
 					</div>
 				</div>
 				<div class="hero__controls">
-					<div class="container">
+					<div class="shell">
 						<div class="hero__arrows">
 							<button class="btn btn--outline hero__arrow" type="button" aria-label="Previous slide" data-hero-prev>
 								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
@@ -252,7 +265,7 @@
 				</div>
 			</section>
 			<section class="quick-links">
-				<div class="container">
+				<div class="shell">
 					<ul class="quick-links__list">
 						<li>
 							<a class="quick-links__card" href="./prices.html">
@@ -314,7 +327,7 @@
 				</div>
 			</section>
 			<section class="catalog">
-				<div class="container">
+				<div class="shell">
 					<div class="section-head">
 						<div class="section-head__text">
 							<span class="eyebrow">Аналізи та ціни</span>
@@ -327,7 +340,7 @@
 					</div>
 					<ul class="catalog__list">
 						<li>
-							<a class="catalog__card catalog__card--red" href="./prices.html">
+							<div class="catalog__card catalog__card--red">
 								<div class="catalog__icon">
 									<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
 										<path d="M12 20c4-3 7-6 7-9.5A4.5 4.5 0 0 0 12 7a4.5 4.5 0 0 0-7 3.5C5 14 8 17 12 20Z"></path>
@@ -341,10 +354,10 @@
 									<span class="catalog__price">від 150 ₴</span>
 									<span class="catalog__count">64 аналізи</span>
 								</div>
-							</a>
+							</div>
 						</li>
 						<li>
-							<a class="catalog__card" href="./prices.html">
+							<div class="catalog__card">
 								<div class="catalog__icon">
 									<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
 										<path d="M9 3v6l-3 7a4 4 0 0 0 4 5h4a4 4 0 0 0 4-5l-3-7V3z"></path>
@@ -359,10 +372,10 @@
 									<span class="catalog__price">від 120 ₴</span>
 									<span class="catalog__count">96 аналізів</span>
 								</div>
-							</a>
+							</div>
 						</li>
 						<li>
-							<a class="catalog__card catalog__card--green" href="./prices.html">
+							<div class="catalog__card catalog__card--green">
 								<div class="catalog__icon">
 									<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
 										<circle cx="12" cy="12" r="8"></circle>
@@ -377,10 +390,10 @@
 									<span class="catalog__price">від 210 ₴</span>
 									<span class="catalog__count">78 аналізів</span>
 								</div>
-							</a>
+							</div>
 						</li>
 						<li>
-							<a class="catalog__card" href="./prices.html">
+							<div class="catalog__card">
 								<div class="catalog__icon">
 									<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
 										<circle cx="12" cy="12" r="3"></circle>
@@ -395,10 +408,10 @@
 									<span class="catalog__price">від 260 ₴</span>
 									<span class="catalog__count">112 аналізів</span>
 								</div>
-							</a>
+							</div>
 						</li>
 						<li>
-							<a class="catalog__card catalog__card--red" href="./prices.html">
+							<div class="catalog__card catalog__card--red">
 								<div class="catalog__icon">
 									<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
 										<path d="M6 4h12v4a6 6 0 0 1-12 0z"></path>
@@ -413,10 +426,10 @@
 									<span class="catalog__price">від 340 ₴</span>
 									<span class="catalog__count">45 панелей</span>
 								</div>
-							</a>
+							</div>
 						</li>
 						<li>
-							<a class="catalog__card catalog__card--green" href="./prices.html">
+							<div class="catalog__card catalog__card--green">
 								<div class="catalog__icon">
 									<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
 										<path d="M8 3v7a4 4 0 0 0 8 0V3"></path>
@@ -431,10 +444,10 @@
 									<span class="catalog__price">від 290 ₴</span>
 									<span class="catalog__count">31 аналіз</span>
 								</div>
-							</a>
+							</div>
 						</li>
 						<li>
-							<a class="catalog__card" href="./prices.html">
+							<div class="catalog__card">
 								<div class="catalog__icon">
 									<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
 										<path d="M5 20V9l7-5 7 5v11"></path>
@@ -449,7 +462,7 @@
 									<span class="catalog__price">від 480 ₴</span>
 									<span class="catalog__count">22 програми</span>
 								</div>
-							</a>
+							</div>
 						</li>
 						<li>
 							<a class="catalog__card catalog__card--navy" href="./prices.html">
@@ -469,7 +482,7 @@
 				</div>
 			</section>
 			<section class="banner">
-				<div class="container">
+				<div class="shell">
 					<div class="banner__inner">
 						<div class="banner__content">
 							<div class="banner__text">
@@ -488,7 +501,7 @@
 				</div>
 			</section>
 			<section class="doctors">
-				<div class="container">
+				<div class="shell">
 					<div class="section-head">
 						<div class="section-head__text">
 							<span class="eyebrow">Консультація лікарів</span>
@@ -544,7 +557,7 @@
 				</div>
 			</section>
 			<section class="about">
-				<div class="container">
+				<div class="shell">
 					<div class="about__inner">
 						<div class="about__media">
 							<img src="./images/img-05.webp" width="1144" height="1144" loading="lazy" alt="Приміщення лабораторії з аналізаторами">
@@ -584,7 +597,7 @@
 				</div>
 			</section>
 			<section id="points" class="points">
-				<div class="container">
+				<div class="shell">
 					<div class="section-head">
 						<div class="section-head__text">
 							<span class="eyebrow">Де здати аналізи</span>
@@ -621,7 +634,7 @@
 				</div>
 			</section>
 			<section class="reviews reviews--bg-tint">
-				<div class="container">
+				<div class="shell">
 					<div class="section-head">
 						<div class="section-head__text">
 							<h2>Відгуки пацієнтів</h2>
@@ -677,7 +690,7 @@
 				</div>
 			</section>
 			<section class="partners">
-				<div class="container">
+				<div class="shell">
 					<div class="partners__inner">
 						<div class="section-head">
 							<div class="section-head__text">
@@ -708,7 +721,7 @@
 				</div>
 			</section>
 			<section class="faq">
-				<div class="container">
+				<div class="shell">
 					<div class="faq__inner">
 						<div class="faq__media">
 							<img src="./images/img-12.webp" width="916" height="1144" loading="lazy" alt="Медсестра консультує пацієнтку у пункті прийому">
@@ -807,7 +820,7 @@
 				</div>
 			</section>
 			<section class="blog">
-				<div class="container">
+				<div class="shell">
 					<div class="section-head">
 						<div class="section-head__text">
 							<h2>Корисне про аналізи</h2>
@@ -854,15 +867,15 @@
 				</div>
 			</section>
 			<section class="cta">
-				<div class="container">
+				<div class="shell">
 					<div class="cta__inner">
 						<div class="cta__text">
 							<h2>Не відкладайте перевірку здоров’я</h2>
 							<p>Запишіться на зручний час — або зателефонуйте, ми підберемо аналізи разом.</p>
 						</div>
 						<div class="actions">
-							<button class="btn btn--white" type="button" data-modal-open>Записатись онлайн</button>
-							<a class="btn btn--outline-white" href="tel:0800331212">0 800 33 12 12</a>
+							<a class="btn btn--white" href="./appointment.html">Записатись на прийом</a>
+							<a class="btn btn--outline-white" href="tel:+380996209957">099 620-99-57</a>
 						</div>
 					</div>
 				</div>
@@ -870,7 +883,7 @@
 		</main>
 	
 		<footer class="footer">
-			<div class="container">
+			<div class="shell">
 				<div class="footer__inner">
 					<div class="footer__brand">
 						<div class="logo">
@@ -938,7 +951,7 @@
 						<div class="footer__panel" id="footer-contacts">
 							<div class="footer__contacts">
 								<div class="footer__contacts-text">
-									<p class="footer__phone"><a href="tel:0800331212">0 800 33 12 12</a></p>
+									<p class="footer__phone"><a href="tel:+380996209957">099 620-99-57</a></p>
 									<p class="footer__address">м. Київ, вул. Медична 14<br>Пн–Сб 07:00–19:00, Нд 08:00–14:00</p>
 									<p><a href="mailto:info@mtm-lab.ua">info@mtm-lab.ua</a></p>
 								</div>
