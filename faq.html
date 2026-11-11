@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Питання та відповіді — Діагностика плюс</title>
   <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/pages/faq.css">
   <script src="./js/main.js" defer></script>
 </head>
 <body>
@@ -150,10 +151,425 @@
 		</dialog>
 	
 		<main>
-			<section class="intro">
+			<section class="page-hero faq-hero">
 				<div class="shell">
-					<h1>Питання та відповіді</h1>
-					<p>Сторінка в роботі — тут будуть часті питання пацієнтів.</p>
+					<div class="page-hero__text">
+						<h1>Питання та відповіді</h1>
+						<p>Зібрали відповіді на питання, які пацієнти ставлять найчастіше. Не знайшли свого — зателефонуйте, адміністратор підкаже.</p>
+					</div>
+				</div>
+			</section>
+			<section class="faq-group">
+				<div class="shell">
+					<div class="group-head">
+						<h2>Візит до лабораторії</h2>
+					</div>
+					<ul class="faq-group__list">
+						<li class="faq-group__item">
+							<h3>
+								<button class="btn faq-group__question" type="button" aria-expanded="true" aria-controls="faq-answer-1" data-faq-toggle>
+									<span>Що потрібно для візиту до лабораторії?</span>
+									<span class="faq-group__icon">
+										<svg class="plus" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+											<line x1="3" y1="8" x2="13" y2="8"></line>
+											<line x1="8" y1="3" x2="8" y2="13"></line>
+										</svg>
+									</span>
+								</button>
+							</h3>
+							<div class="fold" id="faq-answer-1">
+								<div class="faq-group__answer">
+									<div class="faq-group__text">
+										<p>Щоб здати аналізи, нічого особливого не знадобиться. Обстеження можна пройти без направлення лікаря — достатньо знати, які саме аналізи вам потрібні.</p>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="faq-group__item">
+							<h3>
+								<button class="btn faq-group__question" type="button" aria-expanded="false" aria-controls="faq-answer-2" data-faq-toggle>
+									<span>Чи треба записуватися на аналізи?</span>
+									<span class="faq-group__icon">
+										<svg class="plus" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+											<line x1="3" y1="8" x2="13" y2="8"></line>
+											<line x1="8" y1="3" x2="8" y2="13"></line>
+										</svg>
+									</span>
+								</button>
+							</h3>
+							<div class="fold" id="faq-answer-2">
+								<div class="faq-group__answer">
+									<div class="faq-group__text">
+										<p>Ні. Ви можете прийти до будь-якого нашого пункту без запису в робочий час і здати матеріал для обстеження.</p>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="faq-group__item">
+							<h3>
+								<button class="btn faq-group__question" type="button" aria-expanded="false" aria-controls="faq-answer-3" data-faq-toggle>
+									<span>Як підготуватися до здачі аналізів?</span>
+									<span class="faq-group__icon">
+										<svg class="plus" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+											<line x1="3" y1="8" x2="13" y2="8"></line>
+											<line x1="8" y1="3" x2="8" y2="13"></line>
+										</svg>
+									</span>
+								</button>
+							</h3>
+							<div class="fold" id="faq-answer-3">
+								<div class="faq-group__answer">
+									<div class="faq-group__text">
+										<p>Щоб результати були максимально точними й достовірними, суворо дотримуйтеся правил підготовки до лабораторного дослідження.</p>
+										<p>Для більшості досліджень кров здають натщесерце в першій половині дня. Натщесерце означає, що від останнього прийому їжі минуло щонайменше 4–8 годин. Напередодні також рекомендовано виключити з раціону жирну їжу.</p>
+										<p>Врахуйте, що ліки, алкоголь, кава та куріння можуть вплинути на результат. Хвилювання теж позначається на аналізі крові, тому перед забором відпочиньте 10–15 хвилин у приймальні та заспокойтеся.</p>
+										<p>Багато аналізів потребують особливої підготовки — уточніть правила для свого дослідження в розділі <a href="./preparation.html">Підготовка до аналізів</a>.</p>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="faq-group__item">
+							<h3>
+								<button class="btn faq-group__question" type="button" aria-expanded="false" aria-controls="faq-answer-4" data-faq-toggle>
+									<span>Чи боляче та чи безпечно здавати аналізи?</span>
+									<span class="faq-group__icon">
+										<svg class="plus" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+											<line x1="3" y1="8" x2="13" y2="8"></line>
+											<line x1="8" y1="3" x2="8" y2="13"></line>
+										</svg>
+									</span>
+								</button>
+							</h3>
+							<div class="fold" id="faq-answer-4">
+								<div class="faq-group__answer">
+									<div class="faq-group__text">
+										<p>Завдяки сучасним матеріалам і повністю одноразовим наборам забір крові та урогенітальних мазків абсолютно безпечний.</p>
+										<ul>
+											<li>Неприємні відчуття під час забору крові мінімальні.</li>
+											<li>Сучасне обладнання та тест-системи дозволяють набрати кров для кількох аналізів в одну пробірку.</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="faq-group__item">
+							<h3>
+								<button class="btn faq-group__question" type="button" aria-expanded="false" aria-controls="faq-answer-5" data-faq-toggle>
+									<span>Чому після забору крові в мене утворилася гематома?</span>
+									<span class="faq-group__icon">
+										<svg class="plus" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+											<line x1="3" y1="8" x2="13" y2="8"></line>
+											<line x1="8" y1="3" x2="8" y2="13"></line>
+										</svg>
+									</span>
+								</button>
+							</h3>
+							<div class="fold" id="faq-answer-5">
+								<div class="faq-group__answer">
+									<div class="faq-group__text">
+										<p>Забір крові з вени завжди повʼязаний із мікротравмою судини, тому іноді може утворитися підшкірна гематома. Це залежить від індивідуальних особливостей організму.</p>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="faq-group__item">
+							<h3>
+								<button class="btn faq-group__question" type="button" aria-expanded="false" aria-controls="faq-answer-6" data-faq-toggle>
+									<span>Навіщо вказувати ПІБ лікуючого лікаря?</span>
+									<span class="faq-group__icon">
+										<svg class="plus" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+											<line x1="3" y1="8" x2="13" y2="8"></line>
+											<line x1="8" y1="3" x2="8" y2="13"></line>
+										</svg>
+									</span>
+								</button>
+							</h3>
+							<div class="fold" id="faq-answer-6">
+								<div class="faq-group__answer">
+									<div class="faq-group__text">
+										<p>Ця інформація потрібна лабораторії для оперативного звʼязку з вашим лікарем, якщо знадобляться додаткові відомості. Крім того, цього вимагає стандартне заповнення бланка реєстрації пацієнта в лабораторній програмі.</p>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="faq-group__item">
+							<h3>
+								<button class="btn faq-group__question" type="button" aria-expanded="false" aria-controls="faq-answer-7" data-faq-toggle>
+									<span>Чи дотримується лабораторія конфіденційності?</span>
+									<span class="faq-group__icon">
+										<svg class="plus" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+											<line x1="3" y1="8" x2="13" y2="8"></line>
+											<line x1="8" y1="3" x2="8" y2="13"></line>
+										</svg>
+									</span>
+								</button>
+							</h3>
+							<div class="fold" id="faq-answer-7">
+								<div class="faq-group__answer">
+									<div class="faq-group__text">
+										<p>Так, звісно. Уся інформація про наших клієнтів суворо конфіденційна.</p>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<section class="faq-group">
+				<div class="shell">
+					<div class="group-head">
+						<h2>Результати аналізів</h2>
+					</div>
+					<ul class="faq-group__list">
+						<li class="faq-group__item">
+							<h3>
+								<button class="btn faq-group__question" type="button" aria-expanded="false" aria-controls="faq-answer-8" data-faq-toggle>
+									<span>Як отримати результати аналізів?</span>
+									<span class="faq-group__icon">
+										<svg class="plus" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+											<line x1="3" y1="8" x2="13" y2="8"></line>
+											<line x1="8" y1="3" x2="8" y2="13"></line>
+										</svg>
+									</span>
+								</button>
+							</h3>
+							<div class="fold" id="faq-answer-8">
+								<div class="faq-group__answer">
+									<div class="faq-group__text">
+										<p>Ви можете обрати зручний для вас спосіб:</p>
+										<ul>
+											<li>У будь-якому нашому пункті — за предʼявлення чека, виданого в одному з пунктів «Діагностики плюс».</li>
+											<li>На електронну пошту або у веб-архів. Щоб отримати результат на e-mail, вкажіть адресу під час реєстрації.</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="faq-group__item">
+							<h3>
+								<button class="btn faq-group__question" type="button" aria-expanded="false" aria-controls="faq-answer-9" data-faq-toggle>
+									<span>Що означають результати моїх аналізів?</span>
+									<span class="faq-group__icon">
+										<svg class="plus" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+											<line x1="3" y1="8" x2="13" y2="8"></line>
+											<line x1="8" y1="3" x2="8" y2="13"></line>
+										</svg>
+									</span>
+								</button>
+							</h3>
+							<div class="fold" id="faq-answer-9">
+								<div class="faq-group__answer">
+									<div class="faq-group__text">
+										<p>У бланку результату вказані ваші показники та межі норми для цього дослідження. Детальніше все пояснить ваш лікар.</p>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="faq-group__item">
+							<h3>
+								<button class="btn faq-group__question" type="button" aria-expanded="false" aria-controls="faq-answer-10" data-faq-toggle>
+									<span>Хто розповість мені про мої результати?</span>
+									<span class="faq-group__icon">
+										<svg class="plus" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+											<line x1="3" y1="8" x2="13" y2="8"></line>
+											<line x1="8" y1="3" x2="8" y2="13"></line>
+										</svg>
+									</span>
+								</button>
+							</h3>
+							<div class="fold" id="faq-answer-10">
+								<div class="faq-group__answer">
+									<div class="faq-group__text">
+										<p>Ви можете звернутися до свого лікуючого лікаря або отримати консультацію в нашому центрі. Запис за телефонами:</p>
+									</div>
+									<ul class="faq-group__phones">
+										<li>
+											<a href="tel:+380577004257">
+												<span class="faq-group__dial">
+													<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+														<path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"></path>
+													</svg>
+												</span>
+												057 700-42-57
+											</a>
+										</li>
+										<li>
+											<a href="tel:+380996209957">
+												<span class="faq-group__dial">
+													<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+														<path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"></path>
+													</svg>
+												</span>
+												099 620-99-57
+											</a>
+										</li>
+										<li>
+											<a href="tel:+380977032509">
+												<span class="faq-group__dial">
+													<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+														<path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"></path>
+													</svg>
+												</span>
+												097 703-25-09
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<li class="faq-group__item">
+							<h3>
+								<button class="btn faq-group__question" type="button" aria-expanded="false" aria-controls="faq-answer-11" data-faq-toggle>
+									<span>Чому ви не коментуєте результати аналізів?</span>
+									<span class="faq-group__icon">
+										<svg class="plus" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+											<line x1="3" y1="8" x2="13" y2="8"></line>
+											<line x1="8" y1="3" x2="8" y2="13"></line>
+										</svg>
+									</span>
+								</button>
+							</h3>
+							<div class="fold" id="faq-answer-11">
+								<div class="faq-group__answer">
+									<div class="faq-group__text">
+										<p>Лабораторія «Діагностика плюс» не є лікувальним закладом і не встановлює діагноз. Правильний діагноз може поставити лише ваш лікар з урахуванням клінічної картини.</p>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<section class="faq-group">
+				<div class="shell">
+					<div class="group-head">
+						<h2>Обстеження та вартість</h2>
+					</div>
+					<ul class="faq-group__list">
+						<li class="faq-group__item">
+							<h3>
+								<button class="btn faq-group__question" type="button" aria-expanded="false" aria-controls="faq-answer-12" data-faq-toggle>
+									<span>Як часто слід здавати аналізи?</span>
+									<span class="faq-group__icon">
+										<svg class="plus" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+											<line x1="3" y1="8" x2="13" y2="8"></line>
+											<line x1="8" y1="3" x2="8" y2="13"></line>
+										</svg>
+									</span>
+								</button>
+							</h3>
+							<div class="fold" id="faq-answer-12">
+								<div class="faq-group__answer">
+									<div class="faq-group__text">
+										<p>Що раніше виявлено хворобу, то простіше її вилікувати, але багато захворювань на ранніх стадіях ніяк себе не проявляють. Тому, навіть якщо ви почуваєтеся здоровими, з профілактичною метою варто періодично здавати прості аналізи: загальний аналіз крові та сечі, глюкозу.</p>
+										<p>Найточнішу картину стану здоровʼя дають аналізи, які здають систематично: до 30–40 років — раз на рік, після 40 — раз на пів року. За наявності хронічних захворювань такі дослідження можна проходити раз на три місяці або щомісяця:</p>
+										<ul>
+											<li>Гормони щитоподібної залози</li>
+											<li>Статеві гормони</li>
+											<li>Онкомаркери</li>
+											<li>Ліпіди та холестерин</li>
+											<li>Урогенітальні інфекції</li>
+											<li>Гепатити</li>
+										</ul>
+										<p>Памʼятайте: лише регулярне профілактичне обстеження допоможе зберегти здоровʼя.</p>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="faq-group__item">
+							<h3>
+								<button class="btn faq-group__question" type="button" aria-expanded="false" aria-controls="faq-answer-13" data-faq-toggle>
+									<span>Чому у вас такі ціни на аналізи?</span>
+									<span class="faq-group__icon">
+										<svg class="plus" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+											<line x1="3" y1="8" x2="13" y2="8"></line>
+											<line x1="8" y1="3" x2="8" y2="13"></line>
+										</svg>
+									</span>
+								</button>
+							</h3>
+							<div class="fold" id="faq-answer-13">
+								<div class="faq-group__answer">
+									<div class="faq-group__text">
+										<p>Вартість досліджень визначається якістю обладнання, реактивів, матеріалів і тест-систем, які використовуються на всіх етапах. Ціна аналізу — це сумарна вартість усього необхідного, щоб отримати якісний, коректний і гарантований результат.</p>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="faq-group__item">
+							<h3>
+								<button class="btn faq-group__question" type="button" aria-expanded="false" aria-controls="faq-answer-14" data-faq-toggle>
+									<span>Чому ви не робите деякі аналізи?</span>
+									<span class="faq-group__icon">
+										<svg class="plus" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+											<line x1="3" y1="8" x2="13" y2="8"></line>
+											<line x1="8" y1="3" x2="8" y2="13"></line>
+										</svg>
+									</span>
+								</button>
+							</h3>
+							<div class="fold" id="faq-answer-14">
+								<div class="faq-group__answer">
+									<div class="faq-group__text">
+										<p>Перелік досліджень «Діагностики плюс» охоплює всі основні напрями й виконується за передовими світовими методиками лабораторної діагностики — сьогодні це понад 300 тестів. Ми постійно впроваджуємо нові аналізи, якщо вони мають клінічну значущість і адекватну вартість.</p>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<section class="phones-cta">
+				<div class="shell">
+					<div class="phones-cta__inner">
+						<div class="phones-cta__head">
+							<div class="phones-cta__icon">
+								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+									<circle cx="12" cy="12" r="9"></circle>
+									<path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.6v.6M12 17v.1"></path>
+								</svg>
+							</div>
+							<div class="phones-cta__text">
+								<h2>Не знайшли відповіді?</h2>
+								<p>Зателефонуйте — адміністратор відповість на ваше питання та підкаже, як підготуватися до дослідження.</p>
+							</div>
+						</div>
+						<ul class="phones-cta__phones">
+							<li>
+								<a href="tel:+380577004257">
+									<span class="phones-cta__dial">
+										<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+											<path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"></path>
+										</svg>
+									</span>
+									<span class="phones-cta__number">057 700-42-57</span>
+									<span class="phones-cta__label">Міський</span>
+								</a>
+							</li>
+							<li>
+								<a href="tel:+380996209957">
+									<span class="phones-cta__dial">
+										<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+											<path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"></path>
+										</svg>
+									</span>
+									<span class="phones-cta__number">099 620-99-57</span>
+									<span class="phones-cta__label">Vodafone · основний</span>
+								</a>
+							</li>
+							<li>
+								<a href="tel:+380977032509">
+									<span class="phones-cta__dial">
+										<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+											<path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"></path>
+										</svg>
+									</span>
+									<span class="phones-cta__number">097 703-25-09</span>
+									<span class="phones-cta__label">Київстар</span>
+								</a>
+							</li>
+						</ul>
+					</div>
 				</div>
 			</section>
 		</main>
@@ -183,12 +599,12 @@
 					<div class="footer__col">
 						<button class="btn footer__toggle" type="button" aria-expanded="false" aria-controls="footer-sections" data-footer-toggle>
 							<span>Розділи</span>
-							<svg class="footer__toggle-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+							<svg class="plus footer__toggle-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
 								<line x1="3" y1="8" x2="13" y2="8"></line>
 								<line x1="8" y1="3" x2="8" y2="13"></line>
 							</svg>
 						</button>
-						<div class="footer__panel" id="footer-sections">
+						<div class="fold footer__panel" id="footer-sections">
 							<ul class="footer__links">
 								<li><a href="./index.html">Головна</a></li>
 								<li><a href="./prices.html">Аналізи та ціни</a></li>
@@ -201,12 +617,12 @@
 					<div class="footer__col">
 						<button class="btn footer__toggle" type="button" aria-expanded="false" aria-controls="footer-info" data-footer-toggle>
 							<span>Інформація</span>
-							<svg class="footer__toggle-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+							<svg class="plus footer__toggle-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
 								<line x1="3" y1="8" x2="13" y2="8"></line>
 								<line x1="8" y1="3" x2="8" y2="13"></line>
 							</svg>
 						</button>
-						<div class="footer__panel" id="footer-info">
+						<div class="fold footer__panel" id="footer-info">
 							<ul class="footer__links">
 								<li><a href="#">Пацієнтам</a></li>
 								<li><a href="./partners.html">Партнерам</a></li>
@@ -219,12 +635,12 @@
 					<div class="footer__col">
 						<button class="btn footer__toggle" type="button" aria-expanded="false" aria-controls="footer-contacts" data-footer-toggle>
 							<span>Контакти</span>
-							<svg class="footer__toggle-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+							<svg class="plus footer__toggle-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
 								<line x1="3" y1="8" x2="13" y2="8"></line>
 								<line x1="8" y1="3" x2="8" y2="13"></line>
 							</svg>
 						</button>
-						<div class="footer__panel" id="footer-contacts">
+						<div class="fold footer__panel" id="footer-contacts">
 							<div class="footer__contacts">
 								<div class="footer__contacts-text">
 									<p class="footer__phone"><a href="tel:+380996209957">099 620-99-57</a></p>
