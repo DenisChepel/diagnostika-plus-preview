@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Корисне про аналізи — Діагностика плюс</title>
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/pages/blog.css">
+  <script src="./js/main.js" defer></script>
+</head>
+<body>
+		<div class="topbar">
+			<div class="shell">
+				<div class="topbar__info">
+					<p class="topbar__hours">Пн–Сб 08:00–15:00</p>
+					<p class="topbar__address">м. Харків, вул. Максиміліанівська, 10</p>
+				</div>
+			</div>
+		</div>
+		<header class="header">
+			<div class="shell">
+				<div class="header__main">
+					<div class="header__brand logo">
+						<a href="./index.html">
+							<img src="./images/logo-diagnostikaplus.svg" width="238" height="49" alt="Діагностика плюс">
+						</a>
+					</div>
+					<div class="header__search-wrap">
+						<form class="header__search" id="site-search-form" action="./prices.html" role="search">
+							<label class="visually-hidden" for="site-search">Пошук аналізу</label>
+							<input id="site-search" type="search" name="q" placeholder="Пошук аналізу…" autocomplete="off" aria-controls="site-search-results" data-suggest-field>
+							<button class="btn" type="submit" aria-label="Search">
+								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+									<circle cx="11" cy="11" r="7"></circle>
+									<path d="M16.5 16.5 21 21"></path>
+								</svg>
+							</button>
+						</form>
+						<div class="header__suggest" id="site-search-results" data-suggest hidden>
+							<ul class="header__suggest-list" data-suggest-list></ul>
+							<div class="header__suggest-all" data-suggest-all>
+								<a href="./prices.html">
+									<span>Переглянути всі результати (<span data-suggest-count></span>)</span>
+								</a>
+							</div>
+							<template data-suggest-item>
+								<li>
+									<a href="./prices.html">
+										<span data-suggest-name></span>
+										<span class="header__suggest-price" data-suggest-price></span>
+									</a>
+								</li>
+							</template>
+						</div>
+					</div>
+					<div class="header__actions">
+						<div class="header__phone">
+							<p><a href="tel:+380996209957">099 620-99-57</a></p>
+							<span class="header__callback">Зв’язатися з нами</span>
+						</div>
+						<div class="header__cta">
+							<button class="btn btn--sm" type="button" data-modal-open>Записатись</button>
+							<a class="btn header__login" href="https://patient-docs.com/login" aria-label="Sign in">
+								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+									<circle cx="12" cy="8" r="4"></circle>
+									<path d="M4 21a8 8 0 0 1 16 0"></path>
+								</svg>
+							</a>
+						</div>
+						<div class="header__controls">
+							<button class="btn header__search-toggle" type="button" aria-controls="site-search-form" aria-expanded="false" aria-label="Open search" data-search-toggle>
+								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+									<circle cx="11" cy="11" r="7"></circle>
+									<path d="M16.5 16.5 21 21"></path>
+								</svg>
+							</button>
+							<button class="btn header__burger" type="button" aria-controls="site-menu" aria-expanded="false" aria-label="Menu" data-menu-toggle>
+								<span></span>
+								<span></span>
+								<span></span>
+							</button>
+						</div>
+					</div>
+				</div>
+				<nav class="header__nav" id="site-menu" aria-label="Main navigation">
+					<div class="header__menu">
+						<ul class="header__menu-list">
+							<li><a href="./index.html">Головна</a></li>
+							<li><a href="./doctors.html">Наші лікарі</a></li>
+							<li><a href="./appointment.html">Запис на прийом</a></li>
+							<li><a href="./prices.html">Аналізи та ціни</a></li>
+							<li>
+								<a href="#">Пацієнтам</a>
+								<ul class="header__submenu">
+									<li><a href="./points.html">Пункти прийому аналізів</a></li>
+									<li><a href="./preparation.html">Підготовка до аналізів</a></li>
+									<li><a href="https://patient-docs.com/login">Результати онлайн</a></li>
+									<li><a href="./faq.html">Питання та відповіді</a></li>
+									<li><a href="./blog.html">Корисні статті</a></li>
+								</ul>
+							</li>
+							<li><a href="./partners.html">Партнерам</a></li>
+							<li><a href="./contacts.html">Зв’язок</a></li>
+							<li><a href="./about.html">Про компанію</a></li>
+						</ul>
+					</div>
+					<div class="header__nav-actions">
+						<div class="header__phone header__phone--menu">
+							<p><a href="tel:+380996209957">099 620-99-57</a></p>
+							<span class="header__callback">Зв’язатися з нами</span>
+						</div>
+						<div class="header__nav-buttons">
+							<button class="btn btn--sm" type="button" data-modal-open>Записатись</button>
+							<a class="btn btn--sm btn--outline header__login-menu" href="https://patient-docs.com/login">
+								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+									<circle cx="12" cy="8" r="4"></circle>
+									<path d="M4 21a8 8 0 0 1 16 0"></path>
+								</svg>
+								Увійти
+							</a>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</header>
+		<dialog class="modal" aria-labelledby="booking-title" data-modal>
+			<div class="modal__box">
+				<button class="btn modal__close" type="button" aria-label="Close dialog" data-modal-close>
+					<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+						<path d="m7 7 10 10M17 7 7 17"></path>
+					</svg>
+				</button>
+				<div class="modal__head">
+					<h2 id="booking-title">Запис на прийом</h2>
+					<p>Залиште контакти — ми передзвонимо в робочий час, підберемо аналізи та зручний час візиту.</p>
+				</div>
+				<form class="modal__form" action="#" method="post" data-validate>
+					<div class="modal__field">
+						<label for="booking-name">Ім’я</label>
+						<input type="text" id="booking-name" name="name" autocomplete="given-name" required minlength="2" maxlength="60" placeholder="Ваше ім’я">
+					</div>
+					<div class="modal__field">
+						<label for="booking-phone">Телефон</label>
+						<input type="tel" id="booking-phone" name="phone" autocomplete="tel" required maxlength="19" pattern="\+38 \(0\d{2}\) \d{3}-\d{2}-\d{2}" placeholder="+38 (0__) ___-__-__" data-phone>
+					</div>
+					<div class="modal__consent">
+						<input type="checkbox" id="booking-consent" name="consent" required>
+						<label for="booking-consent">Погоджуюсь на обробку персональних даних згідно з <a href="#">політикою конфіденційності</a></label>
+					</div>
+					<button class="btn" type="submit">Записатись</button>
+				</form>
+			</div>
+		</dialog>
+	
+		<main>
+			<section class="page-hero blog-hero">
+				<div class="shell">
+					<div class="page-hero__text">
+						<h1>Корисне про аналізи</h1>
+						<p>Пояснюємо простими словами, що показують аналізи, як до них підготуватися і коли варто перевіритися.</p>
+					</div>
+				</div>
+			</section>
+			<section class="blog-list">
+				<div class="shell">
+					<ul class="blog-list__grid" data-pages="6">
+						<li>
+							<a class="blog-list__card" href="#">
+								<div class="blog-list__media">
+									<img src="./images/img-07.webp" width="810" height="608" alt="">
+								</div>
+								<div class="blog-list__text">
+									<h2>Вітамін D: кому і коли перевіряти рівень</h2>
+									<p>Дефіцит вітаміну D трапляється частіше, ніж здається, особливо взимку. Розповідаємо, кому варто здати аналіз і як часто його повторювати.</p>
+									<span class="blog-list__more">
+										<span>Читати статтю</span>
+										<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+											<path d="M4 10h12M11 5l5 5-5 5"></path>
+										</svg>
+									</span>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a class="blog-list__card" href="#">
+								<div class="blog-list__media">
+									<img src="./images/img-08.webp" width="810" height="608" alt="">
+								</div>
+								<div class="blog-list__text">
+									<h2>Як читати загальний аналіз крові: 7 показників</h2>
+									<p>Гемоглобін, лейкоцити, тромбоцити, ШОЕ — що означає кожен показник і коли відхилення від норми справді привід звернутися до лікаря.</p>
+									<span class="blog-list__more">
+										<span>Читати статтю</span>
+										<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+											<path d="M4 10h12M11 5l5 5-5 5"></path>
+										</svg>
+									</span>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a class="blog-list__card" href="#">
+								<div class="blog-list__media">
+									<img src="./images/img-09.webp" width="810" height="752" alt="">
+								</div>
+								<div class="blog-list__text">
+									<h2>Щитоподібна залоза: мінімальний набір досліджень</h2>
+									<p>ТТГ, вільний Т4 та антитіла до ТПО — з чого почати перевірку щитоподібної залози і коли додавати інші аналізи.</p>
+									<span class="blog-list__more">
+										<span>Читати статтю</span>
+										<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+											<path d="M4 10h12M11 5l5 5-5 5"></path>
+										</svg>
+									</span>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a class="blog-list__card" href="#">
+								<div class="blog-list__media">
+									<img src="./images/img-04.webp" width="1180" height="885" loading="lazy" alt="">
+								</div>
+								<div class="blog-list__text">
+									<h2>Феритин і залізо: чому втома буває «в аналізах»</h2>
+									<p>Нормальний гемоглобін ще не означає достатніх запасів заліза. Пояснюємо, навіщо дивитися на феритин і як підготуватися до аналізу.</p>
+									<span class="blog-list__more">
+										<span>Читати статтю</span>
+										<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+											<path d="M4 10h12M11 5l5 5-5 5"></path>
+										</svg>
+									</span>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a class="blog-list__card" href="#">
+								<div class="blog-list__media">
+									<img src="./images/img-06.webp" width="1200" height="902" loading="lazy" alt="">
+								</div>
+								<div class="blog-list__text">
+									<h2>Чек-ап раз на рік: які аналізи варто здавати дорослим</h2>
+									<p>Базовий перелік досліджень для щорічної перевірки здоровʼя — і що додати після 40 років.</p>
+									<span class="blog-list__more">
+										<span>Читати статтю</span>
+										<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+											<path d="M4 10h12M11 5l5 5-5 5"></path>
+										</svg>
+									</span>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a class="blog-list__card" href="#">
+								<div class="blog-list__media">
+									<img src="./images/img-05.webp" width="1144" height="1144" loading="lazy" alt="">
+								</div>
+								<div class="blog-list__text">
+									<h2>Аналізи для дитини: як підготувати малюка і себе</h2>
+									<p>Як пояснити дитині, що буде, скільки не годувати перед забором крові і що взяти з собою, щоб візит пройшов спокійно.</p>
+									<span class="blog-list__more">
+										<span>Читати статтю</span>
+										<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+											<path d="M4 10h12M11 5l5 5-5 5"></path>
+										</svg>
+									</span>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a class="blog-list__card" href="#">
+								<div class="blog-list__media">
+									<img src="./images/img-01.webp" width="1448" height="1086" loading="lazy" alt="">
+								</div>
+								<div class="blog-list__text">
+									<h2>Глюкоза і глікований гемоглобін: у чому різниця</h2>
+									<p>Один аналіз показує рівень цукру зараз, інший — за останні три місяці. Розбираємо, коли потрібен кожен із них.</p>
+									<span class="blog-list__more">
+										<span>Читати статтю</span>
+										<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+											<path d="M4 10h12M11 5l5 5-5 5"></path>
+										</svg>
+									</span>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a class="blog-list__card" href="#">
+								<div class="blog-list__media">
+									<img src="./images/img-12.webp" width="1254" height="1254" loading="lazy" alt="">
+								</div>
+								<div class="blog-list__text">
+									<h2>Ліпідограма: «хороший» і «поганий» холестерин</h2>
+									<p>З чого складається ліпідний профіль, чому загального холестерину недостатньо і як правильно підготуватися до аналізу.</p>
+									<span class="blog-list__more">
+										<span>Читати статтю</span>
+										<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+											<path d="M4 10h12M11 5l5 5-5 5"></path>
+										</svg>
+									</span>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a class="blog-list__card" href="#">
+								<div class="blog-list__media"></div>
+								<div class="blog-list__text">
+									<h2>Коли здавати аналізи після хвороби</h2>
+									<p>Після ГРВІ чи антибіотиків показники можуть відрізнятися від звичних. Підказуємо, скільки зачекати, щоб результат був точним.</p>
+									<span class="blog-list__more">
+										<span>Читати статтю</span>
+										<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+											<path d="M4 10h12M11 5l5 5-5 5"></path>
+										</svg>
+									</span>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a class="blog-list__card" href="#">
+								<div class="blog-list__media">
+									<img src="./images/img-03.webp" width="986" height="740" loading="lazy" alt="">
+								</div>
+								<div class="blog-list__text">
+									<h2>Жіночі гормони: у який день циклу здавати</h2>
+									<p>ФСГ, ЛГ, естрадіол і прогестерон здають у різні дні циклу. Пояснюємо, як обрати правильний день, щоб результат був інформативним.</p>
+									<span class="blog-list__more">
+										<span>Читати статтю</span>
+										<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+											<path d="M4 10h12M11 5l5 5-5 5"></path>
+										</svg>
+									</span>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a class="blog-list__card" href="#">
+								<div class="blog-list__media">
+									<img src="./images/img-02.webp" width="384" height="576" loading="lazy" alt="">
+								</div>
+								<div class="blog-list__text">
+									<h2>Вітамін B12 і фолієва кислота: навіщо перевіряти разом</h2>
+									<p>Дефіцит цих вітамінів дає схожі симптоми — від утоми до проблем із памʼяттю. Розповідаємо, кому варто здати обидва аналізи.</p>
+									<span class="blog-list__more">
+										<span>Читати статтю</span>
+										<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+											<path d="M4 10h12M11 5l5 5-5 5"></path>
+										</svg>
+									</span>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a class="blog-list__card" href="#">
+								<div class="blog-list__media">
+									<img src="./images/img-07.webp" width="810" height="608" loading="lazy" alt="">
+								</div>
+								<div class="blog-list__text">
+									<h2>Загальний аналіз сечі: як зібрати правильно</h2>
+									<p>Ранкова порція, чистий контейнер і кілька простих правил — від них залежить, чи буде результат точним.</p>
+									<span class="blog-list__more">
+										<span>Читати статтю</span>
+										<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+											<path d="M4 10h12M11 5l5 5-5 5"></path>
+										</svg>
+									</span>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a class="blog-list__card" href="#">
+								<div class="blog-list__media">
+									<img src="./images/img-08.webp" width="810" height="608" loading="lazy" alt="">
+								</div>
+								<div class="blog-list__text">
+									<h2>Аналізи перед садком і школою: що перевірити дитині</h2>
+									<p>Які дослідження зазвичай потрібні для медичної довідки і як підготувати дитину, щоб усе пройшло швидко.</p>
+									<span class="blog-list__more">
+										<span>Читати статтю</span>
+										<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+											<path d="M4 10h12M11 5l5 5-5 5"></path>
+										</svg>
+									</span>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a class="blog-list__card" href="#">
+								<div class="blog-list__media">
+									<img src="./images/img-09.webp" width="810" height="752" loading="lazy" alt="">
+								</div>
+								<div class="blog-list__text">
+									<h2>Кортизол: навіщо здавати і як підготуватися</h2>
+									<p>Рівень кортизолу змінюється протягом доби й залежить від стресу. Підказуємо, коли і як здавати аналіз, щоб він був показовим.</p>
+									<span class="blog-list__more">
+										<span>Читати статтю</span>
+										<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+											<path d="M4 10h12M11 5l5 5-5 5"></path>
+										</svg>
+									</span>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a class="blog-list__card" href="#">
+								<div class="blog-list__media">
+									<img src="./images/img-04.webp" width="1180" height="885" loading="lazy" alt="">
+								</div>
+								<div class="blog-list__text">
+									<h2>Онкомаркери: коли вони справді потрібні</h2>
+									<p>Онкомаркери не замінюють обстеження, але допомагають лікарю в контролі. Розбираємо, кому і за яких умов їх призначають.</p>
+									<span class="blog-list__more">
+										<span>Читати статтю</span>
+										<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+											<path d="M4 10h12M11 5l5 5-5 5"></path>
+										</svg>
+									</span>
+								</div>
+							</a>
+						</li>
+					</ul>
+					<nav class="pager" aria-label="Pages" data-pages-nav hidden>
+						<button class="btn" type="button" aria-label="Previous page" data-pages-prev>
+							<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+								<path d="M16 10H4M9 5l-5 5 5 5"></path>
+							</svg>
+						</button>
+						<button class="btn" type="button" aria-label="Next page" data-pages-next>
+							<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+								<path d="M4 10h12M11 5l5 5-5 5"></path>
+							</svg>
+						</button>
+					</nav>
+				</div>
+			</section>
+		</main>
+	
+		<footer class="footer">
+			<div class="shell">
+				<div class="footer__inner">
+					<div class="footer__brand">
+						<div class="logo">
+							<a href="./index.html">
+								<img src="./images/logo-diagnostikaplus-white.svg" width="218" height="44" loading="lazy" alt="Діагностика плюс">
+							</a>
+						</div>
+						<div class="footer__about">
+							<p>«Діагностика плюс» — лабораторні дослідження та пункт прийому аналізів. Ліцензія МОЗ України, акредитація ISO 15189.</p>
+						</div>
+						<div class="footer__helsi">
+							<div class="footer__helsi-logo">
+								<img src="./images/logo-helsi.webp" width="428" height="274" loading="lazy" alt="Helsi">
+							</div>
+							<div class="footer__helsi-text">
+								<span>Ми в системі Helsi</span>
+								<span>Онлайн-запис на аналізи</span>
+							</div>
+						</div>
+					</div>
+					<div class="footer__col">
+						<button class="btn footer__toggle" type="button" aria-expanded="false" aria-controls="footer-sections" data-footer-toggle>
+							<span>Розділи</span>
+							<svg class="plus footer__toggle-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+								<line x1="3" y1="8" x2="13" y2="8"></line>
+								<line x1="8" y1="3" x2="8" y2="13"></line>
+							</svg>
+						</button>
+						<div class="fold footer__panel" id="footer-sections">
+							<ul class="footer__links">
+								<li><a href="./index.html">Головна</a></li>
+								<li><a href="./prices.html">Аналізи та ціни</a></li>
+								<li><a href="./doctors.html">Наші лікарі</a></li>
+								<li><a href="./appointment.html">Запис на прийом</a></li>
+								<li><a href="./about.html">Про компанію</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="footer__col">
+						<button class="btn footer__toggle" type="button" aria-expanded="false" aria-controls="footer-info" data-footer-toggle>
+							<span>Інформація</span>
+							<svg class="plus footer__toggle-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+								<line x1="3" y1="8" x2="13" y2="8"></line>
+								<line x1="8" y1="3" x2="8" y2="13"></line>
+							</svg>
+						</button>
+						<div class="fold footer__panel" id="footer-info">
+							<ul class="footer__links">
+								<li><a href="#">Пацієнтам</a></li>
+								<li><a href="./partners.html">Партнерам</a></li>
+								<li><a href="./preparation.html">Підготовка до аналізів</a></li>
+								<li><a href="./blog.html">Корисні статті</a></li>
+								<li><a href="./about.html">Ліцензії та сертифікати</a></li>
+								<li><a href="./contacts.html">Зв’язок</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="footer__col">
+						<button class="btn footer__toggle" type="button" aria-expanded="false" aria-controls="footer-contacts" data-footer-toggle>
+							<span>Контакти</span>
+							<svg class="plus footer__toggle-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+								<line x1="3" y1="8" x2="13" y2="8"></line>
+								<line x1="8" y1="3" x2="8" y2="13"></line>
+							</svg>
+						</button>
+						<div class="fold footer__panel" id="footer-contacts">
+							<div class="footer__contacts">
+								<div class="footer__contacts-text">
+									<p class="footer__phone"><a href="tel:+380996209957">099 620-99-57</a></p>
+									<p class="footer__address">м. Харків, вул. Максиміліанівська, 10<br>Пн–Сб 08:00–15:00</p>
+									<p><a href="mailto:diagnostika.pluss@gmail.com">diagnostika.pluss@gmail.com</a></p>
+								</div>
+								<ul class="footer__social">
+									<li>
+										<a href="#" aria-label="Facebook">
+											<img src="./images/ico-facebook.svg" width="24" height="24" loading="lazy" alt="">
+										</a>
+									</li>
+									<li>
+										<a href="#" aria-label="Instagram">
+											<img src="./images/ico-instagram.svg" width="24" height="24" loading="lazy" alt="">
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="footer__bottom">
+					<p>&copy; 2026 ТОВ «МЦ «МТМ»». Усі права захищено.</p>
+					<ul class="footer__legal">
+						<li><a href="#">Політика конфіденційності</a></li>
+						<li><a href="#">Публічна угода</a></li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+</body>
+</html>

@@ -12,8 +12,8 @@
 		<div class="topbar">
 			<div class="shell">
 				<div class="topbar__info">
-					<p>Пн–Сб 07:00–19:00, Нд&nbsp;08:00&#65279;–&#65279;14:00</p>
-					<p class="topbar__address">м. Харків, майдан Захисників України, 15</p>
+					<p class="topbar__hours">Пн–Сб 08:00–15:00</p>
+					<p class="topbar__address">м. Харків, вул. Максиміліанівська, 10</p>
 				</div>
 			</div>
 		</div>
@@ -92,9 +92,11 @@
 							<li>
 								<a href="#">Пацієнтам</a>
 								<ul class="header__submenu">
+									<li><a href="./points.html">Пункти прийому аналізів</a></li>
 									<li><a href="./preparation.html">Підготовка до аналізів</a></li>
 									<li><a href="https://patient-docs.com/login">Результати онлайн</a></li>
 									<li><a href="./faq.html">Питання та відповіді</a></li>
+									<li><a href="./blog.html">Корисні статті</a></li>
 								</ul>
 							</li>
 							<li><a href="./partners.html">Партнерам</a></li>
@@ -193,7 +195,7 @@
 					<div class="prices-tabs" role="tablist" aria-label="Diagnostics type" data-prices-tabs>
 						<button class="btn prices-tabs__tab" type="button" role="tab" id="tab-lab" aria-controls="panel-lab" aria-selected="true" tabindex="0" data-prices-tab="lab" data-unit-one="послуга" data-unit-few="послуги" data-unit-many="послуг">
 							<span class="prices-tabs__row">
-								<span class="prices-tabs__icon">
+								<span class="tile prices-tabs__icon">
 									<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
 										<path d="M9 3v6l-5 9a2 2 0 0 0 1.7 3h12.6a2 2 0 0 0 1.7-3l-5-9V3M8 3h8M7 15h10"></path>
 									</svg>
@@ -204,7 +206,7 @@
 						</button>
 						<button class="btn prices-tabs__tab" type="button" role="tab" id="tab-instr" aria-controls="panel-instr" aria-selected="false" tabindex="-1" data-prices-tab="instr" data-unit-one="послуга" data-unit-few="послуги" data-unit-many="послуг">
 							<span class="prices-tabs__row">
-								<span class="prices-tabs__icon prices-tabs__icon--green">
+								<span class="tile prices-tabs__icon prices-tabs__icon--green">
 									<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
 										<path d="M4 18a10 10 0 0 1 16 0M8 18a5 5 0 0 1 8 0M12 4v9"></path>
 									</svg>
@@ -215,7 +217,7 @@
 						</button>
 						<button class="btn prices-tabs__tab" type="button" role="tab" id="tab-consult" aria-controls="panel-consult" aria-selected="false" tabindex="-1" data-prices-tab="consult" data-unit-one="послуга" data-unit-few="послуги" data-unit-many="послуг">
 							<span class="prices-tabs__row">
-								<span class="prices-tabs__icon">
+								<span class="tile prices-tabs__icon">
 									<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
 										<path d="M6 3v6a4 4 0 0 0 8 0V3M10 13v3a5 5 0 0 0 10 0v-2M20 10a2 2 0 1 0 0 4 2 2 0 0 0 0-4"></path>
 									</svg>
@@ -226,7 +228,7 @@
 						</button>
 						<button class="btn prices-tabs__tab" type="button" role="tab" id="tab-manip" aria-controls="panel-manip" aria-selected="false" tabindex="-1" data-prices-tab="manip" data-unit-one="послуга" data-unit-few="послуги" data-unit-many="послуг">
 							<span class="prices-tabs__row">
-								<span class="prices-tabs__icon prices-tabs__icon--red">
+								<span class="tile prices-tabs__icon prices-tabs__icon--red">
 									<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
 										<path d="M18 2l4 4M17 7l3-3M19 9l-8 8-4 1 1-4 8-8zM9 11l4 4M5 19l-3 3"></path>
 									</svg>
@@ -237,7 +239,7 @@
 						</button>
 						<button class="btn prices-tabs__tab" type="button" role="tab" id="tab-extra" aria-controls="panel-extra" aria-selected="false" tabindex="-1" data-prices-tab="extra" data-unit-one="послуга" data-unit-few="послуги" data-unit-many="послуг">
 							<span class="prices-tabs__row">
-								<span class="prices-tabs__icon prices-tabs__icon--green">
+								<span class="tile prices-tabs__icon prices-tabs__icon--green">
 									<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
 										<path d="M4 4h16v16H4zM12 8v8M8 12h8"></path>
 									</svg>
@@ -270,7 +272,7 @@
 				<div class="prices-catalog__bar">
 					<div class="shell">
 						<button class="btn btn--outline prices-catalog__current" type="button" aria-controls="prices-sections" aria-expanded="false" data-prices-sheet>
-							<span class="prices-catalog__current-icon" aria-hidden="true"></span>
+							<span class="tile prices-catalog__current-icon" aria-hidden="true"></span>
 							<span class="prices-catalog__current-text">
 								<span class="prices-catalog__current-name">Розділи</span>
 								<span class="prices-catalog__current-all">Дивитись усі</span>
@@ -1706,7 +1708,7 @@
 									<p class="prices-catalog__help-title">Не знайшли потрібне дослідження?</p>
 									<p>Зателефонуйте — підкажемо, чи виконуємо його, і як підготуватися.</p>
 								</div>
-								<div class="prices-catalog__help-action">
+								<div>
 									<a class="btn btn--sm" href="tel:+380996209957">099 620-99-57</a>
 								</div>
 							</div>
@@ -1718,7 +1720,7 @@
 							</div>
 							<div class="calc" data-calc data-unit-one="позиція" data-unit-few="позиції" data-unit-many="позицій">
 								<div class="calc__head">
-									<span class="calc__icon">
+									<span class="tile calc__icon">
 										<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
 											<rect x="5" y="3" width="14" height="18" rx="2"></rect>
 											<path d="M8 7h8M8 12h1M12 12h1M16 12h0M8 16h1M12 16h1M16 16h0"></path>
@@ -1814,6 +1816,7 @@
 								<li><a href="#">Пацієнтам</a></li>
 								<li><a href="./partners.html">Партнерам</a></li>
 								<li><a href="./preparation.html">Підготовка до аналізів</a></li>
+								<li><a href="./blog.html">Корисні статті</a></li>
 								<li><a href="./about.html">Ліцензії та сертифікати</a></li>
 								<li><a href="./contacts.html">Зв’язок</a></li>
 							</ul>
@@ -1831,8 +1834,8 @@
 							<div class="footer__contacts">
 								<div class="footer__contacts-text">
 									<p class="footer__phone"><a href="tel:+380996209957">099 620-99-57</a></p>
-									<p class="footer__address">м. Київ, вул. Медична 14<br>Пн–Сб 07:00–19:00, Нд 08:00–14:00</p>
-									<p><a href="mailto:info@mtm-lab.ua">info@mtm-lab.ua</a></p>
+									<p class="footer__address">м. Харків, вул. Максиміліанівська, 10<br>Пн–Сб 08:00–15:00</p>
+									<p><a href="mailto:diagnostika.pluss@gmail.com">diagnostika.pluss@gmail.com</a></p>
 								</div>
 								<ul class="footer__social">
 									<li>

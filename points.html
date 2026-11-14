@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Пункти прийому аналізів — Діагностика плюс</title>
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/pages/points.css">
+  <script src="./js/main.js" defer></script>
+</head>
+<body>
+		<div class="topbar">
+			<div class="shell">
+				<div class="topbar__info">
+					<p class="topbar__hours">Пн–Сб 08:00–15:00</p>
+					<p class="topbar__address">м. Харків, вул. Максиміліанівська, 10</p>
+				</div>
+			</div>
+		</div>
+		<header class="header">
+			<div class="shell">
+				<div class="header__main">
+					<div class="header__brand logo">
+						<a href="./index.html">
+							<img src="./images/logo-diagnostikaplus.svg" width="238" height="49" alt="Діагностика плюс">
+						</a>
+					</div>
+					<div class="header__search-wrap">
+						<form class="header__search" id="site-search-form" action="./prices.html" role="search">
+							<label class="visually-hidden" for="site-search">Пошук аналізу</label>
+							<input id="site-search" type="search" name="q" placeholder="Пошук аналізу…" autocomplete="off" aria-controls="site-search-results" data-suggest-field>
+							<button class="btn" type="submit" aria-label="Search">
+								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+									<circle cx="11" cy="11" r="7"></circle>
+									<path d="M16.5 16.5 21 21"></path>
+								</svg>
+							</button>
+						</form>
+						<div class="header__suggest" id="site-search-results" data-suggest hidden>
+							<ul class="header__suggest-list" data-suggest-list></ul>
+							<div class="header__suggest-all" data-suggest-all>
+								<a href="./prices.html">
+									<span>Переглянути всі результати (<span data-suggest-count></span>)</span>
+								</a>
+							</div>
+							<template data-suggest-item>
+								<li>
+									<a href="./prices.html">
+										<span data-suggest-name></span>
+										<span class="header__suggest-price" data-suggest-price></span>
+									</a>
+								</li>
+							</template>
+						</div>
+					</div>
+					<div class="header__actions">
+						<div class="header__phone">
+							<p><a href="tel:+380996209957">099 620-99-57</a></p>
+							<span class="header__callback">Зв’язатися з нами</span>
+						</div>
+						<div class="header__cta">
+							<button class="btn btn--sm" type="button" data-modal-open>Записатись</button>
+							<a class="btn header__login" href="https://patient-docs.com/login" aria-label="Sign in">
+								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+									<circle cx="12" cy="8" r="4"></circle>
+									<path d="M4 21a8 8 0 0 1 16 0"></path>
+								</svg>
+							</a>
+						</div>
+						<div class="header__controls">
+							<button class="btn header__search-toggle" type="button" aria-controls="site-search-form" aria-expanded="false" aria-label="Open search" data-search-toggle>
+								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+									<circle cx="11" cy="11" r="7"></circle>
+									<path d="M16.5 16.5 21 21"></path>
+								</svg>
+							</button>
+							<button class="btn header__burger" type="button" aria-controls="site-menu" aria-expanded="false" aria-label="Menu" data-menu-toggle>
+								<span></span>
+								<span></span>
+								<span></span>
+							</button>
+						</div>
+					</div>
+				</div>
+				<nav class="header__nav" id="site-menu" aria-label="Main navigation">
+					<div class="header__menu">
+						<ul class="header__menu-list">
+							<li><a href="./index.html">Головна</a></li>
+							<li><a href="./doctors.html">Наші лікарі</a></li>
+							<li><a href="./appointment.html">Запис на прийом</a></li>
+							<li><a href="./prices.html">Аналізи та ціни</a></li>
+							<li>
+								<a href="#">Пацієнтам</a>
+								<ul class="header__submenu">
+									<li><a href="./points.html">Пункти прийому аналізів</a></li>
+									<li><a href="./preparation.html">Підготовка до аналізів</a></li>
+									<li><a href="https://patient-docs.com/login">Результати онлайн</a></li>
+									<li><a href="./faq.html">Питання та відповіді</a></li>
+									<li><a href="./blog.html">Корисні статті</a></li>
+								</ul>
+							</li>
+							<li><a href="./partners.html">Партнерам</a></li>
+							<li><a href="./contacts.html">Зв’язок</a></li>
+							<li><a href="./about.html">Про компанію</a></li>
+						</ul>
+					</div>
+					<div class="header__nav-actions">
+						<div class="header__phone header__phone--menu">
+							<p><a href="tel:+380996209957">099 620-99-57</a></p>
+							<span class="header__callback">Зв’язатися з нами</span>
+						</div>
+						<div class="header__nav-buttons">
+							<button class="btn btn--sm" type="button" data-modal-open>Записатись</button>
+							<a class="btn btn--sm btn--outline header__login-menu" href="https://patient-docs.com/login">
+								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+									<circle cx="12" cy="8" r="4"></circle>
+									<path d="M4 21a8 8 0 0 1 16 0"></path>
+								</svg>
+								Увійти
+							</a>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</header>
+		<dialog class="modal" aria-labelledby="booking-title" data-modal>
+			<div class="modal__box">
+				<button class="btn modal__close" type="button" aria-label="Close dialog" data-modal-close>
+					<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+						<path d="m7 7 10 10M17 7 7 17"></path>
+					</svg>
+				</button>
+				<div class="modal__head">
+					<h2 id="booking-title">Запис на прийом</h2>
+					<p>Залиште контакти — ми передзвонимо в робочий час, підберемо аналізи та зручний час візиту.</p>
+				</div>
+				<form class="modal__form" action="#" method="post" data-validate>
+					<div class="modal__field">
+						<label for="booking-name">Ім’я</label>
+						<input type="text" id="booking-name" name="name" autocomplete="given-name" required minlength="2" maxlength="60" placeholder="Ваше ім’я">
+					</div>
+					<div class="modal__field">
+						<label for="booking-phone">Телефон</label>
+						<input type="tel" id="booking-phone" name="phone" autocomplete="tel" required maxlength="19" pattern="\+38 \(0\d{2}\) \d{3}-\d{2}-\d{2}" placeholder="+38 (0__) ___-__-__" data-phone>
+					</div>
+					<div class="modal__consent">
+						<input type="checkbox" id="booking-consent" name="consent" required>
+						<label for="booking-consent">Погоджуюсь на обробку персональних даних згідно з <a href="#">політикою конфіденційності</a></label>
+					</div>
+					<button class="btn" type="submit">Записатись</button>
+				</form>
+			</div>
+		</dialog>
+	
+		<main>
+			<section class="page-hero points-hero">
+				<div class="shell">
+					<div class="page-hero__text">
+						<h1>Пункти прийому аналізів</h1>
+						<p>Здати аналізи можна в головній лабораторії «Діагностика плюс» або в одному з пунктів прийому. Оберіть місто та зручну адресу — перед візитом радимо зателефонувати й уточнити графік.</p>
+					</div>
+					<nav aria-label="Cities">
+						<ul class="chips">
+							<li>
+								<a class="btn chips__link" href="./points.html?city=kharkiv" aria-current="page" data-city-link="kharkiv">
+									<span>Харків та область</span>
+									<span class="chips__count" data-city-count>15</span>
+								</a>
+							</li>
+							<li>
+								<a class="btn chips__link" href="./points.html?city=odesa" data-city-link="odesa">
+									<span>Одеса</span>
+									<span class="chips__count" data-city-count>1</span>
+								</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</section>
+			<section class="points-list">
+				<div class="shell">
+					<ul class="points-list__grid" data-pages="10">
+						<li class="points-list__card" data-city="kharkiv">
+							<div class="points-list__inner">
+								<div class="points-list__place">
+									<p class="points-list__flag">Діагностика плюс</p>
+									<h2>вул. Максиміліанівська, 10</h2>
+									<p class="points-list__metro">ст. м. Ярослава Мудрого</p>
+								</div>
+								<div class="points-list__side">
+									<div class="points-list__schedule">
+										<p class="points-list__caption">Графік роботи</p>
+										<dl>
+											<dt>Пн–Сб</dt>
+											<dd>08:00–15:00</dd>
+										</dl>
+									</div>
+									<div class="points-list__phones">
+										<p class="points-list__caption">Телефони</p>
+										<ul class="points-list__numbers">
+											<li><a href="tel:+380577004257"><span>057 700-42-57</span></a></li>
+											<li><a href="tel:+380977032509"><span>097 703-25-09</span></a></li>
+											<li><a href="tel:+380996209957"><span>099 620-99-57</span></a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="points-list__route">
+									<a class="btn btn--outline btn--sm" href="https://www.google.com/maps/dir/?api=1&destination=%D0%B2%D1%83%D0%BB.%20%D0%9C%D0%B0%D0%BA%D1%81%D0%B8%D0%BC%D1%96%D0%BB%D1%96%D0%B0%D0%BD%D1%96%D0%B2%D1%81%D1%8C%D0%BA%D0%B0%2C%2010%2C%20%D0%A5%D0%B0%D1%80%D0%BA%D1%96%D0%B2" target="_blank" rel="noopener">
+										<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+											<path d="M10 17.5s5.5-5 5.5-9a5.5 5.5 0 0 0-11 0c0 4 5.5 9 5.5 9z"></path>
+											<circle cx="10" cy="8.5" r="2"></circle>
+										</svg>
+										Прокласти маршрут
+									</a>
+								</div>
+							</div>
+						</li>
+						<li class="points-list__card" data-city="kharkiv">
+							<div class="points-list__inner">
+								<div class="points-list__place">
+									<p class="points-list__flag">Головна лабораторія</p>
+									<h2>пл. Захисників України, 15</h2>
+									<p class="points-list__note">Поруч з адміністрацією Кінного ринку</p>
+								</div>
+								<div class="points-list__side">
+									<div class="points-list__schedule">
+										<p class="points-list__caption">Графік роботи</p>
+										<dl>
+											<dt>Пн, Ср, Пт</dt>
+											<dd>08:30–17:00</dd>
+											<dt>Вт, Чт, Сб</dt>
+											<dd>08:30–16:00</dd>
+										</dl>
+									</div>
+									<div class="points-list__phones">
+										<p class="points-list__caption">Телефон</p>
+										<ul class="points-list__numbers">
+											<li><a href="tel:+380500811604"><span>050 081-16-04</span></a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="points-list__route">
+									<a class="btn btn--outline btn--sm" href="https://www.google.com/maps/dir/?api=1&destination=%D0%BF%D0%BB.%20%D0%97%D0%B0%D1%85%D0%B8%D1%81%D0%BD%D0%B8%D0%BA%D1%96%D0%B2%20%D0%A3%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D0%B8%2C%2015%2C%20%D0%A5%D0%B0%D1%80%D0%BA%D1%96%D0%B2" target="_blank" rel="noopener">
+										<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+											<path d="M10 17.5s5.5-5 5.5-9a5.5 5.5 0 0 0-11 0c0 4 5.5 9 5.5 9z"></path>
+											<circle cx="10" cy="8.5" r="2"></circle>
+										</svg>
+										Прокласти маршрут
+									</a>
+								</div>
+							</div>
+						</li>
+						<li class="points-list__card" data-city="kharkiv">
+							<div class="points-list__inner">
+								<div class="points-list__place">
+									<h2>вул. Георгія Тарасенка</h2>
+									<p class="points-list__building">Міська поліклініка № 21</p>
+									<p class="points-list__note">4 поверх, каб. № 409</p>
+									<p class="points-list__metro">ст. м. Заводська</p>
+								</div>
+								<div class="points-list__side">
+									<div class="points-list__schedule">
+										<p class="points-list__caption">Графік роботи</p>
+										<dl>
+											<dt>Пн–Пт</dt>
+											<dd>09:00–13:00</dd>
+											<dt>Сб</dt>
+											<dd>09:00–12:00</dd>
+										</dl>
+									</div>
+									<div class="points-list__phones">
+										<p class="points-list__caption">Телефони</p>
+										<ul class="points-list__numbers">
+											<li><a href="tel:+380994696200"><span>099 469-62-00</span></a></li>
+											<li><a href="tel:+380987507993"><span>098 750-79-93</span></a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="points-list__route">
+									<a class="btn btn--outline btn--sm" href="https://www.google.com/maps/dir/?api=1&destination=%D0%B2%D1%83%D0%BB.%20%D0%93%D0%B5%D0%BE%D1%80%D0%B3%D1%96%D1%8F%20%D0%A2%D0%B0%D1%80%D0%B0%D1%81%D0%B5%D0%BD%D0%BA%D0%B0%2C%20%D0%A5%D0%B0%D1%80%D0%BA%D1%96%D0%B2" target="_blank" rel="noopener">
+										<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+											<path d="M10 17.5s5.5-5 5.5-9a5.5 5.5 0 0 0-11 0c0 4 5.5 9 5.5 9z"></path>
+											<circle cx="10" cy="8.5" r="2"></circle>
+										</svg>
+										Прокласти маршрут
+									</a>
+								</div>
+							</div>
+						</li>
+						<li class="points-list__card" data-city="kharkiv">
+							<div class="points-list__inner">
+								<div class="points-list__place">
+									<h2>просп. Науки, 43А</h2>
+									<p class="points-list__metro">ст. м. Ботанічний сад</p>
+								</div>
+								<div class="points-list__side">
+									<div class="points-list__schedule">
+										<p class="points-list__caption">Графік роботи</p>
+										<dl>
+											<dt>Пн–Пт</dt>
+											<dd>08:00–13:00</dd>
+										</dl>
+									</div>
+									<div class="points-list__phones">
+										<p class="points-list__caption">Телефон</p>
+										<ul class="points-list__numbers">
+											<li><a href="tel:+380668496750"><span>066 849-67-50</span></a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="points-list__route">
+									<a class="btn btn--outline btn--sm" href="https://www.google.com/maps/dir/?api=1&destination=%D0%BF%D1%80%D0%BE%D1%81%D0%BF.%20%D0%9D%D0%B0%D1%83%D0%BA%D0%B8%2C%2043%D0%90%2C%20%D0%A5%D0%B0%D1%80%D0%BA%D1%96%D0%B2" target="_blank" rel="noopener">
+										<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+											<path d="M10 17.5s5.5-5 5.5-9a5.5 5.5 0 0 0-11 0c0 4 5.5 9 5.5 9z"></path>
+											<circle cx="10" cy="8.5" r="2"></circle>
+										</svg>
+										Прокласти маршрут
+									</a>
+								</div>
+							</div>
+						</li>
+						<li class="points-list__card" data-city="kharkiv">
+							<div class="points-list__inner">
+								<div class="points-list__place">
+									<h2>вул. Познанська, 2</h2>
+									<p class="points-list__note">24-поверхова будівля</p>
+								</div>
+								<div class="points-list__side">
+									<div class="points-list__schedule">
+										<p class="points-list__caption">Графік роботи</p>
+										<dl>
+											<dt>Пн–Сб</dt>
+											<dd>08:00–14:00</dd>
+										</dl>
+									</div>
+									<div class="points-list__phones">
+										<p class="points-list__caption">Телефон</p>
+										<ul class="points-list__numbers">
+											<li><a href="tel:+380964668579"><span>096 466-85-79</span></a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="points-list__route">
+									<a class="btn btn--outline btn--sm" href="https://www.google.com/maps/dir/?api=1&destination=%D0%B2%D1%83%D0%BB.%20%D0%9F%D0%BE%D0%B7%D0%BD%D0%B0%D0%BD%D1%81%D1%8C%D0%BA%D0%B0%2C%202%2C%20%D0%A5%D0%B0%D1%80%D0%BA%D1%96%D0%B2" target="_blank" rel="noopener">
+										<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+											<path d="M10 17.5s5.5-5 5.5-9a5.5 5.5 0 0 0-11 0c0 4 5.5 9 5.5 9z"></path>
+											<circle cx="10" cy="8.5" r="2"></circle>
+										</svg>
+										Прокласти маршрут
+									</a>
+								</div>
+							</div>
+						</li>
+						<li class="points-list__card" data-city="kharkiv">
+							<div class="points-list__inner">
+								<div class="points-list__place">
+									<h2>вул. Михайла Гуревича, 16</h2>
+								</div>
+								<div class="points-list__side">
+									<div class="points-list__schedule">
+										<p class="points-list__caption">Графік роботи</p>
+										<dl>
+											<dt>Пн–Пт</dt>
+											<dd>08:00–13:00</dd>
+										</dl>
+									</div>
+									<div class="points-list__phones">
+										<p class="points-list__caption">Телефон</p>
+										<ul class="points-list__numbers">
+											<li><a href="tel:+380996457271"><span>099 645-72-71</span></a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="points-list__route">
+									<a class="btn btn--outline btn--sm" href="https://www.google.com/maps/dir/?api=1&destination=%D0%B2%D1%83%D0%BB.%20%D0%9C%D0%B8%D1%85%D0%B0%D0%B9%D0%BB%D0%B0%20%D0%93%D1%83%D1%80%D0%B5%D0%B2%D0%B8%D1%87%D0%B0%2C%2016%2C%20%D0%A5%D0%B0%D1%80%D0%BA%D1%96%D0%B2" target="_blank" rel="noopener">
+										<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+											<path d="M10 17.5s5.5-5 5.5-9a5.5 5.5 0 0 0-11 0c0 4 5.5 9 5.5 9z"></path>
+											<circle cx="10" cy="8.5" r="2"></circle>
+										</svg>
+										Прокласти маршрут
+									</a>
+								</div>
+							</div>
+						</li>
+						<li class="points-list__card" data-city="kharkiv">
+							<div class="points-list__inner">
+								<div class="points-list__place">
+									<h2>просп. Слави, 11</h2>
+									<p class="points-list__building">Міська поліклініка № 24</p>
+								</div>
+								<div class="points-list__side">
+									<div class="points-list__schedule">
+										<p class="points-list__caption">Графік роботи</p>
+										<dl>
+											<dt>Пн–Пт</dt>
+											<dd>08:00–12:00</dd>
+										</dl>
+									</div>
+									<div class="points-list__phones">
+										<p class="points-list__caption">Телефон</p>
+										<ul class="points-list__numbers">
+											<li><a href="tel:+380685386650"><span>068 538-66-50</span></a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="points-list__route">
+									<a class="btn btn--outline btn--sm" href="https://www.google.com/maps/dir/?api=1&destination=%D0%BF%D1%80%D0%BE%D1%81%D0%BF.%20%D0%A1%D0%BB%D0%B0%D0%B2%D0%B8%2C%2011%2C%20%D0%A5%D0%B0%D1%80%D0%BA%D1%96%D0%B2" target="_blank" rel="noopener">
+										<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+											<path d="M10 17.5s5.5-5 5.5-9a5.5 5.5 0 0 0-11 0c0 4 5.5 9 5.5 9z"></path>
+											<circle cx="10" cy="8.5" r="2"></circle>
+										</svg>
+										Прокласти маршрут
+									</a>
+								</div>
+							</div>
+						</li>
+						<li class="points-list__card" data-city="kharkiv">
+							<div class="points-list__inner">
+								<div class="points-list__place">
+									<h2>пров. Верховський, 5</h2>
+									<p class="points-list__building">Міська поліклініка № 24</p>
+								</div>
+								<div class="points-list__side">
+									<div class="points-list__schedule">
+										<p class="points-list__caption">Графік роботи</p>
+										<dl>
+											<dt>Пн–Пт</dt>
+											<dd>08:00–12:00</dd>
+										</dl>
+									</div>
+									<div class="points-list__phones">
+										<p class="points-list__caption">Телефон</p>
+										<ul class="points-list__numbers">
+											<li><a href="tel:+380505553095"><span>050 555-30-95</span></a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="points-list__route">
+									<a class="btn btn--outline btn--sm" href="https://www.google.com/maps/dir/?api=1&destination=%D0%BF%D1%80%D0%BE%D0%B2.%20%D0%92%D0%B5%D1%80%D1%85%D0%BE%D0%B2%D1%81%D1%8C%D0%BA%D0%B8%D0%B9%2C%205%2C%20%D0%A5%D0%B0%D1%80%D0%BA%D1%96%D0%B2" target="_blank" rel="noopener">
+										<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+											<path d="M10 17.5s5.5-5 5.5-9a5.5 5.5 0 0 0-11 0c0 4 5.5 9 5.5 9z"></path>
+											<circle cx="10" cy="8.5" r="2"></circle>
+										</svg>
+										Прокласти маршрут
+									</a>
+								</div>
+							</div>
+						</li>
+						<li class="points-list__card" data-city="kharkiv">
+							<div class="points-list__inner">
+								<div class="points-list__place">
+									<h2>вул. Данилевського, 17</h2>
+									<p class="points-list__metro">ст. м. Наукова</p>
+								</div>
+								<div class="points-list__side">
+									<div class="points-list__schedule">
+										<p class="points-list__caption">Графік роботи</p>
+										<dl>
+											<dt>Пн–Сб</dt>
+											<dd>08:00–13:00</dd>
+										</dl>
+									</div>
+									<div class="points-list__phones">
+										<p class="points-list__caption">Телефон</p>
+										<ul class="points-list__numbers">
+											<li><a href="tel:+380994909180"><span>099 490-91-80</span></a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="points-list__route">
+									<a class="btn btn--outline btn--sm" href="https://www.google.com/maps/dir/?api=1&destination=%D0%B2%D1%83%D0%BB.%20%D0%94%D0%B0%D0%BD%D0%B8%D0%BB%D0%B5%D0%B2%D1%81%D1%8C%D0%BA%D0%BE%D0%B3%D0%BE%2C%2017%2C%20%D0%A5%D0%B0%D1%80%D0%BA%D1%96%D0%B2" target="_blank" rel="noopener">
+										<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+											<path d="M10 17.5s5.5-5 5.5-9a5.5 5.5 0 0 0-11 0c0 4 5.5 9 5.5 9z"></path>
+											<circle cx="10" cy="8.5" r="2"></circle>
+										</svg>
+										Прокласти маршрут
+									</a>
+								</div>
+							</div>
+						</li>
+						<li class="points-list__card" data-city="kharkiv">
+							<div class="points-list__inner">
+								<div class="points-list__place">
+									<h2>вул. Олега Адамовського, 2</h2>
+									<p class="points-list__metro">ст. м. Холодна гора</p>
+								</div>
+								<div class="points-list__side">
+									<div class="points-list__schedule">
+										<p class="points-list__caption">Графік роботи</p>
+										<dl>
+											<dt>Пн–Пт</dt>
+											<dd>08:00–14:00</dd>
+										</dl>
+									</div>
+									<div class="points-list__phones">
+										<p class="points-list__caption">Телефони</p>
+										<ul class="points-list__numbers">
+											<li><a href="tel:+380964668569"><span>096 466-85-69</span></a></li>
+											<li><a href="tel:+380663415920"><span>066 341-59-20</span></a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="points-list__route">
+									<a class="btn btn--outline btn--sm" href="https://www.google.com/maps/dir/?api=1&destination=%D0%B2%D1%83%D0%BB.%20%D0%9E%D0%BB%D0%B5%D0%B3%D0%B0%20%D0%90%D0%B4%D0%B0%D0%BC%D0%BE%D0%B2%D1%81%D1%8C%D0%BA%D0%BE%D0%B3%D0%BE%2C%202%2C%20%D0%A5%D0%B0%D1%80%D0%BA%D1%96%D0%B2" target="_blank" rel="noopener">
+										<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+											<path d="M10 17.5s5.5-5 5.5-9a5.5 5.5 0 0 0-11 0c0 4 5.5 9 5.5 9z"></path>
+											<circle cx="10" cy="8.5" r="2"></circle>
+										</svg>
+										Прокласти маршрут
+									</a>
+								</div>
+							</div>
+						</li>
+						<li class="points-list__card" data-city="kharkiv">
+							<div class="points-list__inner">
+								<div class="points-list__place">
+									<h2>Аерокосмічний просп., 244</h2>
+								</div>
+								<div class="points-list__side">
+									<div class="points-list__schedule">
+										<p class="points-list__caption">Графік роботи</p>
+										<dl>
+											<dt>Пн–Пт</dt>
+											<dd>08:00–13:00</dd>
+										</dl>
+									</div>
+								</div>
+								<div class="points-list__route">
+									<a class="btn btn--outline btn--sm" href="https://www.google.com/maps/dir/?api=1&destination=%D0%90%D0%B5%D1%80%D0%BE%D0%BA%D0%BE%D1%81%D0%BC%D1%96%D1%87%D0%BD%D0%B8%D0%B9%20%D0%BF%D1%80%D0%BE%D1%81%D0%BF.%2C%20244%2C%20%D0%A5%D0%B0%D1%80%D0%BA%D1%96%D0%B2" target="_blank" rel="noopener">
+										<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+											<path d="M10 17.5s5.5-5 5.5-9a5.5 5.5 0 0 0-11 0c0 4 5.5 9 5.5 9z"></path>
+											<circle cx="10" cy="8.5" r="2"></circle>
+										</svg>
+										Прокласти маршрут
+									</a>
+								</div>
+							</div>
+						</li>
+						<li class="points-list__card" data-city="kharkiv">
+							<div class="points-list__inner">
+								<div class="points-list__place">
+									<h2>вул. Любові Малої, 2-Б</h2>
+									<p class="points-list__building">Дитяча поліклініка № 2</p>
+									<p class="points-list__note">1 поверх, поруч з картотекою</p>
+									<p class="points-list__metro">ст. м. Холодна гора</p>
+								</div>
+								<div class="points-list__side">
+									<div class="points-list__schedule">
+										<p class="points-list__caption">Графік роботи</p>
+										<dl>
+											<dt>Пн–Пт</dt>
+											<dd>08:00–13:00</dd>
+										</dl>
+									</div>
+									<div class="points-list__phones">
+										<p class="points-list__caption">Телефон</p>
+										<ul class="points-list__numbers">
+											<li><a href="tel:+380501626317"><span>050 162-63-17</span></a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="points-list__route">
+									<a class="btn btn--outline btn--sm" href="https://www.google.com/maps/dir/?api=1&destination=%D0%B2%D1%83%D0%BB.%20%D0%9B%D1%8E%D0%B1%D0%BE%D0%B2%D1%96%20%D0%9C%D0%B0%D0%BB%D0%BE%D1%97%2C%202-%D0%91%2C%20%D0%A5%D0%B0%D1%80%D0%BA%D1%96%D0%B2" target="_blank" rel="noopener">
+										<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+											<path d="M10 17.5s5.5-5 5.5-9a5.5 5.5 0 0 0-11 0c0 4 5.5 9 5.5 9z"></path>
+											<circle cx="10" cy="8.5" r="2"></circle>
+										</svg>
+										Прокласти маршрут
+									</a>
+								</div>
+							</div>
+						</li>
+						<li class="points-list__card" data-city="kharkiv">
+							<div class="points-list__inner">
+								<div class="points-list__place">
+									<h2>вул. Римарська, 28</h2>
+								</div>
+								<div class="points-list__side">
+									<div class="points-list__schedule">
+										<p class="points-list__caption">Графік роботи</p>
+										<dl>
+											<dt>Пн–Пт</dt>
+											<dd>09:00–14:00</dd>
+										</dl>
+									</div>
+								</div>
+								<div class="points-list__route">
+									<a class="btn btn--outline btn--sm" href="https://www.google.com/maps/dir/?api=1&destination=%D0%B2%D1%83%D0%BB.%20%D0%A0%D0%B8%D0%BC%D0%B0%D1%80%D1%81%D1%8C%D0%BA%D0%B0%2C%2028%2C%20%D0%A5%D0%B0%D1%80%D0%BA%D1%96%D0%B2" target="_blank" rel="noopener">
+										<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+											<path d="M10 17.5s5.5-5 5.5-9a5.5 5.5 0 0 0-11 0c0 4 5.5 9 5.5 9z"></path>
+											<circle cx="10" cy="8.5" r="2"></circle>
+										</svg>
+										Прокласти маршрут
+									</a>
+								</div>
+							</div>
+						</li>
+						<li class="points-list__card" data-city="kharkiv">
+							<div class="points-list__inner">
+								<div class="points-list__place">
+									<h2>вул. 92-ї Бригади, 33А</h2>
+								</div>
+								<div class="points-list__side">
+									<div class="points-list__schedule">
+										<p class="points-list__caption">Графік роботи</p>
+										<dl>
+											<dt>Пн–Пт</dt>
+											<dd>08:00–13:00</dd>
+										</dl>
+									</div>
+								</div>
+								<div class="points-list__route">
+									<a class="btn btn--outline btn--sm" href="https://www.google.com/maps/dir/?api=1&destination=%D0%B2%D1%83%D0%BB.%2092-%D1%97%20%D0%91%D1%80%D0%B8%D0%B3%D0%B0%D0%B4%D0%B8%2C%2033%D0%90%2C%20%D0%A5%D0%B0%D1%80%D0%BA%D1%96%D0%B2" target="_blank" rel="noopener">
+										<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+											<path d="M10 17.5s5.5-5 5.5-9a5.5 5.5 0 0 0-11 0c0 4 5.5 9 5.5 9z"></path>
+											<circle cx="10" cy="8.5" r="2"></circle>
+										</svg>
+										Прокласти маршрут
+									</a>
+								</div>
+							</div>
+						</li>
+						<li class="points-list__card" data-city="kharkiv">
+							<div class="points-list__inner">
+								<div class="points-list__place">
+									<h2>м. Мерефа, вул. Дніпровська, 148</h2>
+									<p class="points-list__building">Центральна районна лікарня</p>
+									<p class="points-list__note">1 поверх, каб. № 112</p>
+								</div>
+								<div class="points-list__side">
+									<div class="points-list__schedule">
+										<p class="points-list__caption">Графік роботи</p>
+										<dl>
+											<dt>Пн, Вт, Ср, Пт</dt>
+											<dd>08:30–12:30</dd>
+											<dt>Чт</dt>
+											<dd>11:30–12:30</dd>
+										</dl>
+									</div>
+									<div class="points-list__phones">
+										<p class="points-list__caption">Телефон</p>
+										<ul class="points-list__numbers">
+											<li><a href="tel:+380990626410"><span>099 062-64-10</span></a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="points-list__route">
+									<a class="btn btn--outline btn--sm" href="https://www.google.com/maps/dir/?api=1&destination=%D0%9C%D0%B5%D1%80%D0%B5%D1%84%D0%B0%2C%20%D0%B2%D1%83%D0%BB.%20%D0%94%D0%BD%D1%96%D0%BF%D1%80%D0%BE%D0%B2%D1%81%D1%8C%D0%BA%D0%B0%2C%20148" target="_blank" rel="noopener">
+										<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+											<path d="M10 17.5s5.5-5 5.5-9a5.5 5.5 0 0 0-11 0c0 4 5.5 9 5.5 9z"></path>
+											<circle cx="10" cy="8.5" r="2"></circle>
+										</svg>
+										Прокласти маршрут
+									</a>
+								</div>
+							</div>
+						</li>
+						<li class="points-list__card" data-city="odesa">
+							<div class="points-list__inner">
+								<div class="points-list__place">
+									<h2>вул. Маршала Малиновського, 18</h2>
+									<p class="points-list__building">Забірний пункт «Діагностика плюс»</p>
+								</div>
+								<div class="points-list__side">
+									<div class="points-list__schedule">
+										<p class="points-list__caption">Графік роботи</p>
+										<p class="points-list__ask">Уточнюйте за телефоном</p>
+									</div>
+									<div class="points-list__phones">
+										<p class="points-list__caption">Телефони</p>
+										<ul class="points-list__numbers">
+											<li><a href="tel:+380991850065"><span>099 185-00-65</span></a></li>
+											<li><a href="tel:+380685786300"><span>068 578-63-00</span></a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="points-list__route">
+									<a class="btn btn--outline btn--sm" href="https://www.google.com/maps/dir/?api=1&destination=%D0%B2%D1%83%D0%BB.%20%D0%9C%D0%B0%D1%80%D1%88%D0%B0%D0%BB%D0%B0%20%D0%9C%D0%B0%D0%BB%D0%B8%D0%BD%D0%BE%D0%B2%D1%81%D1%8C%D0%BA%D0%BE%D0%B3%D0%BE%2C%2018%2C%20%D0%9E%D0%B4%D0%B5%D1%81%D0%B0" target="_blank" rel="noopener">
+										<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+											<path d="M10 17.5s5.5-5 5.5-9a5.5 5.5 0 0 0-11 0c0 4 5.5 9 5.5 9z"></path>
+											<circle cx="10" cy="8.5" r="2"></circle>
+										</svg>
+										Прокласти маршрут
+									</a>
+								</div>
+							</div>
+						</li>
+					</ul>
+					<nav class="pager" aria-label="Pages" data-pages-nav hidden>
+						<button class="btn" type="button" aria-label="Previous page" data-pages-prev>
+							<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+								<path d="M16 10H4M9 5l-5 5 5 5"></path>
+							</svg>
+						</button>
+						<button class="btn" type="button" aria-label="Next page" data-pages-next>
+							<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+								<path d="M4 10h12M11 5l5 5-5 5"></path>
+							</svg>
+						</button>
+					</nav>
+				</div>
+			</section>
+		</main>
+	
+		<footer class="footer">
+			<div class="shell">
+				<div class="footer__inner">
+					<div class="footer__brand">
+						<div class="logo">
+							<a href="./index.html">
+								<img src="./images/logo-diagnostikaplus-white.svg" width="218" height="44" loading="lazy" alt="Діагностика плюс">
+							</a>
+						</div>
+						<div class="footer__about">
+							<p>«Діагностика плюс» — лабораторні дослідження та пункт прийому аналізів. Ліцензія МОЗ України, акредитація ISO 15189.</p>
+						</div>
+						<div class="footer__helsi">
+							<div class="footer__helsi-logo">
+								<img src="./images/logo-helsi.webp" width="428" height="274" loading="lazy" alt="Helsi">
+							</div>
+							<div class="footer__helsi-text">
+								<span>Ми в системі Helsi</span>
+								<span>Онлайн-запис на аналізи</span>
+							</div>
+						</div>
+					</div>
+					<div class="footer__col">
+						<button class="btn footer__toggle" type="button" aria-expanded="false" aria-controls="footer-sections" data-footer-toggle>
+							<span>Розділи</span>
+							<svg class="plus footer__toggle-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+								<line x1="3" y1="8" x2="13" y2="8"></line>
+								<line x1="8" y1="3" x2="8" y2="13"></line>
+							</svg>
+						</button>
+						<div class="fold footer__panel" id="footer-sections">
+							<ul class="footer__links">
+								<li><a href="./index.html">Головна</a></li>
+								<li><a href="./prices.html">Аналізи та ціни</a></li>
+								<li><a href="./doctors.html">Наші лікарі</a></li>
+								<li><a href="./appointment.html">Запис на прийом</a></li>
+								<li><a href="./about.html">Про компанію</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="footer__col">
+						<button class="btn footer__toggle" type="button" aria-expanded="false" aria-controls="footer-info" data-footer-toggle>
+							<span>Інформація</span>
+							<svg class="plus footer__toggle-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+								<line x1="3" y1="8" x2="13" y2="8"></line>
+								<line x1="8" y1="3" x2="8" y2="13"></line>
+							</svg>
+						</button>
+						<div class="fold footer__panel" id="footer-info">
+							<ul class="footer__links">
+								<li><a href="#">Пацієнтам</a></li>
+								<li><a href="./partners.html">Партнерам</a></li>
+								<li><a href="./preparation.html">Підготовка до аналізів</a></li>
+								<li><a href="./blog.html">Корисні статті</a></li>
+								<li><a href="./about.html">Ліцензії та сертифікати</a></li>
+								<li><a href="./contacts.html">Зв’язок</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="footer__col">
+						<button class="btn footer__toggle" type="button" aria-expanded="false" aria-controls="footer-contacts" data-footer-toggle>
+							<span>Контакти</span>
+							<svg class="plus footer__toggle-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+								<line x1="3" y1="8" x2="13" y2="8"></line>
+								<line x1="8" y1="3" x2="8" y2="13"></line>
+							</svg>
+						</button>
+						<div class="fold footer__panel" id="footer-contacts">
+							<div class="footer__contacts">
+								<div class="footer__contacts-text">
+									<p class="footer__phone"><a href="tel:+380996209957">099 620-99-57</a></p>
+									<p class="footer__address">м. Харків, вул. Максиміліанівська, 10<br>Пн–Сб 08:00–15:00</p>
+									<p><a href="mailto:diagnostika.pluss@gmail.com">diagnostika.pluss@gmail.com</a></p>
+								</div>
+								<ul class="footer__social">
+									<li>
+										<a href="#" aria-label="Facebook">
+											<img src="./images/ico-facebook.svg" width="24" height="24" loading="lazy" alt="">
+										</a>
+									</li>
+									<li>
+										<a href="#" aria-label="Instagram">
+											<img src="./images/ico-instagram.svg" width="24" height="24" loading="lazy" alt="">
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="footer__bottom">
+					<p>&copy; 2026 ТОВ «МЦ «МТМ»». Усі права захищено.</p>
+					<ul class="footer__legal">
+						<li><a href="#">Політика конфіденційності</a></li>
+						<li><a href="#">Публічна угода</a></li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+</body>
+</html>
