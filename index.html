@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="format-detection" content="telephone=no" />
 	<title>Діагностика плюс — медична лабораторія</title>
   <link rel="stylesheet" href="./css/main.css">
   <link rel="stylesheet" href="./css/pages/index.css">
@@ -101,7 +102,14 @@
 							</li>
 							<li><a href="./partners.html">Партнерам</a></li>
 							<li><a href="./contacts.html">Зв’язок</a></li>
-							<li><a href="./about.html">Про компанію</a></li>
+							<li>
+								<a href="#">Про компанію</a>
+								<ul class="header__submenu">
+									<li><a href="./about.html">Загальна інформація</a></li>
+									<li><a href="./mtm.html">Медичний центр МТМ</a></li>
+									<li><a href="./photos.html">Наше фото</a></li>
+								</ul>
+							</li>
 						</ul>
 					</div>
 					<div class="header__nav-actions">
@@ -258,10 +266,10 @@
 								</svg>
 							</button>
 						</div>
-						<div class="hero__dots">
-							<button class="btn hero__dot" type="button" aria-label="Slide 1" aria-current="true" data-hero-dot></button>
-							<button class="btn hero__dot" type="button" aria-label="Slide 2" data-hero-dot></button>
-							<button class="btn hero__dot" type="button" aria-label="Slide 3" data-hero-dot></button>
+						<div class="dots">
+							<button class="btn dots__dot" type="button" aria-label="Slide 1" aria-current="true" data-hero-dot></button>
+							<button class="btn dots__dot" type="button" aria-label="Slide 2" data-hero-dot></button>
+							<button class="btn dots__dot" type="button" aria-label="Slide 3" data-hero-dot></button>
 						</div>
 					</div>
 				</div>
@@ -538,7 +546,7 @@
 								<div class="section-head__text">
 									<span class="eyebrow">Про компанію</span>
 									<h2>Чому пацієнти обирають «Діагностика плюс»</h2>
-									<p>«Діагностика плюс» (ТОВ «МЦ «МТМ») — незалежна медична лабораторія з власним пунктом прийому. Ми даємо точні дані, на які спираються ваші лікарі.</p>
+									<p>«Діагностика плюс» (ТОВ «Медичний центр МТМ») — незалежна медична лабораторія з власним пунктом прийому. Ми даємо точні дані, на які спираються ваші лікарі.</p>
 								</div>
 							</div>
 							<ul class="about__stats">
@@ -802,35 +810,53 @@
 					</div>
 					<ul class="blog__list">
 						<li>
-							<a class="blog__card" href="#">
-								<div class="blog__media">
+							<a class="post-card" href="#">
+								<div class="post-card__media">
 									<img src="./images/img-07.webp" width="810" height="608" loading="lazy" alt="">
 								</div>
-								<div class="blog__text">
+								<div class="post-card__text">
 									<h3>Вітамін D: кому і коли перевіряти рівень</h3>
-									<span class="blog__meta">12 серпня · 4 хв читання</span>
+									<p>Дефіцит вітаміну D трапляється частіше, ніж здається, особливо взимку. Розповідаємо, кому варто здати аналіз і як часто його повторювати.</p>
+									<span class="post-card__more">
+										<span>Читати статтю</span>
+										<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+											<path d="M4 10h12M11 5l5 5-5 5"></path>
+										</svg>
+									</span>
 								</div>
 							</a>
 						</li>
 						<li>
-							<a class="blog__card" href="#">
-								<div class="blog__media">
+							<a class="post-card" href="#">
+								<div class="post-card__media">
 									<img src="./images/img-08.webp" width="810" height="608" loading="lazy" alt="">
 								</div>
-								<div class="blog__text">
+								<div class="post-card__text">
 									<h3>Як читати загальний аналіз крові: 7 показників</h3>
-									<span class="blog__meta">4 серпня · 6 хв читання</span>
+									<p>Гемоглобін, лейкоцити, тромбоцити, ШОЕ — що означає кожен показник і коли відхилення від норми справді привід звернутися до лікаря.</p>
+									<span class="post-card__more">
+										<span>Читати статтю</span>
+										<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+											<path d="M4 10h12M11 5l5 5-5 5"></path>
+										</svg>
+									</span>
 								</div>
 							</a>
 						</li>
 						<li>
-							<a class="blog__card" href="#">
-								<div class="blog__media">
+							<a class="post-card" href="#">
+								<div class="post-card__media">
 									<img src="./images/img-09.webp" width="810" height="752" loading="lazy" alt="">
 								</div>
-								<div class="blog__text">
+								<div class="post-card__text">
 									<h3>Щитоподібна залоза: мінімальний набір досліджень</h3>
-									<span class="blog__meta">28 липня · 5 хв читання</span>
+									<p>ТТГ, вільний Т4 та антитіла до ТПО — з чого почати перевірку щитоподібної залози і коли додавати інші аналізи.</p>
+									<span class="post-card__more">
+										<span>Читати статтю</span>
+										<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+											<path d="M4 10h12M11 5l5 5-5 5"></path>
+										</svg>
+									</span>
 								</div>
 							</a>
 						</li>
@@ -907,7 +933,7 @@
 								<li><a href="./partners.html">Партнерам</a></li>
 								<li><a href="./preparation.html">Підготовка до аналізів</a></li>
 								<li><a href="./blog.html">Корисні статті</a></li>
-								<li><a href="./about.html">Ліцензії та сертифікати</a></li>
+								<li><a href="./about.html#documents">Ліцензії та сертифікати</a></li>
 								<li><a href="./contacts.html">Зв’язок</a></li>
 							</ul>
 						</div>
@@ -944,7 +970,7 @@
 					</div>
 				</div>
 				<div class="footer__bottom">
-					<p>&copy; 2026 ТОВ «МЦ «МТМ»». Усі права захищено.</p>
+					<p>&copy; 2026 ТОВ «Діагностика плюс». Усі права захищено.</p>
 					<ul class="footer__legal">
 						<li><a href="#">Політика конфіденційності</a></li>
 						<li><a href="#">Публічна угода</a></li>

@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="format-detection" content="telephone=no" />
 	<title>Аналізи та ціни — Діагностика плюс</title>
   <link rel="stylesheet" href="./css/main.css">
   <link rel="stylesheet" href="./css/pages/prices.css">
@@ -101,7 +102,14 @@
 							</li>
 							<li><a href="./partners.html">Партнерам</a></li>
 							<li><a href="./contacts.html">Зв’язок</a></li>
-							<li><a href="./about.html">Про компанію</a></li>
+							<li>
+								<a href="#">Про компанію</a>
+								<ul class="header__submenu">
+									<li><a href="./about.html">Загальна інформація</a></li>
+									<li><a href="./mtm.html">Медичний центр МТМ</a></li>
+									<li><a href="./photos.html">Наше фото</a></li>
+								</ul>
+							</li>
 						</ul>
 					</div>
 					<div class="header__nav-actions">
@@ -446,7 +454,7 @@
 						</div>
 						<div class="prices-catalog__main">
 							<div id="panel-lab" role="tabpanel" aria-labelledby="tab-lab" data-prices-panel="lab">
-								<div class="tests" id="clinical" data-tests>
+								<div class="tests" id="clinical" data-tests data-show-more>
 									<div class="tests__head">
 										<h2>Загальноклінічні дослідження</h2>
 										<p><span data-tests-count>12</span> <span data-tests-unit>послуг</span><span data-tests-from> · від <span data-tests-min>60 ₴</span></span></p>
@@ -456,7 +464,7 @@
 										<span class="tests__thead-term">Термін</span>
 										<span>Ціна</span>
 									</div>
-									<ul class="tests__list" data-tests-list>
+									<ul class="tests__list" data-show-more-list>
 										<li class="tests__row" data-test-id="lab:clin:0" data-test-price="180">
 											<span class="tests__name" data-test-name>Загальний аналіз крові з лейкоцитарною формулою</span>
 											<span class="tests__term tests__term--fast">12 год</span>
@@ -530,12 +538,12 @@
 											<button class="btn btn--outline tests__add" type="button" aria-pressed="false" aria-label="Include in the estimate: Зішкріб на ентеробіоз" data-calc-toggle></button>
 										</li>
 									</ul>
-									<button class="btn tests__more" type="button" aria-expanded="false" data-tests-more>
+									<button class="btn tests__more" type="button" aria-expanded="false" data-show-more-toggle>
 										<span>Показати всі <span data-tests-count>12</span> <span data-tests-unit>послуг</span></span>
 										<span>Згорнути</span>
 									</button>
 								</div>
-								<div class="tests" id="biochemistry" data-tests>
+								<div class="tests" id="biochemistry" data-tests data-show-more>
 									<div class="tests__head">
 										<h2>Біохімічні дослідження</h2>
 										<p><span data-tests-count>26</span> <span data-tests-unit>послуг</span><span data-tests-from> · від <span data-tests-min>80 ₴</span></span></p>
@@ -545,7 +553,7 @@
 										<span class="tests__thead-term">Термін</span>
 										<span>Ціна</span>
 									</div>
-									<ul class="tests__list" data-tests-list>
+									<ul class="tests__list" data-show-more-list>
 										<li class="tests__row" data-test-id="lab:bio:0" data-test-price="520">
 											<span class="tests__name" data-test-name>Гомоцистеїн (в сироватці крові)</span>
 											<span class="tests__term tests__term--fast">1 р.д.</span>
@@ -703,12 +711,12 @@
 											<button class="btn btn--outline tests__add" type="button" aria-pressed="false" aria-label="Include in the estimate: Залізо сироваткове" data-calc-toggle></button>
 										</li>
 									</ul>
-									<button class="btn tests__more" type="button" aria-expanded="false" data-tests-more>
+									<button class="btn tests__more" type="button" aria-expanded="false" data-show-more-toggle>
 										<span>Показати всі <span data-tests-count>26</span> <span data-tests-unit>послуг</span></span>
 										<span>Згорнути</span>
 									</button>
 								</div>
-								<div class="tests" id="hormones" data-tests>
+								<div class="tests" id="hormones" data-tests data-show-more>
 									<div class="tests__head">
 										<h2>Гормональні дослідження</h2>
 										<p><span data-tests-count>14</span> <span data-tests-unit>послуг</span><span data-tests-from> · від <span data-tests-min>210 ₴</span></span></p>
@@ -718,7 +726,7 @@
 										<span class="tests__thead-term">Термін</span>
 										<span>Ціна</span>
 									</div>
-									<ul class="tests__list" data-tests-list>
+									<ul class="tests__list" data-show-more-list>
 										<li class="tests__row" data-test-id="lab:horm:0" data-test-price="210">
 											<span class="tests__name" data-test-name>Тиреотропний гормон (ТТГ)</span>
 											<span class="tests__term tests__term--fast">1 р.д.</span>
@@ -804,12 +812,12 @@
 											<button class="btn btn--outline tests__add" type="button" aria-pressed="false" aria-label="Include in the estimate: Вітамін D (25-OH)" data-calc-toggle></button>
 										</li>
 									</ul>
-									<button class="btn tests__more" type="button" aria-expanded="false" data-tests-more>
+									<button class="btn tests__more" type="button" aria-expanded="false" data-show-more-toggle>
 										<span>Показати всі <span data-tests-count>14</span> <span data-tests-unit>послуг</span></span>
 										<span>Згорнути</span>
 									</button>
 								</div>
-								<div class="tests" id="coagulation" data-tests>
+								<div class="tests" id="coagulation" data-tests data-show-more>
 									<div class="tests__head">
 										<h2>Коагулологія</h2>
 										<p><span data-tests-count>6</span> <span data-tests-unit>послуг</span><span data-tests-from> · від <span data-tests-min>140 ₴</span></span></p>
@@ -819,7 +827,7 @@
 										<span class="tests__thead-term">Термін</span>
 										<span>Ціна</span>
 									</div>
-									<ul class="tests__list" data-tests-list>
+									<ul class="tests__list" data-show-more-list>
 										<li class="tests__row" data-test-id="lab:coag:0" data-test-price="380">
 											<span class="tests__name" data-test-name>Коагулограма (базова)</span>
 											<span class="tests__term tests__term--fast">1 р.д.</span>
@@ -857,12 +865,12 @@
 											<button class="btn btn--outline tests__add" type="button" aria-pressed="false" aria-label="Include in the estimate: Антитромбін III" data-calc-toggle></button>
 										</li>
 									</ul>
-									<button class="btn tests__more" type="button" aria-expanded="false" data-tests-more>
+									<button class="btn tests__more" type="button" aria-expanded="false" data-show-more-toggle>
 										<span>Показати всі <span data-tests-count>6</span> <span data-tests-unit>послуг</span></span>
 										<span>Згорнути</span>
 									</button>
 								</div>
-								<div class="tests" id="infections" data-tests>
+								<div class="tests" id="infections" data-tests data-show-more>
 									<div class="tests__head">
 										<h2>Імунологія та інфекції</h2>
 										<p><span data-tests-count>12</span> <span data-tests-unit>послуг</span><span data-tests-from> · від <span data-tests-min>180 ₴</span></span></p>
@@ -872,7 +880,7 @@
 										<span class="tests__thead-term">Термін</span>
 										<span>Ціна</span>
 									</div>
-									<ul class="tests__list" data-tests-list>
+									<ul class="tests__list" data-show-more-list>
 										<li class="tests__row" data-test-id="lab:inf:0" data-test-price="250">
 											<span class="tests__name" data-test-name>ВІЛ 1/2 (антитіла та антиген p24)</span>
 											<span class="tests__term tests__term--fast">1 р.д.</span>
@@ -946,12 +954,12 @@
 											<button class="btn btn--outline tests__add" type="button" aria-pressed="false" aria-label="Include in the estimate: ПЛР: ВПЛ високого ризику (14 типів)" data-calc-toggle></button>
 										</li>
 									</ul>
-									<button class="btn tests__more" type="button" aria-expanded="false" data-tests-more>
+									<button class="btn tests__more" type="button" aria-expanded="false" data-show-more-toggle>
 										<span>Показати всі <span data-tests-count>12</span> <span data-tests-unit>послуг</span></span>
 										<span>Згорнути</span>
 									</button>
 								</div>
-								<div class="tests" id="oncomarkers" data-tests>
+								<div class="tests" id="oncomarkers" data-tests data-show-more>
 									<div class="tests__head">
 										<h2>Онкомаркери</h2>
 										<p><span data-tests-count>8</span> <span data-tests-unit>послуг</span><span data-tests-from> · від <span data-tests-min>290 ₴</span></span></p>
@@ -961,7 +969,7 @@
 										<span class="tests__thead-term">Термін</span>
 										<span>Ціна</span>
 									</div>
-									<ul class="tests__list" data-tests-list>
+									<ul class="tests__list" data-show-more-list>
 										<li class="tests__row" data-test-id="lab:onco:0" data-test-price="290">
 											<span class="tests__name" data-test-name>ПСА загальний</span>
 											<span class="tests__price">290 ₴</span>
@@ -1009,12 +1017,12 @@
 											<button class="btn btn--outline tests__add" type="button" aria-pressed="false" aria-label="Include in the estimate: HE4" data-calc-toggle></button>
 										</li>
 									</ul>
-									<button class="btn tests__more" type="button" aria-expanded="false" data-tests-more>
+									<button class="btn tests__more" type="button" aria-expanded="false" data-show-more-toggle>
 										<span>Показати всі <span data-tests-count>8</span> <span data-tests-unit>послуг</span></span>
 										<span>Згорнути</span>
 									</button>
 								</div>
-								<div class="tests" id="allergy" data-tests>
+								<div class="tests" id="allergy" data-tests data-show-more>
 									<div class="tests__head">
 										<h2>Алергологія</h2>
 										<p><span data-tests-count>4</span> <span data-tests-unit>послуги</span><span data-tests-from> · від <span data-tests-min>230 ₴</span></span></p>
@@ -1024,7 +1032,7 @@
 										<span class="tests__thead-term">Термін</span>
 										<span>Ціна</span>
 									</div>
-									<ul class="tests__list" data-tests-list>
+									<ul class="tests__list" data-show-more-list>
 										<li class="tests__row" data-test-id="lab:all:0" data-test-price="230">
 											<span class="tests__name" data-test-name>Імуноглобулін E загальний (IgE)</span>
 											<span class="tests__term tests__term--fast">1 р.д.</span>
@@ -1050,12 +1058,12 @@
 											<button class="btn btn--outline tests__add" type="button" aria-pressed="false" aria-label="Include in the estimate: Педіатрична панель (20 алергенів)" data-calc-toggle></button>
 										</li>
 									</ul>
-									<button class="btn tests__more" type="button" aria-expanded="false" data-tests-more>
+									<button class="btn tests__more" type="button" aria-expanded="false" data-show-more-toggle>
 										<span>Показати всі <span data-tests-count>4</span> <span data-tests-unit>послуги</span></span>
 										<span>Згорнути</span>
 									</button>
 								</div>
-								<div class="tests" id="cytology" data-tests>
+								<div class="tests" id="cytology" data-tests data-show-more>
 									<div class="tests__head">
 										<h2>Мікробіологія та цитологія</h2>
 										<p><span data-tests-count>4</span> <span data-tests-unit>послуги</span><span data-tests-from> · від <span data-tests-min>160 ₴</span></span></p>
@@ -1065,7 +1073,7 @@
 										<span class="tests__thead-term">Термін</span>
 										<span>Ціна</span>
 									</div>
-									<ul class="tests__list" data-tests-list>
+									<ul class="tests__list" data-show-more-list>
 										<li class="tests__row" data-test-id="lab:cyto:0" data-test-price="160">
 											<span class="tests__name" data-test-name>Мазок на флору</span>
 											<span class="tests__term tests__term--fast">1 р.д.</span>
@@ -1091,12 +1099,12 @@
 											<button class="btn btn--outline tests__add" type="button" aria-pressed="false" aria-label="Include in the estimate: Бактеріологічний посів із зіву" data-calc-toggle></button>
 										</li>
 									</ul>
-									<button class="btn tests__more" type="button" aria-expanded="false" data-tests-more>
+									<button class="btn tests__more" type="button" aria-expanded="false" data-show-more-toggle>
 										<span>Показати всі <span data-tests-count>4</span> <span data-tests-unit>послуги</span></span>
 										<span>Згорнути</span>
 									</button>
 								</div>
-								<div class="tests" id="lipids" data-tests>
+								<div class="tests" id="lipids" data-tests data-show-more>
 									<div class="tests__head">
 										<h2>Дослідження ліпідного обміну</h2>
 										<p><span data-tests-count>3</span> <span data-tests-unit>послуги</span><span data-tests-from> · від <span data-tests-min>120 ₴</span></span></p>
@@ -1106,7 +1114,7 @@
 										<span class="tests__thead-term">Термін</span>
 										<span>Ціна</span>
 									</div>
-									<ul class="tests__list" data-tests-list>
+									<ul class="tests__list" data-show-more-list>
 										<li class="tests__row" data-test-id="lab:lip:0" data-test-price="120">
 											<span class="tests__name" data-test-name>Холестерин (ЛПВЩ)</span>
 											<span class="tests__term tests__term--fast">12 год</span>
@@ -1126,12 +1134,12 @@
 											<button class="btn btn--outline tests__add" type="button" aria-pressed="false" aria-label="Include in the estimate: Холестерин" data-calc-toggle></button>
 										</li>
 									</ul>
-									<button class="btn tests__more" type="button" aria-expanded="false" data-tests-more>
+									<button class="btn tests__more" type="button" aria-expanded="false" data-show-more-toggle>
 										<span>Показати всі <span data-tests-count>3</span> <span data-tests-unit>послуги</span></span>
 										<span>Згорнути</span>
 									</button>
 								</div>
-								<div class="tests" id="vitamins" data-tests>
+								<div class="tests" id="vitamins" data-tests data-show-more>
 									<div class="tests__head">
 										<h2>Дослідження на вітаміни</h2>
 										<p><span data-tests-count>3</span> <span data-tests-unit>послуги</span><span data-tests-from> · від <span data-tests-min>180 ₴</span></span></p>
@@ -1141,7 +1149,7 @@
 										<span class="tests__thead-term">Термін</span>
 										<span>Ціна</span>
 									</div>
-									<ul class="tests__list" data-tests-list>
+									<ul class="tests__list" data-show-more-list>
 										<li class="tests__row" data-test-id="lab:vit:0" data-test-price="270">
 											<span class="tests__name" data-test-name>Вітамін В12 (ціанокобаламін)</span>
 											<span class="tests__term tests__term--fast">1 р.д.</span>
@@ -1161,12 +1169,12 @@
 											<button class="btn btn--outline tests__add" type="button" aria-pressed="false" aria-label="Include in the estimate: Вітамін В2 (рибофлавін)" data-calc-toggle></button>
 										</li>
 									</ul>
-									<button class="btn tests__more" type="button" aria-expanded="false" data-tests-more>
+									<button class="btn tests__more" type="button" aria-expanded="false" data-show-more-toggle>
 										<span>Показати всі <span data-tests-count>3</span> <span data-tests-unit>послуги</span></span>
 										<span>Згорнути</span>
 									</button>
 								</div>
-								<div class="tests" id="microelements" data-tests>
+								<div class="tests" id="microelements" data-tests data-show-more>
 									<div class="tests__head">
 										<h2>Дослідження на мікроелементи</h2>
 										<p><span data-tests-count>3</span> <span data-tests-unit>послуги</span><span data-tests-from> · від <span data-tests-min>120 ₴</span></span></p>
@@ -1176,7 +1184,7 @@
 										<span class="tests__thead-term">Термін</span>
 										<span>Ціна</span>
 									</div>
-									<ul class="tests__list" data-tests-list>
+									<ul class="tests__list" data-show-more-list>
 										<li class="tests__row" data-test-id="lab:micro:0" data-test-price="120">
 											<span class="tests__name" data-test-name>Магній (Mg)</span>
 											<span class="tests__term tests__term--fast">12 год</span>
@@ -1196,12 +1204,12 @@
 											<button class="btn btn--outline tests__add" type="button" aria-pressed="false" aria-label="Include in the estimate: Кальцій іонізований (Са++)" data-calc-toggle></button>
 										</li>
 									</ul>
-									<button class="btn tests__more" type="button" aria-expanded="false" data-tests-more>
+									<button class="btn tests__more" type="button" aria-expanded="false" data-show-more-toggle>
 										<span>Показати всі <span data-tests-count>3</span> <span data-tests-unit>послуги</span></span>
 										<span>Згорнути</span>
 									</button>
 								</div>
-								<div class="tests" id="thyroid" data-tests>
+								<div class="tests" id="thyroid" data-tests data-show-more>
 									<div class="tests__head">
 										<h2>Тиреоїдна панель</h2>
 										<p><span data-tests-count>3</span> <span data-tests-unit>послуги</span><span data-tests-from> · від <span data-tests-min>200 ₴</span></span></p>
@@ -1211,7 +1219,7 @@
 										<span class="tests__thead-term">Термін</span>
 										<span>Ціна</span>
 									</div>
-									<ul class="tests__list" data-tests-list>
+									<ul class="tests__list" data-show-more-list>
 										<li class="tests__row" data-test-id="lab:thyr:0" data-test-price="200">
 											<span class="tests__name" data-test-name>Тиреотропний гормон (ТТГ)</span>
 											<span class="tests__term">2 р.д.</span>
@@ -1231,12 +1239,12 @@
 											<button class="btn btn--outline tests__add" type="button" aria-pressed="false" aria-label="Include in the estimate: Трийодтиронін вільний (Т3 вільний)" data-calc-toggle></button>
 										</li>
 									</ul>
-									<button class="btn tests__more" type="button" aria-expanded="false" data-tests-more>
+									<button class="btn tests__more" type="button" aria-expanded="false" data-show-more-toggle>
 										<span>Показати всі <span data-tests-count>3</span> <span data-tests-unit>послуги</span></span>
 										<span>Згорнути</span>
 									</button>
 								</div>
-								<div class="tests" id="cardiac" data-tests>
+								<div class="tests" id="cardiac" data-tests data-show-more>
 									<div class="tests__head">
 										<h2>Серцеві маркери</h2>
 										<p><span data-tests-count>3</span> <span data-tests-unit>послуги</span><span data-tests-from> · від <span data-tests-min>100 ₴</span></span></p>
@@ -1246,7 +1254,7 @@
 										<span class="tests__thead-term">Термін</span>
 										<span>Ціна</span>
 									</div>
-									<ul class="tests__list" data-tests-list>
+									<ul class="tests__list" data-show-more-list>
 										<li class="tests__row" data-test-id="lab:card:0" data-test-price="100">
 											<span class="tests__name" data-test-name>Креатинфосфокіназа МВ-фракція (КФК) (діагностика інфаркту міокарда)</span>
 											<span class="tests__term tests__term--fast">1 р.д.</span>
@@ -1266,12 +1274,12 @@
 											<button class="btn btn--outline tests__add" type="button" aria-pressed="false" aria-label="Include in the estimate: Тропонін-І" data-calc-toggle></button>
 										</li>
 									</ul>
-									<button class="btn tests__more" type="button" aria-expanded="false" data-tests-more>
+									<button class="btn tests__more" type="button" aria-expanded="false" data-show-more-toggle>
 										<span>Показати всі <span data-tests-count>3</span> <span data-tests-unit>послуги</span></span>
 										<span>Згорнути</span>
 									</button>
 								</div>
-								<div class="tests" id="pcr" data-tests>
+								<div class="tests" id="pcr" data-tests data-show-more>
 									<div class="tests__head">
 										<h2>Дослідження на інфекції методом ПЛР</h2>
 										<p><span data-tests-count>3</span> <span data-tests-unit>послуги</span><span data-tests-from> · від <span data-tests-min>250 ₴</span></span></p>
@@ -1281,7 +1289,7 @@
 										<span class="tests__thead-term">Термін</span>
 										<span>Ціна</span>
 									</div>
-									<ul class="tests__list" data-tests-list>
+									<ul class="tests__list" data-show-more-list>
 										<li class="tests__row" data-test-id="lab:pcr:0" data-test-price="250">
 											<span class="tests__name" data-test-name>ПЛР. Вірус герпесу, тип 7 (HSV 7) (зішкріб, якісне визн., Real-time)</span>
 											<span class="tests__term">2 р.д.</span>
@@ -1301,12 +1309,12 @@
 											<button class="btn btn--outline tests__add" type="button" aria-pressed="false" aria-label="Include in the estimate: ПЛР. Вірус краснухи (рана, якісне визн., Real-time)" data-calc-toggle></button>
 										</li>
 									</ul>
-									<button class="btn tests__more" type="button" aria-expanded="false" data-tests-more>
+									<button class="btn tests__more" type="button" aria-expanded="false" data-show-more-toggle>
 										<span>Показати всі <span data-tests-count>3</span> <span data-tests-unit>послуги</span></span>
 										<span>Згорнути</span>
 									</button>
 								</div>
-								<div class="tests" id="genetics" data-tests>
+								<div class="tests" id="genetics" data-tests data-show-more>
 									<div class="tests__head">
 										<h2>Генетичні дослідження</h2>
 										<p><span data-tests-count>3</span> <span data-tests-unit>послуги</span><span data-tests-from> · від <span data-tests-min>500 ₴</span></span></p>
@@ -1316,7 +1324,7 @@
 										<span class="tests__thead-term">Термін</span>
 										<span>Ціна</span>
 									</div>
-									<ul class="tests__list" data-tests-list>
+									<ul class="tests__list" data-show-more-list>
 										<li class="tests__row" data-test-id="lab:gen:0" data-test-price="800">
 											<span class="tests__name" data-test-name>G - 2001 Виділення та зберігання ДНК із зразку біоматеріалу пацієнта - ДНК</span>
 											<span class="tests__term">2 р.д.</span>
@@ -1336,12 +1344,12 @@
 											<button class="btn btn--outline tests__add" type="button" aria-pressed="false" aria-label="Include in the estimate: Мутація в гені протромбіну (фактор 2) системи згортання крові (А-20210-G)" data-calc-toggle></button>
 										</li>
 									</ul>
-									<button class="btn tests__more" type="button" aria-expanded="false" data-tests-more>
+									<button class="btn tests__more" type="button" aria-expanded="false" data-show-more-toggle>
 										<span>Показати всі <span data-tests-count>3</span> <span data-tests-unit>послуги</span></span>
 										<span>Згорнути</span>
 									</button>
 								</div>
-								<div class="tests" id="stool" data-tests>
+								<div class="tests" id="stool" data-tests data-show-more>
 									<div class="tests__head">
 										<h2>Біохімічні дослідження калу</h2>
 										<p><span data-tests-count>3</span> <span data-tests-unit>послуги</span><span data-tests-from> · від <span data-tests-min>150 ₴</span></span></p>
@@ -1351,7 +1359,7 @@
 										<span class="tests__thead-term">Термін</span>
 										<span>Ціна</span>
 									</div>
-									<ul class="tests__list" data-tests-list>
+									<ul class="tests__list" data-show-more-list>
 										<li class="tests__row" data-test-id="lab:stool:0" data-test-price="150">
 											<span class="tests__name" data-test-name>Визначення вмісту вуглеводів в калі (метод Бенедікта)</span>
 											<span class="tests__term">2 р.д.</span>
@@ -1371,14 +1379,14 @@
 											<button class="btn btn--outline tests__add" type="button" aria-pressed="false" aria-label="Include in the estimate: Кальпротектін" data-calc-toggle></button>
 										</li>
 									</ul>
-									<button class="btn tests__more" type="button" aria-expanded="false" data-tests-more>
+									<button class="btn tests__more" type="button" aria-expanded="false" data-show-more-toggle>
 										<span>Показати всі <span data-tests-count>3</span> <span data-tests-unit>послуги</span></span>
 										<span>Згорнути</span>
 									</button>
 								</div>
 							</div>
 							<div id="panel-instr" role="tabpanel" aria-labelledby="tab-instr" data-prices-panel="instr" hidden>
-								<div class="tests" id="ultrasound" data-tests>
+								<div class="tests" id="ultrasound" data-tests data-show-more>
 									<div class="tests__head">
 										<h2>Ультразвукові дослідження</h2>
 										<p><span data-tests-count>20</span> <span data-tests-unit>послуг</span><span data-tests-from> · від <span data-tests-min>380 ₴</span></span></p>
@@ -1388,7 +1396,7 @@
 										<span class="tests__thead-term">Термін</span>
 										<span>Ціна</span>
 									</div>
-									<ul class="tests__list" data-tests-list>
+									<ul class="tests__list" data-show-more-list>
 										<li class="tests__row" data-test-id="instr:us:0" data-test-price="450">
 											<span class="tests__name" data-test-name>Цервікометрія</span>
 											<span class="tests__price">450 ₴</span>
@@ -1490,12 +1498,12 @@
 											<button class="btn btn--outline tests__add" type="button" aria-pressed="false" aria-label="Include in the estimate: УЗД нирок і наднирників" data-calc-toggle></button>
 										</li>
 									</ul>
-									<button class="btn tests__more" type="button" aria-expanded="false" data-tests-more>
+									<button class="btn tests__more" type="button" aria-expanded="false" data-show-more-toggle>
 										<span>Показати всі <span data-tests-count>20</span> <span data-tests-unit>послуг</span></span>
 										<span>Згорнути</span>
 									</button>
 								</div>
-								<div class="tests" id="functional" data-tests>
+								<div class="tests" id="functional" data-tests data-show-more>
 									<div class="tests__head">
 										<h2>Функціональна діагностика</h2>
 										<p><span data-tests-count>5</span> <span data-tests-unit>послуг</span><span data-tests-from> · від <span data-tests-min>290 ₴</span></span></p>
@@ -1505,7 +1513,7 @@
 										<span class="tests__thead-term">Термін</span>
 										<span>Ціна</span>
 									</div>
-									<ul class="tests__list" data-tests-list>
+									<ul class="tests__list" data-show-more-list>
 										<li class="tests__row" data-test-id="instr:func:0" data-test-price="290">
 											<span class="tests__name" data-test-name>Електрокардіограма з розшифровкою (ЕКГ)</span>
 											<span class="tests__price">290 ₴</span>
@@ -1532,14 +1540,14 @@
 											<button class="btn btn--outline tests__add" type="button" aria-pressed="false" aria-label="Include in the estimate: Установка ВМС «Мирена», ВМК «Джайдес»" data-calc-toggle></button>
 										</li>
 									</ul>
-									<button class="btn tests__more" type="button" aria-expanded="false" data-tests-more>
+									<button class="btn tests__more" type="button" aria-expanded="false" data-show-more-toggle>
 										<span>Показати всі <span data-tests-count>5</span> <span data-tests-unit>послуг</span></span>
 										<span>Згорнути</span>
 									</button>
 								</div>
 							</div>
 							<div id="panel-consult" role="tabpanel" aria-labelledby="tab-consult" data-prices-panel="consult" hidden>
-								<div class="tests" id="consultation" data-tests>
+								<div class="tests" id="consultation" data-tests data-show-more>
 									<div class="tests__head">
 										<h2>Консультативний прийом</h2>
 										<p><span data-tests-count>8</span> <span data-tests-unit>послуг</span><span data-tests-from> · від <span data-tests-min>300 ₴</span></span></p>
@@ -1549,7 +1557,7 @@
 										<span class="tests__thead-term">Термін</span>
 										<span>Ціна</span>
 									</div>
-									<ul class="tests__list" data-tests-list>
+									<ul class="tests__list" data-show-more-list>
 										<li class="tests__row" data-test-id="consult:cons:0" data-test-price="550">
 											<span class="tests__name" data-test-name>Консультація гінеколога (первинна)</span>
 											<span class="tests__price">550 ₴</span>
@@ -1591,14 +1599,14 @@
 											<button class="btn btn--outline tests__add" type="button" aria-pressed="false" aria-label="Include in the estimate: Інтерпретація результатів аналізів" data-calc-toggle></button>
 										</li>
 									</ul>
-									<button class="btn tests__more" type="button" aria-expanded="false" data-tests-more>
+									<button class="btn tests__more" type="button" aria-expanded="false" data-show-more-toggle>
 										<span>Показати всі <span data-tests-count>8</span> <span data-tests-unit>послуг</span></span>
 										<span>Згорнути</span>
 									</button>
 								</div>
 							</div>
 							<div id="panel-manip" role="tabpanel" aria-labelledby="tab-manip" data-prices-panel="manip" hidden>
-								<div class="tests" id="manipulations" data-tests>
+								<div class="tests" id="manipulations" data-tests data-show-more>
 									<div class="tests__head">
 										<h2>Лікарські маніпуляції</h2>
 										<p><span data-tests-count>7</span> <span data-tests-unit>послуг</span><span data-tests-from> · від <span data-tests-min>50 ₴</span></span></p>
@@ -1608,7 +1616,7 @@
 										<span class="tests__thead-term">Термін</span>
 										<span>Ціна</span>
 									</div>
-									<ul class="tests__list" data-tests-list>
+									<ul class="tests__list" data-show-more-list>
 										<li class="tests__row" data-test-id="manip:man:0" data-test-price="120">
 											<span class="tests__name" data-test-name>Внутрішньом’язова ін’єкція</span>
 											<span class="tests__price">120 ₴</span>
@@ -1645,14 +1653,14 @@
 											<button class="btn btn--outline tests__add" type="button" aria-pressed="false" aria-label="Include in the estimate: Вимірювання артеріального тиску" data-calc-toggle></button>
 										</li>
 									</ul>
-									<button class="btn tests__more" type="button" aria-expanded="false" data-tests-more>
+									<button class="btn tests__more" type="button" aria-expanded="false" data-show-more-toggle>
 										<span>Показати всі <span data-tests-count>7</span> <span data-tests-unit>послуг</span></span>
 										<span>Згорнути</span>
 									</button>
 								</div>
 							</div>
 							<div id="panel-extra" role="tabpanel" aria-labelledby="tab-extra" data-prices-panel="extra" hidden>
-								<div class="tests" id="services" data-tests>
+								<div class="tests" id="services" data-tests data-show-more>
 									<div class="tests__head">
 										<h2>Додаткові послуги</h2>
 										<p><span data-tests-count>6</span> <span data-tests-unit>послуг</span><span data-tests-from> · від <span data-tests-min>50 ₴</span></span></p>
@@ -1662,7 +1670,7 @@
 										<span class="tests__thead-term">Термін</span>
 										<span>Ціна</span>
 									</div>
-									<ul class="tests__list" data-tests-list>
+									<ul class="tests__list" data-show-more-list>
 										<li class="tests__row" data-test-id="extra:oth:0" data-test-price="80">
 											<span class="tests__name" data-test-name>Забір венозної крові</span>
 											<span class="tests__price">80 ₴</span>
@@ -1694,7 +1702,7 @@
 											<button class="btn btn--outline tests__add" type="button" aria-pressed="false" aria-label="Include in the estimate: Термінове виконання (cito)" data-calc-toggle></button>
 										</li>
 									</ul>
-									<button class="btn tests__more" type="button" aria-expanded="false" data-tests-more>
+									<button class="btn tests__more" type="button" aria-expanded="false" data-show-more-toggle>
 										<span>Показати всі <span data-tests-count>6</span> <span data-tests-unit>послуг</span></span>
 										<span>Згорнути</span>
 									</button>
@@ -1702,15 +1710,6 @@
 							</div>
 							<div class="prices-catalog__empty" data-prices-empty>
 								<p>За запитом «<span data-prices-query></span>» нічого не знайдено</p>
-							</div>
-							<div class="prices-catalog__help">
-								<div class="prices-catalog__help-text">
-									<p class="prices-catalog__help-title">Не знайшли потрібне дослідження?</p>
-									<p>Зателефонуйте — підкажемо, чи виконуємо його, і як підготуватися.</p>
-								</div>
-								<div>
-									<a class="btn btn--sm" href="tel:+380996209957">099 620-99-57</a>
-								</div>
 							</div>
 						</div>
 						<div class="prices-catalog__panel prices-catalog__panel--calc" id="prices-calc">
@@ -1758,6 +1757,59 @@
 					</div>
 					<div>
 						<button class="btn prices-catalog__dock-open" type="button" aria-controls="prices-calc" aria-expanded="false" data-prices-sheet>Розрахунок</button>
+					</div>
+				</div>
+			</section>
+			<section class="phones-cta">
+				<div class="shell">
+					<div class="phones-cta__inner">
+						<div class="phones-cta__head">
+							<div class="tile phones-cta__icon">
+								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+									<circle cx="12" cy="12" r="9"></circle>
+									<path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.6v.6M12 17v.1"></path>
+								</svg>
+							</div>
+							<div class="phones-cta__text">
+								<h2>Не знайшли потрібне дослідження?</h2>
+								<p>Зателефонуйте — підкажемо, чи виконуємо його, і як підготуватися.</p>
+							</div>
+						</div>
+						<ul class="phones-cta__phones">
+							<li>
+								<a href="tel:+380577004257">
+									<span class="tile phones-cta__dial">
+										<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+											<path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"></path>
+										</svg>
+									</span>
+									<span class="phones-cta__number">057 700-42-57</span>
+									<span class="phones-cta__label">Міський</span>
+								</a>
+							</li>
+							<li>
+								<a href="tel:+380996209957">
+									<span class="tile phones-cta__dial">
+										<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+											<path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"></path>
+										</svg>
+									</span>
+									<span class="phones-cta__number">099 620-99-57</span>
+									<span class="phones-cta__label">Vodafone · основний</span>
+								</a>
+							</li>
+							<li>
+								<a href="tel:+380977032509">
+									<span class="tile phones-cta__dial">
+										<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+											<path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"></path>
+										</svg>
+									</span>
+									<span class="phones-cta__number">097 703-25-09</span>
+									<span class="phones-cta__label">Київстар</span>
+								</a>
+							</li>
+						</ul>
 					</div>
 				</div>
 			</section>
@@ -1817,7 +1869,7 @@
 								<li><a href="./partners.html">Партнерам</a></li>
 								<li><a href="./preparation.html">Підготовка до аналізів</a></li>
 								<li><a href="./blog.html">Корисні статті</a></li>
-								<li><a href="./about.html">Ліцензії та сертифікати</a></li>
+								<li><a href="./about.html#documents">Ліцензії та сертифікати</a></li>
 								<li><a href="./contacts.html">Зв’язок</a></li>
 							</ul>
 						</div>
@@ -1854,7 +1906,7 @@
 					</div>
 				</div>
 				<div class="footer__bottom">
-					<p>&copy; 2026 ТОВ «МЦ «МТМ»». Усі права захищено.</p>
+					<p>&copy; 2026 ТОВ «Діагностика плюс». Усі права захищено.</p>
 					<ul class="footer__legal">
 						<li><a href="#">Політика конфіденційності</a></li>
 						<li><a href="#">Публічна угода</a></li>

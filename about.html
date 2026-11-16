@@ -3,8 +3,10 @@
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Про компанію — Діагностика плюс</title>
+	<meta name="format-detection" content="telephone=no" />
+	<title>Загальна інформація — Діагностика плюс</title>
   <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/pages/article.css">
   <script src="./js/main.js" defer></script>
 </head>
 <body>
@@ -100,7 +102,14 @@
 							</li>
 							<li><a href="./partners.html">Партнерам</a></li>
 							<li><a href="./contacts.html">Зв’язок</a></li>
-							<li><a href="./about.html">Про компанію</a></li>
+							<li>
+								<a href="#">Про компанію</a>
+								<ul class="header__submenu">
+									<li><a href="./about.html">Загальна інформація</a></li>
+									<li><a href="./mtm.html">Медичний центр МТМ</a></li>
+									<li><a href="./photos.html">Наше фото</a></li>
+								</ul>
+							</li>
 						</ul>
 					</div>
 					<div class="header__nav-actions">
@@ -152,10 +161,249 @@
 		</dialog>
 	
 		<main>
-			<section class="intro">
+			<section class="page-hero article-hero">
 				<div class="shell">
-					<h1>Про компанію</h1>
-					<p>Сторінка в роботі — тут буде історія лабораторії, ліцензії та обладнання.</p>
+					<div class="page-hero__text">
+						<h1>Медичний центр «Діагностика плюс»</h1>
+						<p>Раді вітати вас у «Діагностиці плюс». Ми працюємо для тих, хто дбає про своє здоровʼя і цінує час, якість, комфорт та надійність.</p>
+					</div>
+				</div>
+			</section>
+			<section class="article-text">
+				<div class="shell">
+					<div class="article-text__body">
+						<h2>Про нас</h2>
+						<p>Медична лабораторія «Діагностика плюс» — мережа лабораторних відділень, яка динамічно працює та розвивається з 2015 року. Пункти забору біологічного матеріалу розташовані в різних районах Харкова та Харківської області.</p>
+						<p>Лабораторія оснащена сучасним діагностичним обладнанням провідних світових виробників. Ми виконуємо понад 500 видів класичних та інноваційних лабораторних досліджень і пропонуємо понад 20 комплексних пакетів аналізів.</p>
+					</div>
+				</div>
+			</section>
+			<section class="article-stats">
+				<div class="shell">
+					<div class="group-head">
+						<h2>«Діагностика плюс» у цифрах</h2>
+					</div>
+					<ul class="article-stats__list">
+						<li>
+							<p class="article-stats__num">з 2015</p>
+							<p class="article-stats__label">року працюємо для вас</p>
+						</li>
+						<li>
+							<p class="article-stats__num">500+</p>
+							<p class="article-stats__label">видів лабораторних досліджень</p>
+						</li>
+						<li>
+							<p class="article-stats__num">20+</p>
+							<p class="article-stats__label">комплексних пакетів аналізів</p>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<section class="article-cards">
+				<div class="shell">
+					<div class="group-head">
+						<h2>Наші переваги</h2>
+					</div>
+					<ul class="article-cards__list">
+						<li>
+							<span class="tile article-cards__icon">
+								<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+									<path d="M3.5 8.5l3 3 6-7"></path>
+								</svg>
+							</span>
+							<p class="article-cards__title">Перевірені реагенти</p>
+							<p class="article-cards__text">Тест-системи та реагенти відомих виробників, зареєстровані в Україні.</p>
+						</li>
+						<li>
+							<span class="tile article-cards__icon">
+								<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+									<path d="M3.5 8.5l3 3 6-7"></path>
+								</svg>
+							</span>
+							<p class="article-cards__title">Якість за доступною ціною</p>
+							<p class="article-cards__text">Високий рівень досліджень за цінами середнього сегмента.</p>
+						</li>
+						<li>
+							<span class="tile article-cards__icon">
+								<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+									<path d="M3.5 8.5l3 3 6-7"></path>
+								</svg>
+							</span>
+							<p class="article-cards__title">Сучасне обладнання</p>
+							<p class="article-cards__text">Лабораторія оснащена технікою провідних світових виробників.</p>
+						</li>
+						<li>
+							<span class="tile article-cards__icon">
+								<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+									<path d="M3.5 8.5l3 3 6-7"></path>
+								</svg>
+							</span>
+							<p class="article-cards__title">Широкий вибір досліджень</p>
+							<p class="article-cards__text">Понад 500 класичних та інноваційних аналізів і понад 20 комплексних пакетів.</p>
+						</li>
+						<li>
+							<span class="tile article-cards__icon">
+								<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+									<path d="M3.5 8.5l3 3 6-7"></path>
+								</svg>
+							</span>
+							<p class="article-cards__title">Без повторного забору крові</p>
+							<p class="article-cards__text">Зберігаємо зразки біоматеріалу, тож додаткові дослідження можна зробити з уже зданого зразка.</p>
+						</li>
+						<li>
+							<span class="tile article-cards__icon">
+								<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+									<path d="M3.5 8.5l3 3 6-7"></path>
+								</svg>
+							</span>
+							<p class="article-cards__title">Результати в реальному часі</p>
+							<p class="article-cards__text">Результат доступний одразу після завершення дослідження.</p>
+						</li>
+						<li>
+							<span class="tile article-cards__icon">
+								<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+									<path d="M3.5 8.5l3 3 6-7"></path>
+								</svg>
+							</span>
+							<p class="article-cards__title">Історія ваших аналізів</p>
+							<p class="article-cards__text">Усі результати зберігаються в лабораторній інформаційній системі.</p>
+						</li>
+						<li>
+							<span class="tile article-cards__icon">
+								<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+									<path d="M3.5 8.5l3 3 6-7"></path>
+								</svg>
+							</span>
+							<p class="article-cards__title">Поруч із вами</p>
+							<p class="article-cards__text">Широка мережа маніпуляційних кабінетів у Харкові та області.</p>
+						</li>
+						<li>
+							<span class="tile article-cards__icon">
+								<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+									<path d="M3.5 8.5l3 3 6-7"></path>
+								</svg>
+							</span>
+							<p class="article-cards__title">Контроль якості</p>
+							<p class="article-cards__text">Багаторівневий контроль, підтверджений ліцензією МОЗ, атестацією Укрметртестстандарту та сертифікатом ISO 9001.</p>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<section class="article-text">
+				<div class="shell">
+					<div class="article-text__body">
+						<h2>Наша команда</h2>
+						<p>У лабораторії працюють кваліфіковані лікарі, лаборанти, медичні сестри та адміністратори.</p>
+						<p>Наші фахівці регулярно проходять курси підвищення кваліфікації та тематичного удосконалення з лабораторної діагностики, беруть участь у медичних конференціях і семінарах та опановують нові методики. Подивитися, як ми працюємо — у розділі <a href="./photos.html">«Наше фото»</a>.</p>
+					</div>
+				</div>
+			</section>
+			<section id="documents" class="article-docs" data-docs>
+				<div class="shell">
+					<div class="group-head">
+						<h2>Документи</h2>
+					</div>
+					<div class="article-docs__track" role="region" aria-label="Documents" data-docs-track>
+						<ul class="article-docs__list">
+							<li>
+								<a class="article-docs__thumb" href="./images/dignostika-license.webp">
+									<img src="./images/dignostika-license.webp" width="2432" height="3469" loading="lazy" alt="Скан ліцензії МОЗ України на медичну практику ТОВ «Діагностика плюс»">
+								</a>
+								<div class="article-docs__head">
+									<span class="eyebrow">Ліцензія</span>
+									<p class="article-docs__title">Ліцензія МОЗ України на медичну практику</p>
+								</div>
+								<dl class="article-docs__rows">
+									<dt>Ліцензіат</dt>
+									<dd>ТОВ «Діагностика плюс»</dd>
+									<dt>Код ЄДРПОУ</dt>
+									<dd>39512096</dd>
+									<dt>Серія та номер</dt>
+									<dd>АЕ № 638837</dd>
+									<dt>Рішення про видачу</dt>
+									<dd>18.06.2015, № 350</dd>
+									<dt>Строк дії</dt>
+									<dd>з 18.06.2015, безстроково</dd>
+								</dl>
+								<a class="article-docs__link" href="./images/dignostika-license.webp">
+									<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+										<circle cx="9" cy="9" r="5.5"></circle>
+										<path d="M13 13l4 4M9 6.5v5M6.5 9h5"></path>
+									</svg>
+									Переглянути документ
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="article-docs__controls">
+						<div class="dots" data-docs-dots></div>
+						<div class="article-docs__count" data-docs-count></div>
+						<div class="article-docs__arrows">
+							<button class="btn btn--outline article-docs__arrow" type="button" aria-label="Previous document" data-docs-prev>
+								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+									<path d="M14 6l-6 6 6 6"></path>
+								</svg>
+							</button>
+							<button class="btn btn--outline article-docs__arrow" type="button" aria-label="Next document" data-docs-next>
+								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+									<path d="M10 6l6 6-6 6"></path>
+								</svg>
+							</button>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="phones-cta">
+				<div class="shell">
+					<div class="phones-cta__inner">
+						<div class="phones-cta__head">
+							<div class="tile phones-cta__icon">
+								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+									<circle cx="12" cy="12" r="9"></circle>
+									<path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.6v.6M12 17v.1"></path>
+								</svg>
+							</div>
+							<div class="phones-cta__text">
+								<h2>Залишилися питання?</h2>
+								<p>Зателефонуйте — адміністратор розповість про дослідження та запише на зручний час.</p>
+							</div>
+						</div>
+						<ul class="phones-cta__phones">
+							<li>
+								<a href="tel:+380577004257">
+									<span class="tile phones-cta__dial">
+										<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+											<path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"></path>
+										</svg>
+									</span>
+									<span class="phones-cta__number">057 700-42-57</span>
+									<span class="phones-cta__label">Міський</span>
+								</a>
+							</li>
+							<li>
+								<a href="tel:+380996209957">
+									<span class="tile phones-cta__dial">
+										<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+											<path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"></path>
+										</svg>
+									</span>
+									<span class="phones-cta__number">099 620-99-57</span>
+									<span class="phones-cta__label">Vodafone · основний</span>
+								</a>
+							</li>
+							<li>
+								<a href="tel:+380977032509">
+									<span class="tile phones-cta__dial">
+										<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+											<path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"></path>
+										</svg>
+									</span>
+									<span class="phones-cta__number">097 703-25-09</span>
+									<span class="phones-cta__label">Київстар</span>
+								</a>
+							</li>
+						</ul>
+					</div>
 				</div>
 			</section>
 		</main>
@@ -214,7 +462,7 @@
 								<li><a href="./partners.html">Партнерам</a></li>
 								<li><a href="./preparation.html">Підготовка до аналізів</a></li>
 								<li><a href="./blog.html">Корисні статті</a></li>
-								<li><a href="./about.html">Ліцензії та сертифікати</a></li>
+								<li><a href="./about.html#documents">Ліцензії та сертифікати</a></li>
 								<li><a href="./contacts.html">Зв’язок</a></li>
 							</ul>
 						</div>
@@ -251,7 +499,7 @@
 					</div>
 				</div>
 				<div class="footer__bottom">
-					<p>&copy; 2026 ТОВ «МЦ «МТМ»». Усі права захищено.</p>
+					<p>&copy; 2026 ТОВ «Діагностика плюс». Усі права захищено.</p>
 					<ul class="footer__legal">
 						<li><a href="#">Політика конфіденційності</a></li>
 						<li><a href="#">Публічна угода</a></li>

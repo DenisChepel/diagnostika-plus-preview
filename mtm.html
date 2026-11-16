@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="format-detection" content="telephone=no" />
+	<title>Медичний центр МТМ — Діагностика плюс</title>
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/pages/article.css">
+  <script src="./js/main.js" defer></script>
+</head>
+<body>
+		<div class="topbar">
+			<div class="shell">
+				<div class="topbar__info">
+					<p class="topbar__hours">Пн–Сб 08:00–15:00</p>
+					<p class="topbar__address">м. Харків, вул. Максиміліанівська, 10</p>
+				</div>
+			</div>
+		</div>
+		<header class="header">
+			<div class="shell">
+				<div class="header__main">
+					<div class="header__brand logo">
+						<a href="./index.html">
+							<img src="./images/logo-diagnostikaplus.svg" width="238" height="49" alt="Діагностика плюс">
+						</a>
+					</div>
+					<div class="header__search-wrap">
+						<form class="header__search" id="site-search-form" action="./prices.html" role="search">
+							<label class="visually-hidden" for="site-search">Пошук аналізу</label>
+							<input id="site-search" type="search" name="q" placeholder="Пошук аналізу…" autocomplete="off" aria-controls="site-search-results" data-suggest-field>
+							<button class="btn" type="submit" aria-label="Search">
+								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+									<circle cx="11" cy="11" r="7"></circle>
+									<path d="M16.5 16.5 21 21"></path>
+								</svg>
+							</button>
+						</form>
+						<div class="header__suggest" id="site-search-results" data-suggest hidden>
+							<ul class="header__suggest-list" data-suggest-list></ul>
+							<div class="header__suggest-all" data-suggest-all>
+								<a href="./prices.html">
+									<span>Переглянути всі результати (<span data-suggest-count></span>)</span>
+								</a>
+							</div>
+							<template data-suggest-item>
+								<li>
+									<a href="./prices.html">
+										<span data-suggest-name></span>
+										<span class="header__suggest-price" data-suggest-price></span>
+									</a>
+								</li>
+							</template>
+						</div>
+					</div>
+					<div class="header__actions">
+						<div class="header__phone">
+							<p><a href="tel:+380996209957">099 620-99-57</a></p>
+							<span class="header__callback">Зв’язатися з нами</span>
+						</div>
+						<div class="header__cta">
+							<button class="btn btn--sm" type="button" data-modal-open>Записатись</button>
+							<a class="btn header__login" href="https://patient-docs.com/login" aria-label="Sign in">
+								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+									<circle cx="12" cy="8" r="4"></circle>
+									<path d="M4 21a8 8 0 0 1 16 0"></path>
+								</svg>
+							</a>
+						</div>
+						<div class="header__controls">
+							<button class="btn header__search-toggle" type="button" aria-controls="site-search-form" aria-expanded="false" aria-label="Open search" data-search-toggle>
+								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+									<circle cx="11" cy="11" r="7"></circle>
+									<path d="M16.5 16.5 21 21"></path>
+								</svg>
+							</button>
+							<button class="btn header__burger" type="button" aria-controls="site-menu" aria-expanded="false" aria-label="Menu" data-menu-toggle>
+								<span></span>
+								<span></span>
+								<span></span>
+							</button>
+						</div>
+					</div>
+				</div>
+				<nav class="header__nav" id="site-menu" aria-label="Main navigation">
+					<div class="header__menu">
+						<ul class="header__menu-list">
+							<li><a href="./index.html">Головна</a></li>
+							<li><a href="./doctors.html">Наші лікарі</a></li>
+							<li><a href="./appointment.html">Запис на прийом</a></li>
+							<li><a href="./prices.html">Аналізи та ціни</a></li>
+							<li>
+								<a href="#">Пацієнтам</a>
+								<ul class="header__submenu">
+									<li><a href="./points.html">Пункти прийому аналізів</a></li>
+									<li><a href="./preparation.html">Підготовка до аналізів</a></li>
+									<li><a href="https://patient-docs.com/login">Результати онлайн</a></li>
+									<li><a href="./faq.html">Питання та відповіді</a></li>
+									<li><a href="./blog.html">Корисні статті</a></li>
+								</ul>
+							</li>
+							<li><a href="./partners.html">Партнерам</a></li>
+							<li><a href="./contacts.html">Зв’язок</a></li>
+							<li>
+								<a href="#">Про компанію</a>
+								<ul class="header__submenu">
+									<li><a href="./about.html">Загальна інформація</a></li>
+									<li><a href="./mtm.html">Медичний центр МТМ</a></li>
+									<li><a href="./photos.html">Наше фото</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<div class="header__nav-actions">
+						<div class="header__phone header__phone--menu">
+							<p><a href="tel:+380996209957">099 620-99-57</a></p>
+							<span class="header__callback">Зв’язатися з нами</span>
+						</div>
+						<div class="header__nav-buttons">
+							<button class="btn btn--sm" type="button" data-modal-open>Записатись</button>
+							<a class="btn btn--sm btn--outline header__login-menu" href="https://patient-docs.com/login">
+								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+									<circle cx="12" cy="8" r="4"></circle>
+									<path d="M4 21a8 8 0 0 1 16 0"></path>
+								</svg>
+								Увійти
+							</a>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</header>
+		<dialog class="modal" aria-labelledby="booking-title" data-modal>
+			<div class="modal__box">
+				<button class="btn modal__close" type="button" aria-label="Close dialog" data-modal-close>
+					<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+						<path d="m7 7 10 10M17 7 7 17"></path>
+					</svg>
+				</button>
+				<div class="modal__head">
+					<h2 id="booking-title">Запис на прийом</h2>
+					<p>Залиште контакти — ми передзвонимо в робочий час, підберемо аналізи та зручний час візиту.</p>
+				</div>
+				<form class="modal__form" action="#" method="post" data-validate>
+					<div class="modal__field">
+						<label for="booking-name">Ім’я</label>
+						<input type="text" id="booking-name" name="name" autocomplete="given-name" required minlength="2" maxlength="60" placeholder="Ваше ім’я">
+					</div>
+					<div class="modal__field">
+						<label for="booking-phone">Телефон</label>
+						<input type="tel" id="booking-phone" name="phone" autocomplete="tel" required maxlength="19" pattern="\+38 \(0\d{2}\) \d{3}-\d{2}-\d{2}" placeholder="+38 (0__) ___-__-__" data-phone>
+					</div>
+					<div class="modal__consent">
+						<input type="checkbox" id="booking-consent" name="consent" required>
+						<label for="booking-consent">Погоджуюсь на обробку персональних даних згідно з <a href="#">політикою конфіденційності</a></label>
+					</div>
+					<button class="btn" type="submit">Записатись</button>
+				</form>
+			</div>
+		</dialog>
+	
+		<main>
+			<section class="page-hero article-hero">
+				<div class="shell">
+					<div class="page-hero__text">
+						<h1>Медичний центр МТМ</h1>
+						<p>Діагностичний лабораторний центр у Харкові. Бактеріологічні, імунологічні, ПЛР, клінічні та біохімічні дослідження — в одному місці з 2016 року.</p>
+					</div>
+				</div>
+			</section>
+			<section class="article-text">
+				<div class="shell">
+					<div class="article-text__body">
+						<h2>Про нас</h2>
+						<p>ТОВ «Медичний центр МТМ» засноване у 2013 році як незалежна бактеріологічна лабораторія.</p>
+						<p>У 2016 році, після зміни складу засновників, на базі компанії створено діагностичний центр, до якого увійшли пʼять профільних лабораторій. Комплексний підхід дозволив «МТМ» стати одним із лідерів лабораторної діагностики в Харкові.</p>
+					</div>
+				</div>
+			</section>
+			<section class="article-stats">
+				<div class="shell">
+					<div class="group-head">
+						<h2>«МТМ» у цифрах</h2>
+					</div>
+					<ul class="article-stats__list">
+						<li>
+							<p class="article-stats__num">з 2013</p>
+							<p class="article-stats__label">року в лабораторній діагностиці</p>
+						</li>
+						<li>
+							<p class="article-stats__num">5</p>
+							<p class="article-stats__label">профільних лабораторій у складі центру</p>
+						</li>
+						<li>
+							<p class="article-stats__num">ISO 10012</p>
+							<p class="article-stats__label">відповідність системи вимірювань</p>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<section class="article-cards">
+				<div class="shell">
+					<div class="group-head">
+						<h2>Лабораторії центру</h2>
+					</div>
+					<ul class="article-cards__list">
+						<li>
+							<span class="tile article-cards__icon">
+								<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+									<path d="M3.5 8.5l3 3 6-7"></path>
+								</svg>
+							</span>
+							<p class="article-cards__title">Бактеріологічна</p>
+							<p class="article-cards__text">Посіви на мікрофлору та визначення чутливості до антибіотиків.</p>
+						</li>
+						<li>
+							<span class="tile article-cards__icon">
+								<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+									<path d="M3.5 8.5l3 3 6-7"></path>
+								</svg>
+							</span>
+							<p class="article-cards__title">Імунологічна</p>
+							<p class="article-cards__text">Гормони, онкомаркери, антитіла та маркери інфекцій.</p>
+						</li>
+						<li>
+							<span class="tile article-cards__icon">
+								<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+									<path d="M3.5 8.5l3 3 6-7"></path>
+								</svg>
+							</span>
+							<p class="article-cards__title">ПЛР-діагностика</p>
+							<p class="article-cards__text">Виявлення ДНК і РНК збудників інфекцій.</p>
+						</li>
+						<li>
+							<span class="tile article-cards__icon">
+								<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+									<path d="M3.5 8.5l3 3 6-7"></path>
+								</svg>
+							</span>
+							<p class="article-cards__title">Клінічна</p>
+							<p class="article-cards__text">Загальні аналізи крові, сечі та інших біоматеріалів.</p>
+						</li>
+						<li>
+							<span class="tile article-cards__icon">
+								<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+									<path d="M3.5 8.5l3 3 6-7"></path>
+								</svg>
+							</span>
+							<p class="article-cards__title">Біохімічна</p>
+							<p class="article-cards__text">Показники роботи печінки, нирок і обміну речовин.</p>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<section class="article-text">
+				<div class="shell">
+					<div class="article-text__body">
+						<h2>З ким ми працюємо</h2>
+						<p>Нам довіряють як приватні медичні центри, так і державні та комунальні заклади охорони здоровʼя. Серед наших партнерів:</p>
+						<ul>
+							<li>медичний центр «Доктор Алекс»</li>
+							<li>МЦ «Офтальміка»</li>
+							<li>МЦ «Інстинкт сонця»</li>
+							<li>МЦ «ОК центр»</li>
+						</ul>
+						<p>Також ми виконували договори з обстеження працівників установ і підприємств методом ПЛР на COVID-19. Медичним закладам пропонуємо <a href="./partners.html">лабораторне забезпечення на індивідуальних умовах</a>.</p>
+					</div>
+				</div>
+			</section>
+			<section class="article-text">
+				<div class="shell">
+					<div class="article-text__body">
+						<h2>Якість досліджень</h2>
+						<p>Дослідження в діагностичному центрі виконує кваліфікований персонал на сучасному обладнанні.</p>
+						<p>У 2020 році центр пройшов атестацію Харківського регіонального центру стандартизації, метрології та сертифікації й повторно отримав свідоцтво про відповідність системи вимірювань вимогам ДСТУ ISO 10012:2005.</p>
+					</div>
+				</div>
+			</section>
+			<section class="article-docs" data-docs>
+				<div class="shell">
+					<div class="group-head">
+						<h2>Документи</h2>
+					</div>
+					<div class="article-docs__track" role="region" aria-label="Documents" data-docs-track>
+						<ul class="article-docs__list">
+							<li>
+								<a class="article-docs__thumb" href="./images/mtm_license.webp">
+									<img src="./images/mtm_license.webp" width="1654" height="2338" loading="lazy" alt="Скан ліцензії МОЗ України на медичну практику ТОВ «Медичний центр МТМ»">
+								</a>
+								<div class="article-docs__head">
+									<span class="eyebrow">Ліцензія</span>
+									<p class="article-docs__title">Ліцензія МОЗ України на медичну практику</p>
+								</div>
+								<dl class="article-docs__rows">
+									<dt>Ліцензіат</dt>
+									<dd>ТОВ «Медичний центр МТМ»</dd>
+									<dt>Код ЄДРПОУ</dt>
+									<dd>38634189</dd>
+									<dt>Серія та номер</dt>
+									<dd>АЕ № 197361</dd>
+									<dt>Рішення про видачу</dt>
+									<dd>18.07.2013, № 29</dd>
+									<dt>Строк дії</dt>
+									<dd>з 18.07.2013, безстроково</dd>
+								</dl>
+								<a class="article-docs__link" href="./images/mtm_license.webp">
+									<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+										<circle cx="9" cy="9" r="5.5"></circle>
+										<path d="M13 13l4 4M9 6.5v5M6.5 9h5"></path>
+									</svg>
+									Переглянути документ
+								</a>
+							</li>
+							<li>
+								<a class="article-docs__thumb" href="./images/mtm_license_add.webp">
+									<img src="./images/mtm_license_add.webp" width="1240" height="1754" loading="lazy" alt="Скан витягу з наказу МОЗ України від 19.04.2018 № 762 щодо ТОВ «Медичний центр МТМ»">
+								</a>
+								<div class="article-docs__head">
+									<span class="eyebrow">Наказ МОЗ</span>
+									<p class="article-docs__title">Доповнення ліцензії лабораторними спеціальностями</p>
+								</div>
+								<dl class="article-docs__rows">
+									<dt>Наказ</dt>
+									<dd>від 19.04.2018 № 762</dd>
+									<dt>До ліцензії</dt>
+									<dd>АЕ № 197361</dd>
+									<dt>Спеціальності</dt>
+									<dd>бактеріологія, клінічна біохімія, клінічна лабораторна діагностика, лабораторна імунологія</dd>
+								</dl>
+								<a class="article-docs__link" href="./images/mtm_license_add.webp">
+									<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+										<circle cx="9" cy="9" r="5.5"></circle>
+										<path d="M13 13l4 4M9 6.5v5M6.5 9h5"></path>
+									</svg>
+									Переглянути документ
+								</a>
+							</li>
+							<li>
+								<a class="article-docs__thumb" href="./images/mtm_sertificate.webp">
+									<img src="./images/mtm_sertificate.webp" width="1240" height="1753" loading="lazy" alt="Скан свідоцтва про відповідність системи вимірювань вимогам ДСТУ ISO 10012:2005">
+								</a>
+								<div class="article-docs__head">
+									<span class="eyebrow">Свідоцтво</span>
+									<p class="article-docs__title">Відповідність системи вимірювань ДСТУ ISO 10012:2005</p>
+								</div>
+								<dl class="article-docs__rows">
+									<dt>Номер</dt>
+									<dd>№ 01-0114/2020</dd>
+									<dt>Дата</dt>
+									<dd>22.09.2020</dd>
+									<dt>Видав</dt>
+									<dd>ДП «Харківстандартметрологія»</dd>
+								</dl>
+								<a class="article-docs__link" href="./images/mtm_sertificate.webp">
+									<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+										<circle cx="9" cy="9" r="5.5"></circle>
+										<path d="M13 13l4 4M9 6.5v5M6.5 9h5"></path>
+									</svg>
+									Переглянути документ
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="article-docs__controls">
+						<div class="dots" data-docs-dots></div>
+						<div class="article-docs__count" data-docs-count></div>
+						<div class="article-docs__arrows">
+							<button class="btn btn--outline article-docs__arrow" type="button" aria-label="Previous document" data-docs-prev>
+								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+									<path d="M14 6l-6 6 6 6"></path>
+								</svg>
+							</button>
+							<button class="btn btn--outline article-docs__arrow" type="button" aria-label="Next document" data-docs-next>
+								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+									<path d="M10 6l6 6-6 6"></path>
+								</svg>
+							</button>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="phones-cta">
+				<div class="shell">
+					<div class="phones-cta__inner">
+						<div class="phones-cta__head">
+							<div class="tile phones-cta__icon">
+								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+									<circle cx="12" cy="12" r="9"></circle>
+									<path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.6v.6M12 17v.1"></path>
+								</svg>
+							</div>
+							<div class="phones-cta__text">
+								<h2>Залишилися питання?</h2>
+								<p>Зателефонуйте — адміністратор розповість про дослідження та запише на зручний час.</p>
+							</div>
+						</div>
+						<ul class="phones-cta__phones">
+							<li>
+								<a href="tel:+380577004257">
+									<span class="tile phones-cta__dial">
+										<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+											<path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"></path>
+										</svg>
+									</span>
+									<span class="phones-cta__number">057 700-42-57</span>
+									<span class="phones-cta__label">Міський</span>
+								</a>
+							</li>
+							<li>
+								<a href="tel:+380996209957">
+									<span class="tile phones-cta__dial">
+										<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+											<path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"></path>
+										</svg>
+									</span>
+									<span class="phones-cta__number">099 620-99-57</span>
+									<span class="phones-cta__label">Vodafone · основний</span>
+								</a>
+							</li>
+							<li>
+								<a href="tel:+380977032509">
+									<span class="tile phones-cta__dial">
+										<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+											<path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"></path>
+										</svg>
+									</span>
+									<span class="phones-cta__number">097 703-25-09</span>
+									<span class="phones-cta__label">Київстар</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+		</main>
+	
+		<footer class="footer">
+			<div class="shell">
+				<div class="footer__inner">
+					<div class="footer__brand">
+						<div class="logo">
+							<a href="./index.html">
+								<img src="./images/logo-diagnostikaplus-white.svg" width="218" height="44" loading="lazy" alt="Діагностика плюс">
+							</a>
+						</div>
+						<div class="footer__about">
+							<p>«Діагностика плюс» — лабораторні дослідження та пункт прийому аналізів. Ліцензія МОЗ України, акредитація ISO 15189.</p>
+						</div>
+						<div class="footer__helsi">
+							<div class="footer__helsi-logo">
+								<img src="./images/logo-helsi.webp" width="428" height="274" loading="lazy" alt="Helsi">
+							</div>
+							<div class="footer__helsi-text">
+								<span>Ми в системі Helsi</span>
+								<span>Онлайн-запис на аналізи</span>
+							</div>
+						</div>
+					</div>
+					<div class="footer__col">
+						<button class="btn footer__toggle" type="button" aria-expanded="false" aria-controls="footer-sections" data-footer-toggle>
+							<span>Розділи</span>
+							<svg class="plus footer__toggle-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+								<line x1="3" y1="8" x2="13" y2="8"></line>
+								<line x1="8" y1="3" x2="8" y2="13"></line>
+							</svg>
+						</button>
+						<div class="fold footer__panel" id="footer-sections">
+							<ul class="footer__links">
+								<li><a href="./index.html">Головна</a></li>
+								<li><a href="./prices.html">Аналізи та ціни</a></li>
+								<li><a href="./doctors.html">Наші лікарі</a></li>
+								<li><a href="./appointment.html">Запис на прийом</a></li>
+								<li><a href="./about.html">Про компанію</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="footer__col">
+						<button class="btn footer__toggle" type="button" aria-expanded="false" aria-controls="footer-info" data-footer-toggle>
+							<span>Інформація</span>
+							<svg class="plus footer__toggle-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+								<line x1="3" y1="8" x2="13" y2="8"></line>
+								<line x1="8" y1="3" x2="8" y2="13"></line>
+							</svg>
+						</button>
+						<div class="fold footer__panel" id="footer-info">
+							<ul class="footer__links">
+								<li><a href="#">Пацієнтам</a></li>
+								<li><a href="./partners.html">Партнерам</a></li>
+								<li><a href="./preparation.html">Підготовка до аналізів</a></li>
+								<li><a href="./blog.html">Корисні статті</a></li>
+								<li><a href="./about.html#documents">Ліцензії та сертифікати</a></li>
+								<li><a href="./contacts.html">Зв’язок</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="footer__col">
+						<button class="btn footer__toggle" type="button" aria-expanded="false" aria-controls="footer-contacts" data-footer-toggle>
+							<span>Контакти</span>
+							<svg class="plus footer__toggle-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+								<line x1="3" y1="8" x2="13" y2="8"></line>
+								<line x1="8" y1="3" x2="8" y2="13"></line>
+							</svg>
+						</button>
+						<div class="fold footer__panel" id="footer-contacts">
+							<div class="footer__contacts">
+								<div class="footer__contacts-text">
+									<p class="footer__phone"><a href="tel:+380996209957">099 620-99-57</a></p>
+									<p class="footer__address">м. Харків, вул. Максиміліанівська, 10<br>Пн–Сб 08:00–15:00</p>
+									<p><a href="mailto:diagnostika.pluss@gmail.com">diagnostika.pluss@gmail.com</a></p>
+								</div>
+								<ul class="footer__social">
+									<li>
+										<a href="#" aria-label="Facebook">
+											<img src="./images/ico-facebook.svg" width="24" height="24" loading="lazy" alt="">
+										</a>
+									</li>
+									<li>
+										<a href="#" aria-label="Instagram">
+											<img src="./images/ico-instagram.svg" width="24" height="24" loading="lazy" alt="">
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="footer__bottom">
+					<p>&copy; 2026 ТОВ «Діагностика плюс». Усі права захищено.</p>
+					<ul class="footer__legal">
+						<li><a href="#">Політика конфіденційності</a></li>
+						<li><a href="#">Публічна угода</a></li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+</body>
+</html>

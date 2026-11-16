@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="format-detection" content="telephone=no" />
+	<title>Наше фото — Діагностика плюс</title>
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/pages/article.css">
+  <script src="./js/main.js" defer></script>
+</head>
+<body>
+		<div class="topbar">
+			<div class="shell">
+				<div class="topbar__info">
+					<p class="topbar__hours">Пн–Сб 08:00–15:00</p>
+					<p class="topbar__address">м. Харків, вул. Максиміліанівська, 10</p>
+				</div>
+			</div>
+		</div>
+		<header class="header">
+			<div class="shell">
+				<div class="header__main">
+					<div class="header__brand logo">
+						<a href="./index.html">
+							<img src="./images/logo-diagnostikaplus.svg" width="238" height="49" alt="Діагностика плюс">
+						</a>
+					</div>
+					<div class="header__search-wrap">
+						<form class="header__search" id="site-search-form" action="./prices.html" role="search">
+							<label class="visually-hidden" for="site-search">Пошук аналізу</label>
+							<input id="site-search" type="search" name="q" placeholder="Пошук аналізу…" autocomplete="off" aria-controls="site-search-results" data-suggest-field>
+							<button class="btn" type="submit" aria-label="Search">
+								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+									<circle cx="11" cy="11" r="7"></circle>
+									<path d="M16.5 16.5 21 21"></path>
+								</svg>
+							</button>
+						</form>
+						<div class="header__suggest" id="site-search-results" data-suggest hidden>
+							<ul class="header__suggest-list" data-suggest-list></ul>
+							<div class="header__suggest-all" data-suggest-all>
+								<a href="./prices.html">
+									<span>Переглянути всі результати (<span data-suggest-count></span>)</span>
+								</a>
+							</div>
+							<template data-suggest-item>
+								<li>
+									<a href="./prices.html">
+										<span data-suggest-name></span>
+										<span class="header__suggest-price" data-suggest-price></span>
+									</a>
+								</li>
+							</template>
+						</div>
+					</div>
+					<div class="header__actions">
+						<div class="header__phone">
+							<p><a href="tel:+380996209957">099 620-99-57</a></p>
+							<span class="header__callback">Зв’язатися з нами</span>
+						</div>
+						<div class="header__cta">
+							<button class="btn btn--sm" type="button" data-modal-open>Записатись</button>
+							<a class="btn header__login" href="https://patient-docs.com/login" aria-label="Sign in">
+								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+									<circle cx="12" cy="8" r="4"></circle>
+									<path d="M4 21a8 8 0 0 1 16 0"></path>
+								</svg>
+							</a>
+						</div>
+						<div class="header__controls">
+							<button class="btn header__search-toggle" type="button" aria-controls="site-search-form" aria-expanded="false" aria-label="Open search" data-search-toggle>
+								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+									<circle cx="11" cy="11" r="7"></circle>
+									<path d="M16.5 16.5 21 21"></path>
+								</svg>
+							</button>
+							<button class="btn header__burger" type="button" aria-controls="site-menu" aria-expanded="false" aria-label="Menu" data-menu-toggle>
+								<span></span>
+								<span></span>
+								<span></span>
+							</button>
+						</div>
+					</div>
+				</div>
+				<nav class="header__nav" id="site-menu" aria-label="Main navigation">
+					<div class="header__menu">
+						<ul class="header__menu-list">
+							<li><a href="./index.html">Головна</a></li>
+							<li><a href="./doctors.html">Наші лікарі</a></li>
+							<li><a href="./appointment.html">Запис на прийом</a></li>
+							<li><a href="./prices.html">Аналізи та ціни</a></li>
+							<li>
+								<a href="#">Пацієнтам</a>
+								<ul class="header__submenu">
+									<li><a href="./points.html">Пункти прийому аналізів</a></li>
+									<li><a href="./preparation.html">Підготовка до аналізів</a></li>
+									<li><a href="https://patient-docs.com/login">Результати онлайн</a></li>
+									<li><a href="./faq.html">Питання та відповіді</a></li>
+									<li><a href="./blog.html">Корисні статті</a></li>
+								</ul>
+							</li>
+							<li><a href="./partners.html">Партнерам</a></li>
+							<li><a href="./contacts.html">Зв’язок</a></li>
+							<li>
+								<a href="#">Про компанію</a>
+								<ul class="header__submenu">
+									<li><a href="./about.html">Загальна інформація</a></li>
+									<li><a href="./mtm.html">Медичний центр МТМ</a></li>
+									<li><a href="./photos.html">Наше фото</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<div class="header__nav-actions">
+						<div class="header__phone header__phone--menu">
+							<p><a href="tel:+380996209957">099 620-99-57</a></p>
+							<span class="header__callback">Зв’язатися з нами</span>
+						</div>
+						<div class="header__nav-buttons">
+							<button class="btn btn--sm" type="button" data-modal-open>Записатись</button>
+							<a class="btn btn--sm btn--outline header__login-menu" href="https://patient-docs.com/login">
+								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+									<circle cx="12" cy="8" r="4"></circle>
+									<path d="M4 21a8 8 0 0 1 16 0"></path>
+								</svg>
+								Увійти
+							</a>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</header>
+		<dialog class="modal" aria-labelledby="booking-title" data-modal>
+			<div class="modal__box">
+				<button class="btn modal__close" type="button" aria-label="Close dialog" data-modal-close>
+					<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+						<path d="m7 7 10 10M17 7 7 17"></path>
+					</svg>
+				</button>
+				<div class="modal__head">
+					<h2 id="booking-title">Запис на прийом</h2>
+					<p>Залиште контакти — ми передзвонимо в робочий час, підберемо аналізи та зручний час візиту.</p>
+				</div>
+				<form class="modal__form" action="#" method="post" data-validate>
+					<div class="modal__field">
+						<label for="booking-name">Ім’я</label>
+						<input type="text" id="booking-name" name="name" autocomplete="given-name" required minlength="2" maxlength="60" placeholder="Ваше ім’я">
+					</div>
+					<div class="modal__field">
+						<label for="booking-phone">Телефон</label>
+						<input type="tel" id="booking-phone" name="phone" autocomplete="tel" required maxlength="19" pattern="\+38 \(0\d{2}\) \d{3}-\d{2}-\d{2}" placeholder="+38 (0__) ___-__-__" data-phone>
+					</div>
+					<div class="modal__consent">
+						<input type="checkbox" id="booking-consent" name="consent" required>
+						<label for="booking-consent">Погоджуюсь на обробку персональних даних згідно з <a href="#">політикою конфіденційності</a></label>
+					</div>
+					<button class="btn" type="submit">Записатись</button>
+				</form>
+			</div>
+		</dialog>
+	
+		<main>
+			<section class="page-hero article-hero">
+				<div class="shell">
+					<div class="page-hero__text">
+						<h1>Наше фото</h1>
+						<p>Лабораторія, обладнання та події, у яких ми беремо участь.</p>
+					</div>
+				</div>
+			</section>
+			<section class="article-gallery" data-gallery data-show-more>
+				<div class="shell">
+					<div class="group-head">
+						<h2>Наша лабораторія</h2>
+						<p class="article-gallery__meta">22 фото</p>
+					</div>
+					<ul class="article-gallery__list" data-gallery-list data-show-more-list>
+						<li>
+							<a class="article-gallery__photo" href="./images/img-14.webp" data-pswp-width="1840" data-pswp-height="1228">
+								<img src="./images/img-14.webp" width="1840" height="1228" loading="lazy" decoding="async" alt="Робоче місце лаборанта з центрифугою та мікроскопом">
+							</a>
+						</li>
+						<li>
+							<a class="article-gallery__photo" href="./images/img-15.webp" data-pswp-width="1840" data-pswp-height="1228">
+								<img src="./images/img-15.webp" width="1840" height="1228" loading="lazy" decoding="async" alt="Ротор біохімічного аналізатора">
+							</a>
+						</li>
+						<li>
+							<a class="article-gallery__photo" href="./images/img-16.webp" data-pswp-width="1840" data-pswp-height="1228">
+								<img src="./images/img-16.webp" width="1840" height="1228" loading="lazy" decoding="async" alt="Лаборантка працює з гематологічним аналізатором">
+							</a>
+						</li>
+						<li>
+							<a class="article-gallery__photo" href="./images/img-17.webp" data-pswp-width="1424" data-pswp-height="950">
+								<img src="./images/img-17.webp" width="1424" height="950" loading="lazy" decoding="async" alt="Аналізатор ШОЕ Cube 30 touch">
+							</a>
+						</li>
+						<li>
+							<a class="article-gallery__photo" href="./images/img-18.webp" data-pswp-width="1840" data-pswp-height="1228">
+								<img src="./images/img-18.webp" width="1840" height="1228" loading="lazy" decoding="async" alt="Мікроскоп">
+							</a>
+						</li>
+						<li>
+							<a class="article-gallery__photo" href="./images/img-19.webp" data-pswp-width="1840" data-pswp-height="1228">
+								<img src="./images/img-19.webp" width="1840" height="1228" loading="lazy" decoding="async" alt="Реєстрація пробірок сканером штрихкодів">
+							</a>
+						</li>
+						<li>
+							<a class="article-gallery__photo" href="./images/img-20.webp" data-pswp-width="1455" data-pswp-height="971">
+								<img src="./images/img-20.webp" width="1455" height="971" loading="lazy" decoding="async" alt="Бактеріологічний посів на чашці Петрі">
+							</a>
+						</li>
+						<li>
+							<a class="article-gallery__photo" href="./images/img-21.webp" data-pswp-width="1840" data-pswp-height="1228">
+								<img src="./images/img-21.webp" width="1840" height="1228" loading="lazy" decoding="async" alt="Бактеріологічний посів на чашці Петрі з жовтим середовищем">
+							</a>
+						</li>
+						<li>
+							<a class="article-gallery__photo" href="./images/img-22.webp" data-pswp-width="1652" data-pswp-height="1103">
+								<img src="./images/img-22.webp" width="1652" height="1103" loading="lazy" decoding="async" alt="Чашки Петрі з поживними середовищами">
+							</a>
+						</li>
+						<li>
+							<a class="article-gallery__photo" href="./images/img-23.webp" data-pswp-width="1840" data-pswp-height="1228">
+								<img src="./images/img-23.webp" width="1840" height="1228" loading="lazy" decoding="async" alt="Пробірки з поживними середовищами в штативі">
+							</a>
+						</li>
+						<li>
+							<a class="article-gallery__photo" href="./images/img-24.webp" data-pswp-width="1840" data-pswp-height="1228">
+								<img src="./images/img-24.webp" width="1840" height="1228" loading="lazy" decoding="async" alt="Пробірки та чашки Петрі для бактеріологічних посівів">
+							</a>
+						</li>
+						<li>
+							<a class="article-gallery__photo" href="./images/img-25.webp" data-pswp-width="1840" data-pswp-height="1228">
+								<img src="./images/img-25.webp" width="1840" height="1228" loading="lazy" decoding="async" alt="Лабораторний аналізатор із сенсорною панеллю">
+							</a>
+						</li>
+						<li>
+							<a class="article-gallery__photo" href="./images/img-26.webp" data-pswp-width="1840" data-pswp-height="1228">
+								<img src="./images/img-26.webp" width="1840" height="1228" loading="lazy" decoding="async" alt="Обладнання для ПЛР-діагностики">
+							</a>
+						</li>
+						<li>
+							<a class="article-gallery__photo" href="./images/img-27.webp" data-pswp-width="1315" data-pswp-height="878">
+								<img src="./images/img-27.webp" width="1315" height="878" loading="lazy" decoding="async" alt="Лабораторні центрифуги">
+							</a>
+						</li>
+						<li>
+							<a class="article-gallery__photo" href="./images/img-28.webp" data-pswp-width="1477" data-pswp-height="986">
+								<img src="./images/img-28.webp" width="1477" height="986" loading="lazy" decoding="async" alt="Пробірки зі зразками крові в штативах">
+							</a>
+						</li>
+						<li>
+							<a class="article-gallery__photo" href="./images/img-29.webp" data-pswp-width="1840" data-pswp-height="1228">
+								<img src="./images/img-29.webp" width="1840" height="1228" loading="lazy" decoding="async" alt="Багатоканальна піпетка над планшетом">
+							</a>
+						</li>
+						<li>
+							<a class="article-gallery__photo" href="./images/img-30.webp" data-pswp-width="1840" data-pswp-height="1228">
+								<img src="./images/img-30.webp" width="1840" height="1228" loading="lazy" decoding="async" alt="Внесення зразків у планшет багатоканальною піпеткою">
+							</a>
+						</li>
+						<li>
+							<a class="article-gallery__photo" href="./images/img-31.webp" data-pswp-width="1840" data-pswp-height="1228">
+								<img src="./images/img-31.webp" width="1840" height="1228" loading="lazy" decoding="async" alt="Коагулометр">
+							</a>
+						</li>
+						<li>
+							<a class="article-gallery__photo" href="./images/img-32.webp" data-pswp-width="1672" data-pswp-height="1116">
+								<img src="./images/img-32.webp" width="1672" height="1116" loading="lazy" decoding="async" alt="Біохімічний аналізатор Miura 200">
+							</a>
+						</li>
+						<li>
+							<a class="article-gallery__photo" href="./images/img-33.webp" data-pswp-width="550" data-pswp-height="483">
+								<img src="./images/img-33.webp" width="550" height="483" loading="lazy" decoding="async" alt="Автоматичний лабораторний аналізатор">
+							</a>
+						</li>
+						<li>
+							<a class="article-gallery__photo" href="./images/img-34.webp" data-pswp-width="1500" data-pswp-height="1228">
+								<img src="./images/img-34.webp" width="1500" height="1228" loading="lazy" decoding="async" alt="Аналізатор для імуноферментного аналізу">
+							</a>
+						</li>
+						<li>
+							<a class="article-gallery__photo" href="./images/img-35.webp" data-pswp-width="750" data-pswp-height="750">
+								<img src="./images/img-35.webp" width="750" height="750" loading="lazy" decoding="async" alt="Лабораторний аналізатор">
+							</a>
+						</li>
+					</ul>
+					<button class="btn btn--outline btn--sm article-gallery__more" type="button" aria-expanded="false" data-show-more-toggle>
+						<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+							<path d="M5 7.5l5 5 5-5"></path>
+						</svg>
+						<span>Показати всі фото (22)</span>
+						<span>Згорнути</span>
+					</button>
+				</div>
+			</section>
+			<section class="article-gallery" data-gallery data-show-more>
+				<div class="shell">
+					<div class="group-head">
+						<h2>Форум «Майбутнє в сьогоденні»</h2>
+						<p class="article-gallery__meta">8 фото</p>
+					</div>
+					<ul class="article-gallery__list" data-gallery-list data-show-more-list>
+						<li>
+							<a class="article-gallery__photo" href="./images/img-36.webp" data-pswp-width="960" data-pswp-height="1280">
+								<img src="./images/img-36.webp" width="960" height="1280" loading="lazy" decoding="async" alt="Нагородження на сцені форуму">
+							</a>
+						</li>
+						<li>
+							<a class="article-gallery__photo" href="./images/img-37.webp" data-pswp-width="960" data-pswp-height="1280">
+								<img src="./images/img-37.webp" width="960" height="1280" loading="lazy" decoding="async" alt="Учасники форуму «Майбутнє в сьогоденні»">
+							</a>
+						</li>
+						<li>
+							<a class="article-gallery__photo" href="./images/img-38.webp" data-pswp-width="960" data-pswp-height="1280">
+								<img src="./images/img-38.webp" width="960" height="1280" loading="lazy" decoding="async" alt="Відвідувачі біля стенду «Діагностика плюс»">
+							</a>
+						</li>
+						<li>
+							<a class="article-gallery__photo" href="./images/img-39.webp" data-pswp-width="960" data-pswp-height="1280">
+								<img src="./images/img-39.webp" width="960" height="1280" loading="lazy" decoding="async" alt="Спілкування з відвідувачами форуму">
+							</a>
+						</li>
+						<li>
+							<a class="article-gallery__photo" href="./images/img-40.webp" data-pswp-width="960" data-pswp-height="1280">
+								<img src="./images/img-40.webp" width="960" height="1280" loading="lazy" decoding="async" alt="Розмова гостей форуму">
+							</a>
+						</li>
+						<li>
+							<a class="article-gallery__photo" href="./images/img-41.webp" data-pswp-width="960" data-pswp-height="1280">
+								<img src="./images/img-41.webp" width="960" height="1280" loading="lazy" decoding="async" alt="Команда «Діагностика плюс» біля стенду">
+							</a>
+						</li>
+						<li>
+							<a class="article-gallery__photo" href="./images/img-42.webp" data-pswp-width="1280" data-pswp-height="960">
+								<img src="./images/img-42.webp" width="1280" height="960" loading="lazy" decoding="async" alt="Стенд «Діагностика плюс» на форумі">
+							</a>
+						</li>
+						<li>
+							<a class="article-gallery__photo" href="./images/img-43.webp" data-pswp-width="1280" data-pswp-height="960">
+								<img src="./images/img-43.webp" width="1280" height="960" loading="lazy" decoding="async" alt="Команда «Діагностика плюс» біля стенду на форумі">
+							</a>
+						</li>
+					</ul>
+					<button class="btn btn--outline btn--sm article-gallery__more" type="button" aria-expanded="false" data-show-more-toggle>
+						<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+							<path d="M5 7.5l5 5 5-5"></path>
+						</svg>
+						<span>Показати всі фото (8)</span>
+						<span>Згорнути</span>
+					</button>
+				</div>
+			</section>
+		</main>
+	
+		<footer class="footer">
+			<div class="shell">
+				<div class="footer__inner">
+					<div class="footer__brand">
+						<div class="logo">
+							<a href="./index.html">
+								<img src="./images/logo-diagnostikaplus-white.svg" width="218" height="44" loading="lazy" alt="Діагностика плюс">
+							</a>
+						</div>
+						<div class="footer__about">
+							<p>«Діагностика плюс» — лабораторні дослідження та пункт прийому аналізів. Ліцензія МОЗ України, акредитація ISO 15189.</p>
+						</div>
+						<div class="footer__helsi">
+							<div class="footer__helsi-logo">
+								<img src="./images/logo-helsi.webp" width="428" height="274" loading="lazy" alt="Helsi">
+							</div>
+							<div class="footer__helsi-text">
+								<span>Ми в системі Helsi</span>
+								<span>Онлайн-запис на аналізи</span>
+							</div>
+						</div>
+					</div>
+					<div class="footer__col">
+						<button class="btn footer__toggle" type="button" aria-expanded="false" aria-controls="footer-sections" data-footer-toggle>
+							<span>Розділи</span>
+							<svg class="plus footer__toggle-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+								<line x1="3" y1="8" x2="13" y2="8"></line>
+								<line x1="8" y1="3" x2="8" y2="13"></line>
+							</svg>
+						</button>
+						<div class="fold footer__panel" id="footer-sections">
+							<ul class="footer__links">
+								<li><a href="./index.html">Головна</a></li>
+								<li><a href="./prices.html">Аналізи та ціни</a></li>
+								<li><a href="./doctors.html">Наші лікарі</a></li>
+								<li><a href="./appointment.html">Запис на прийом</a></li>
+								<li><a href="./about.html">Про компанію</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="footer__col">
+						<button class="btn footer__toggle" type="button" aria-expanded="false" aria-controls="footer-info" data-footer-toggle>
+							<span>Інформація</span>
+							<svg class="plus footer__toggle-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+								<line x1="3" y1="8" x2="13" y2="8"></line>
+								<line x1="8" y1="3" x2="8" y2="13"></line>
+							</svg>
+						</button>
+						<div class="fold footer__panel" id="footer-info">
+							<ul class="footer__links">
+								<li><a href="#">Пацієнтам</a></li>
+								<li><a href="./partners.html">Партнерам</a></li>
+								<li><a href="./preparation.html">Підготовка до аналізів</a></li>
+								<li><a href="./blog.html">Корисні статті</a></li>
+								<li><a href="./about.html#documents">Ліцензії та сертифікати</a></li>
+								<li><a href="./contacts.html">Зв’язок</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="footer__col">
+						<button class="btn footer__toggle" type="button" aria-expanded="false" aria-controls="footer-contacts" data-footer-toggle>
+							<span>Контакти</span>
+							<svg class="plus footer__toggle-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+								<line x1="3" y1="8" x2="13" y2="8"></line>
+								<line x1="8" y1="3" x2="8" y2="13"></line>
+							</svg>
+						</button>
+						<div class="fold footer__panel" id="footer-contacts">
+							<div class="footer__contacts">
+								<div class="footer__contacts-text">
+									<p class="footer__phone"><a href="tel:+380996209957">099 620-99-57</a></p>
+									<p class="footer__address">м. Харків, вул. Максиміліанівська, 10<br>Пн–Сб 08:00–15:00</p>
+									<p><a href="mailto:diagnostika.pluss@gmail.com">diagnostika.pluss@gmail.com</a></p>
+								</div>
+								<ul class="footer__social">
+									<li>
+										<a href="#" aria-label="Facebook">
+											<img src="./images/ico-facebook.svg" width="24" height="24" loading="lazy" alt="">
+										</a>
+									</li>
+									<li>
+										<a href="#" aria-label="Instagram">
+											<img src="./images/ico-instagram.svg" width="24" height="24" loading="lazy" alt="">
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="footer__bottom">
+					<p>&copy; 2026 ТОВ «Діагностика плюс». Усі права захищено.</p>
+					<ul class="footer__legal">
+						<li><a href="#">Політика конфіденційності</a></li>
+						<li><a href="#">Публічна угода</a></li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+</body>
+</html>

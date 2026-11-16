@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="format-detection" content="telephone=no" />
 	<title>Корисне про аналізи — Діагностика плюс</title>
   <link rel="stylesheet" href="./css/main.css">
   <link rel="stylesheet" href="./css/pages/blog.css">
@@ -101,7 +102,14 @@
 							</li>
 							<li><a href="./partners.html">Партнерам</a></li>
 							<li><a href="./contacts.html">Зв’язок</a></li>
-							<li><a href="./about.html">Про компанію</a></li>
+							<li>
+								<a href="#">Про компанію</a>
+								<ul class="header__submenu">
+									<li><a href="./about.html">Загальна інформація</a></li>
+									<li><a href="./mtm.html">Медичний центр МТМ</a></li>
+									<li><a href="./photos.html">Наше фото</a></li>
+								</ul>
+							</li>
 						</ul>
 					</div>
 					<div class="header__nav-actions">
@@ -165,14 +173,14 @@
 				<div class="shell">
 					<ul class="blog-list__grid" data-pages="6">
 						<li>
-							<a class="blog-list__card" href="#">
-								<div class="blog-list__media">
+							<a class="post-card" href="#">
+								<div class="post-card__media">
 									<img src="./images/img-07.webp" width="810" height="608" alt="">
 								</div>
-								<div class="blog-list__text">
+								<div class="post-card__text">
 									<h2>Вітамін D: кому і коли перевіряти рівень</h2>
 									<p>Дефіцит вітаміну D трапляється частіше, ніж здається, особливо взимку. Розповідаємо, кому варто здати аналіз і як часто його повторювати.</p>
-									<span class="blog-list__more">
+									<span class="post-card__more">
 										<span>Читати статтю</span>
 										<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
 											<path d="M4 10h12M11 5l5 5-5 5"></path>
@@ -182,14 +190,14 @@
 							</a>
 						</li>
 						<li>
-							<a class="blog-list__card" href="#">
-								<div class="blog-list__media">
+							<a class="post-card" href="#">
+								<div class="post-card__media">
 									<img src="./images/img-08.webp" width="810" height="608" alt="">
 								</div>
-								<div class="blog-list__text">
+								<div class="post-card__text">
 									<h2>Як читати загальний аналіз крові: 7 показників</h2>
 									<p>Гемоглобін, лейкоцити, тромбоцити, ШОЕ — що означає кожен показник і коли відхилення від норми справді привід звернутися до лікаря.</p>
-									<span class="blog-list__more">
+									<span class="post-card__more">
 										<span>Читати статтю</span>
 										<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
 											<path d="M4 10h12M11 5l5 5-5 5"></path>
@@ -199,14 +207,14 @@
 							</a>
 						</li>
 						<li>
-							<a class="blog-list__card" href="#">
-								<div class="blog-list__media">
+							<a class="post-card" href="#">
+								<div class="post-card__media">
 									<img src="./images/img-09.webp" width="810" height="752" alt="">
 								</div>
-								<div class="blog-list__text">
+								<div class="post-card__text">
 									<h2>Щитоподібна залоза: мінімальний набір досліджень</h2>
 									<p>ТТГ, вільний Т4 та антитіла до ТПО — з чого почати перевірку щитоподібної залози і коли додавати інші аналізи.</p>
-									<span class="blog-list__more">
+									<span class="post-card__more">
 										<span>Читати статтю</span>
 										<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
 											<path d="M4 10h12M11 5l5 5-5 5"></path>
@@ -216,14 +224,14 @@
 							</a>
 						</li>
 						<li>
-							<a class="blog-list__card" href="#">
-								<div class="blog-list__media">
+							<a class="post-card" href="#">
+								<div class="post-card__media">
 									<img src="./images/img-04.webp" width="1180" height="885" loading="lazy" alt="">
 								</div>
-								<div class="blog-list__text">
+								<div class="post-card__text">
 									<h2>Феритин і залізо: чому втома буває «в аналізах»</h2>
 									<p>Нормальний гемоглобін ще не означає достатніх запасів заліза. Пояснюємо, навіщо дивитися на феритин і як підготуватися до аналізу.</p>
-									<span class="blog-list__more">
+									<span class="post-card__more">
 										<span>Читати статтю</span>
 										<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
 											<path d="M4 10h12M11 5l5 5-5 5"></path>
@@ -233,14 +241,14 @@
 							</a>
 						</li>
 						<li>
-							<a class="blog-list__card" href="#">
-								<div class="blog-list__media">
+							<a class="post-card" href="#">
+								<div class="post-card__media">
 									<img src="./images/img-06.webp" width="1200" height="902" loading="lazy" alt="">
 								</div>
-								<div class="blog-list__text">
+								<div class="post-card__text">
 									<h2>Чек-ап раз на рік: які аналізи варто здавати дорослим</h2>
 									<p>Базовий перелік досліджень для щорічної перевірки здоровʼя — і що додати після 40 років.</p>
-									<span class="blog-list__more">
+									<span class="post-card__more">
 										<span>Читати статтю</span>
 										<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
 											<path d="M4 10h12M11 5l5 5-5 5"></path>
@@ -250,14 +258,14 @@
 							</a>
 						</li>
 						<li>
-							<a class="blog-list__card" href="#">
-								<div class="blog-list__media">
+							<a class="post-card" href="#">
+								<div class="post-card__media">
 									<img src="./images/img-05.webp" width="1144" height="1144" loading="lazy" alt="">
 								</div>
-								<div class="blog-list__text">
+								<div class="post-card__text">
 									<h2>Аналізи для дитини: як підготувати малюка і себе</h2>
 									<p>Як пояснити дитині, що буде, скільки не годувати перед забором крові і що взяти з собою, щоб візит пройшов спокійно.</p>
-									<span class="blog-list__more">
+									<span class="post-card__more">
 										<span>Читати статтю</span>
 										<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
 											<path d="M4 10h12M11 5l5 5-5 5"></path>
@@ -267,14 +275,14 @@
 							</a>
 						</li>
 						<li>
-							<a class="blog-list__card" href="#">
-								<div class="blog-list__media">
+							<a class="post-card" href="#">
+								<div class="post-card__media">
 									<img src="./images/img-01.webp" width="1448" height="1086" loading="lazy" alt="">
 								</div>
-								<div class="blog-list__text">
+								<div class="post-card__text">
 									<h2>Глюкоза і глікований гемоглобін: у чому різниця</h2>
 									<p>Один аналіз показує рівень цукру зараз, інший — за останні три місяці. Розбираємо, коли потрібен кожен із них.</p>
-									<span class="blog-list__more">
+									<span class="post-card__more">
 										<span>Читати статтю</span>
 										<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
 											<path d="M4 10h12M11 5l5 5-5 5"></path>
@@ -284,14 +292,14 @@
 							</a>
 						</li>
 						<li>
-							<a class="blog-list__card" href="#">
-								<div class="blog-list__media">
+							<a class="post-card" href="#">
+								<div class="post-card__media">
 									<img src="./images/img-12.webp" width="1254" height="1254" loading="lazy" alt="">
 								</div>
-								<div class="blog-list__text">
+								<div class="post-card__text">
 									<h2>Ліпідограма: «хороший» і «поганий» холестерин</h2>
 									<p>З чого складається ліпідний профіль, чому загального холестерину недостатньо і як правильно підготуватися до аналізу.</p>
-									<span class="blog-list__more">
+									<span class="post-card__more">
 										<span>Читати статтю</span>
 										<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
 											<path d="M4 10h12M11 5l5 5-5 5"></path>
@@ -301,12 +309,12 @@
 							</a>
 						</li>
 						<li>
-							<a class="blog-list__card" href="#">
-								<div class="blog-list__media"></div>
-								<div class="blog-list__text">
+							<a class="post-card" href="#">
+								<div class="post-card__media"></div>
+								<div class="post-card__text">
 									<h2>Коли здавати аналізи після хвороби</h2>
 									<p>Після ГРВІ чи антибіотиків показники можуть відрізнятися від звичних. Підказуємо, скільки зачекати, щоб результат був точним.</p>
-									<span class="blog-list__more">
+									<span class="post-card__more">
 										<span>Читати статтю</span>
 										<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
 											<path d="M4 10h12M11 5l5 5-5 5"></path>
@@ -316,14 +324,14 @@
 							</a>
 						</li>
 						<li>
-							<a class="blog-list__card" href="#">
-								<div class="blog-list__media">
+							<a class="post-card" href="#">
+								<div class="post-card__media">
 									<img src="./images/img-03.webp" width="986" height="740" loading="lazy" alt="">
 								</div>
-								<div class="blog-list__text">
+								<div class="post-card__text">
 									<h2>Жіночі гормони: у який день циклу здавати</h2>
 									<p>ФСГ, ЛГ, естрадіол і прогестерон здають у різні дні циклу. Пояснюємо, як обрати правильний день, щоб результат був інформативним.</p>
-									<span class="blog-list__more">
+									<span class="post-card__more">
 										<span>Читати статтю</span>
 										<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
 											<path d="M4 10h12M11 5l5 5-5 5"></path>
@@ -333,14 +341,14 @@
 							</a>
 						</li>
 						<li>
-							<a class="blog-list__card" href="#">
-								<div class="blog-list__media">
+							<a class="post-card" href="#">
+								<div class="post-card__media">
 									<img src="./images/img-02.webp" width="384" height="576" loading="lazy" alt="">
 								</div>
-								<div class="blog-list__text">
+								<div class="post-card__text">
 									<h2>Вітамін B12 і фолієва кислота: навіщо перевіряти разом</h2>
 									<p>Дефіцит цих вітамінів дає схожі симптоми — від утоми до проблем із памʼяттю. Розповідаємо, кому варто здати обидва аналізи.</p>
-									<span class="blog-list__more">
+									<span class="post-card__more">
 										<span>Читати статтю</span>
 										<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
 											<path d="M4 10h12M11 5l5 5-5 5"></path>
@@ -350,14 +358,14 @@
 							</a>
 						</li>
 						<li>
-							<a class="blog-list__card" href="#">
-								<div class="blog-list__media">
+							<a class="post-card" href="#">
+								<div class="post-card__media">
 									<img src="./images/img-07.webp" width="810" height="608" loading="lazy" alt="">
 								</div>
-								<div class="blog-list__text">
+								<div class="post-card__text">
 									<h2>Загальний аналіз сечі: як зібрати правильно</h2>
 									<p>Ранкова порція, чистий контейнер і кілька простих правил — від них залежить, чи буде результат точним.</p>
-									<span class="blog-list__more">
+									<span class="post-card__more">
 										<span>Читати статтю</span>
 										<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
 											<path d="M4 10h12M11 5l5 5-5 5"></path>
@@ -367,14 +375,14 @@
 							</a>
 						</li>
 						<li>
-							<a class="blog-list__card" href="#">
-								<div class="blog-list__media">
+							<a class="post-card" href="#">
+								<div class="post-card__media">
 									<img src="./images/img-08.webp" width="810" height="608" loading="lazy" alt="">
 								</div>
-								<div class="blog-list__text">
+								<div class="post-card__text">
 									<h2>Аналізи перед садком і школою: що перевірити дитині</h2>
 									<p>Які дослідження зазвичай потрібні для медичної довідки і як підготувати дитину, щоб усе пройшло швидко.</p>
-									<span class="blog-list__more">
+									<span class="post-card__more">
 										<span>Читати статтю</span>
 										<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
 											<path d="M4 10h12M11 5l5 5-5 5"></path>
@@ -384,14 +392,14 @@
 							</a>
 						</li>
 						<li>
-							<a class="blog-list__card" href="#">
-								<div class="blog-list__media">
+							<a class="post-card" href="#">
+								<div class="post-card__media">
 									<img src="./images/img-09.webp" width="810" height="752" loading="lazy" alt="">
 								</div>
-								<div class="blog-list__text">
+								<div class="post-card__text">
 									<h2>Кортизол: навіщо здавати і як підготуватися</h2>
 									<p>Рівень кортизолу змінюється протягом доби й залежить від стресу. Підказуємо, коли і як здавати аналіз, щоб він був показовим.</p>
-									<span class="blog-list__more">
+									<span class="post-card__more">
 										<span>Читати статтю</span>
 										<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
 											<path d="M4 10h12M11 5l5 5-5 5"></path>
@@ -401,14 +409,14 @@
 							</a>
 						</li>
 						<li>
-							<a class="blog-list__card" href="#">
-								<div class="blog-list__media">
+							<a class="post-card" href="#">
+								<div class="post-card__media">
 									<img src="./images/img-04.webp" width="1180" height="885" loading="lazy" alt="">
 								</div>
-								<div class="blog-list__text">
+								<div class="post-card__text">
 									<h2>Онкомаркери: коли вони справді потрібні</h2>
 									<p>Онкомаркери не замінюють обстеження, але допомагають лікарю в контролі. Розбираємо, кому і за яких умов їх призначають.</p>
-									<span class="blog-list__more">
+									<span class="post-card__more">
 										<span>Читати статтю</span>
 										<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
 											<path d="M4 10h12M11 5l5 5-5 5"></path>
@@ -488,7 +496,7 @@
 								<li><a href="./partners.html">Партнерам</a></li>
 								<li><a href="./preparation.html">Підготовка до аналізів</a></li>
 								<li><a href="./blog.html">Корисні статті</a></li>
-								<li><a href="./about.html">Ліцензії та сертифікати</a></li>
+								<li><a href="./about.html#documents">Ліцензії та сертифікати</a></li>
 								<li><a href="./contacts.html">Зв’язок</a></li>
 							</ul>
 						</div>
@@ -525,7 +533,7 @@
 					</div>
 				</div>
 				<div class="footer__bottom">
-					<p>&copy; 2026 ТОВ «МЦ «МТМ»». Усі права захищено.</p>
+					<p>&copy; 2026 ТОВ «Діагностика плюс». Усі права захищено.</p>
 					<ul class="footer__legal">
 						<li><a href="#">Політика конфіденційності</a></li>
 						<li><a href="#">Публічна угода</a></li>
