@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="format-detection" content="telephone=no" />
+	<title>Аналіз крові — Підготовка до аналізів — Діагностика плюс</title>
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/pages/article.css">
+  <script src="./js/main.js" defer></script>
+</head>
+<body>
+		<div class="topbar">
+			<div class="shell">
+				<div class="topbar__info">
+					<p class="topbar__hours">Пн–Сб 08:00–15:00</p>
+					<p class="topbar__address">м. Харків, вул. Максиміліанівська, 10</p>
+				</div>
+			</div>
+		</div>
+		<header class="header">
+			<div class="shell">
+				<div class="header__main">
+					<div class="header__brand logo">
+						<a href="./index.html">
+							<img src="./images/logo-diagnostikaplus.svg" width="238" height="49" alt="Діагностика плюс">
+						</a>
+					</div>
+					<div class="header__search-wrap">
+						<form class="header__search" id="site-search-form" action="./prices.html" role="search">
+							<label class="visually-hidden" for="site-search">Пошук аналізу</label>
+							<input id="site-search" type="search" name="q" placeholder="Пошук аналізу…" autocomplete="off" aria-controls="site-search-results" data-suggest-field>
+							<button class="btn" type="submit" aria-label="Search">
+								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+									<circle cx="11" cy="11" r="7"></circle>
+									<path d="M16.5 16.5 21 21"></path>
+								</svg>
+							</button>
+						</form>
+						<div class="header__suggest" id="site-search-results" data-suggest hidden>
+							<ul class="header__suggest-list" data-suggest-list></ul>
+							<p class="header__suggest-empty" data-suggest-empty>За запитом «<span data-suggest-query></span>» нічого не знайдено</p>
+							<div class="header__suggest-all" data-suggest-all>
+								<a href="./prices.html">
+									<span>Переглянути всі результати (<span data-suggest-count></span>)</span>
+								</a>
+							</div>
+							<template data-suggest-item>
+								<li>
+									<a href="./prices.html">
+										<span data-suggest-name></span>
+										<span class="header__suggest-price" data-suggest-price></span>
+									</a>
+								</li>
+							</template>
+						</div>
+					</div>
+					<div class="header__actions">
+						<div class="header__phone">
+							<p><a href="tel:+380996209957">099 620-99-57</a></p>
+							<span class="header__callback">Зв’язатися з нами</span>
+						</div>
+						<div class="header__cta">
+							<button class="btn btn--sm" type="button" data-modal-open>Записатись</button>
+							<a class="btn header__login" href="https://patient-docs.com/login" aria-label="Sign in">
+								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+									<circle cx="12" cy="8" r="4"></circle>
+									<path d="M4 21a8 8 0 0 1 16 0"></path>
+								</svg>
+							</a>
+						</div>
+						<div class="header__controls">
+							<button class="btn header__search-toggle" type="button" aria-controls="site-search-form" aria-expanded="false" aria-label="Open search" data-search-toggle>
+								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+									<circle cx="11" cy="11" r="7"></circle>
+									<path d="M16.5 16.5 21 21"></path>
+								</svg>
+							</button>
+							<button class="btn header__burger" type="button" aria-controls="site-menu" aria-expanded="false" aria-label="Menu" data-menu-toggle>
+								<span></span>
+								<span></span>
+								<span></span>
+							</button>
+						</div>
+					</div>
+				</div>
+				<nav class="header__nav" id="site-menu" aria-label="Main navigation">
+					<div class="header__menu">
+						<ul class="header__menu-list">
+							<li><a href="./index.html">Головна</a></li>
+							<li><a href="./doctors.html">Наші лікарі</a></li>
+							<li><a href="./appointment.html">Запис на прийом</a></li>
+							<li><a href="./prices.html">Аналізи та ціни</a></li>
+							<li>
+								<a href="#">Пацієнтам</a>
+								<ul class="header__submenu">
+									<li><a href="./points.html">Пункти прийому аналізів</a></li>
+									<li><a href="./preparation.html">Підготовка до аналізів</a></li>
+									<li><a href="https://patient-docs.com/login">Результати онлайн</a></li>
+									<li><a href="./faq.html">Питання та відповіді</a></li>
+									<li><a href="./blog.html">Корисні статті</a></li>
+								</ul>
+							</li>
+							<li><a href="./partners.html">Партнерам</a></li>
+							<li><a href="./contacts.html">Зв’язок</a></li>
+							<li>
+								<a href="#">Про компанію</a>
+								<ul class="header__submenu">
+									<li><a href="./about.html">Загальна інформація</a></li>
+									<li><a href="./mtm.html">Медичний центр МТМ</a></li>
+									<li><a href="./photos.html">Наше фото</a></li>
+									<li><a href="./vacancies.html">Вакансії</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<div class="header__nav-actions">
+						<div class="header__phone header__phone--menu">
+							<p><a href="tel:+380996209957">099 620-99-57</a></p>
+							<span class="header__callback">Зв’язатися з нами</span>
+						</div>
+						<div class="header__nav-buttons">
+							<button class="btn btn--sm" type="button" data-modal-open>Записатись</button>
+							<a class="btn btn--sm btn--outline header__login-menu" href="https://patient-docs.com/login">
+								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+									<circle cx="12" cy="8" r="4"></circle>
+									<path d="M4 21a8 8 0 0 1 16 0"></path>
+								</svg>
+								Увійти
+							</a>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</header>
+		<dialog class="modal" aria-labelledby="booking-title" data-modal>
+			<div class="modal__box">
+				<button class="btn modal__close" type="button" aria-label="Close dialog" data-modal-close>
+					<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+						<path d="m7 7 10 10M17 7 7 17"></path>
+					</svg>
+				</button>
+				<div class="modal__head">
+					<h2 id="booking-title">Запис на прийом</h2>
+					<p>Залиште контакти — ми передзвонимо в робочий час, підберемо аналізи та зручний час візиту.</p>
+				</div>
+				<form class="modal__form" action="#" method="post" data-validate>
+					<div class="modal__field">
+						<label for="booking-name">Ім’я</label>
+						<input type="text" id="booking-name" name="name" autocomplete="given-name" required minlength="2" maxlength="60" placeholder="Ваше ім’я">
+					</div>
+					<div class="modal__field">
+						<label for="booking-phone">Телефон</label>
+						<input type="tel" id="booking-phone" name="phone" autocomplete="tel" required maxlength="19" pattern="\+38 \(0\d{2}\) \d{3}-\d{2}-\d{2}" placeholder="+38 (0__) ___-__-__" data-phone>
+					</div>
+					<div class="modal__consent">
+						<input type="checkbox" id="booking-consent" name="consent" required>
+						<label for="booking-consent">Погоджуюсь на обробку персональних даних згідно з <a href="#">політикою конфіденційності</a></label>
+					</div>
+					<button class="btn" type="submit">Записатись</button>
+				</form>
+			</div>
+		</dialog>
+	
+		<main>
+			<section class="page-hero article-hero">
+				<div class="shell">
+					<div class="article-hero__back">
+						<a class="btn btn--outline btn--back" href="./preparation.html" data-menu-parent data-back>
+							<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+								<path d="M16 10H4M9 5l-5 5 5 5"></path>
+							</svg>
+							Повернутись
+						</a>
+					</div>
+					<div class="page-hero__text">
+						<h1>Аналіз крові</h1>
+						<p>Що робити напередодні та вранці в день дослідження, щоб результат був точним, і які аналізи мають особливі умови.</p>
+					</div>
+				</div>
+			</section>
+			<section class="article-text">
+				<div class="shell">
+					<div class="article-text__body">
+						<h2>Чому підготовка важлива</h2>
+						<p>Склад крові змінюється протягом дня: після їжі, кави, куріння, фізичного навантаження і навіть хвилювання. Лабораторні норми розраховані на стан спокою натщесерце, тому лише за дотримання правил результат можна коректно порівняти з нормою та з вашими попередніми аналізами.</p>
+						<h3>Загальні правила</h3>
+						<ul>
+							<li>Кров здають натщесерце — після 6–12 годин голодування. У день дослідження можна випити трохи чистої води.</li>
+							<li>За 6–12 годин до аналізу не вживайте алкоголь, не куріть, не їжте та обмежте фізичне навантаження.</li>
+							<li>Якщо ви здаєте кров повторно для контролю, приходьте в той самий час доби, що й минулого разу.</li>
+							<li>Дітям до 5 років перед забором дайте кипʼячену воду — до 150–200 мл порціями протягом 30 хвилин, а немовлятам кров здають якомога пізніше після останнього годування.</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<section class="article-steps">
+				<div class="shell">
+					<div class="group-head">
+						<h2>Як підготуватися</h2>
+					</div>
+					<ol class="article-steps__list">
+						<li>
+							<span class="eyebrow">Напередодні</span>
+							<p class="article-steps__title">Звичний режим без надмірностей</p>
+							<p class="article-steps__text">Без жирної, смаженої та гострої їжі, алкоголю (перед ліпідограмою — 3 дні), інтенсивних тренувань і сауни. Після рентгену, УЗД, масажу чи фізіотерапії аналіз краще перенести на наступний день.</p>
+						</li>
+						<li>
+							<span class="eyebrow">Увечері</span>
+							<p class="article-steps__title">Легка вечеря</p>
+							<p class="article-steps__text">Між останнім прийомом їжі та аналізом має минути 6–12 годин, але не більше 14. Перед глюкозою й біохімією — 8–12 годин, перед ліпідограмою — 12–14.</p>
+						</li>
+						<li>
+							<span class="eyebrow">Вранці</span>
+							<p class="article-steps__title">Прийдіть натщесерце</p>
+							<p class="article-steps__text">Не снідайте, не пийте каву, чай і соки, не жуйте жуйку й не куріть. Прийдіть трохи раніше й посидьте спокійно 10–15 хвилин: поспіх і хвилювання змінюють показники.</p>
+						</li>
+					</ol>
+				</div>
+			</section>
+			<section class="article-dodont">
+				<div class="shell">
+					<div class="group-head">
+						<h2>Вранці перед аналізом</h2>
+					</div>
+					<div class="article-dodont__inner">
+						<div class="article-dodont__card">
+							<p class="article-dodont__title">Можна</p>
+							<ul class="article-dodont__list">
+								<li>Пити чисту воду без газу</li>
+								<li>Почистити зуби, не ковтаючи пасту</li>
+								<li>Прийняти ліки, які не можна скасувати, — попередивши лабораторію</li>
+							</ul>
+						</div>
+						<div class="article-dodont__card article-dodont__card--dont">
+							<p class="article-dodont__title">Не варто</p>
+							<ul class="article-dodont__list">
+								<li>Снідати, пити каву, чай, сік чи солодкі напої</li>
+								<li>Жувати жуйку та курити</li>
+								<li>Поспішати й приходити захеканим</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="article-note">
+				<div class="shell">
+					<div class="note note--warn">
+						<div class="tile note__icon">
+							<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+								<path d="M8 2.2 14.5 13.5h-13z"></path>
+								<path d="M8 6.5v3.2M8 11.6v.1"></path>
+							</svg>
+						</div>
+						<div class="note__text">
+							<p class="note__title">Якщо ви приймаєте ліки</p>
+							<p>Не скасовуйте препарати, призначені лікарем, самостійно. Повідомте адміністратору, які ліки та в якій дозі приймаєте, — це враховують під час оцінки результату.</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="article-table">
+				<div class="shell">
+					<div class="group-head">
+						<h2>Коли здавати окремі аналізи</h2>
+					</div>
+					<div class="article-table__wrap scrollbar" role="region" aria-label="Table" tabindex="0">
+						<div class="article-table__frame">
+							<table>
+								<thead>
+									<tr>
+										<th>Дослідження</th>
+										<th>Коли</th>
+										<th>Що врахувати</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Глюкозо&shy;толерантний тест</td>
+										<td>Вранці</td>
+										<td>Після 8–14 годин без їжі. Тест триває 2 години: увесь час — у спокої, без їжі та куріння. За 3 дні до нього — звичне харчування</td>
+									</tr>
+									<tr>
+										<td>Пролактин</td>
+										<td>Вранці</td>
+										<td>Не раніше ніж через 2 години після сну, у спокої. Перед аналізом не обстежуйте молочні залози</td>
+									</tr>
+									<tr>
+										<td>Тестостерон, кортизол, альдостерон, АКТГ</td>
+										<td>До 10:00</td>
+										<td>Рівень цих гормонів змінюється протягом доби</td>
+									</tr>
+									<tr>
+										<td>ФСГ, ЛГ, естрадіол</td>
+										<td>3–5-й день циклу</td>
+										<td>Якщо лікар не призначив інший день</td>
+									</tr>
+									<tr>
+										<td>Прогестерон</td>
+										<td>19–21-й день циклу</td>
+										<td>За циклу 28 днів; за іншої тривалості день визначає лікар</td>
+									</tr>
+									<tr>
+										<td>ТТГ, вільний Т4</td>
+										<td>Вранці</td>
+										<td>Гормони щитоподібної залози в день аналізу прийміть після забору крові</td>
+									</tr>
+									<tr>
+										<td>ПСА</td>
+										<td>Через 5–7 днів</td>
+										<td>Без статевих контактів у ці дні. Після масажу чи інших процедур на передміхуровій залозі — через 2 тижні, після біопсії — через місяць</td>
+									</tr>
+									<tr>
+										<td>Коагулограма, ПТІ</td>
+										<td>У той самий час</td>
+										<td>Що й попередній аналіз. Гормональні препарати в день аналізу — за звичним графіком, якщо лікар не радить інакше</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="article-disclaimer">
+				<div class="shell">
+					<div class="article-disclaimer__text">
+						<p>Матеріал має довідковий характер і не замінює консультацію лікаря. Якщо лікар дав вам інші вказівки щодо підготовки — дотримуйтеся їх.</p>
+					</div>
+				</div>
+			</section>
+		</main>
+	
+		<footer class="footer">
+			<div class="shell">
+				<div class="footer__inner">
+					<div class="footer__brand">
+						<div class="logo">
+							<a href="./index.html">
+								<img src="./images/logo-diagnostikaplus-white.svg" width="218" height="44" loading="lazy" alt="Діагностика плюс">
+							</a>
+						</div>
+						<div class="footer__about">
+							<p>«Діагностика плюс» — клініка з власною лабораторією та пунктами прийому аналізів. Ліцензія МОЗ України, акредитація ISO 15189.</p>
+						</div>
+						<div class="footer__helsi">
+							<div class="footer__helsi-logo">
+								<img src="./images/logo-helsi.webp" width="428" height="274" loading="lazy" alt="Helsi">
+							</div>
+							<div class="footer__helsi-text">
+								<span>Ми в системі Helsi</span>
+								<span>Онлайн-запис на аналізи</span>
+							</div>
+						</div>
+					</div>
+					<div class="footer__col">
+						<button class="btn footer__toggle" type="button" aria-expanded="false" aria-controls="footer-sections" data-footer-toggle>
+							<span>Розділи</span>
+							<svg class="plus footer__toggle-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+								<line x1="3" y1="8" x2="13" y2="8"></line>
+								<line x1="8" y1="3" x2="8" y2="13"></line>
+							</svg>
+						</button>
+						<div class="fold footer__panel" id="footer-sections">
+							<ul class="footer__links">
+								<li><a href="./index.html">Головна</a></li>
+								<li><a href="./prices.html">Аналізи та ціни</a></li>
+								<li><a href="./doctors.html">Наші лікарі</a></li>
+								<li><a href="./appointment.html">Запис на прийом</a></li>
+								<li><a href="./about.html">Загальна інформація</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="footer__col">
+						<button class="btn footer__toggle" type="button" aria-expanded="false" aria-controls="footer-info" data-footer-toggle>
+							<span>Інформація</span>
+							<svg class="plus footer__toggle-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+								<line x1="3" y1="8" x2="13" y2="8"></line>
+								<line x1="8" y1="3" x2="8" y2="13"></line>
+							</svg>
+						</button>
+						<div class="fold footer__panel" id="footer-info">
+							<ul class="footer__links">
+								<li><a href="./partners.html">Партнерам</a></li>
+								<li><a href="./points.html">Пункти прийому аналізів</a></li>
+								<li><a href="./preparation.html">Підготовка до аналізів</a></li>
+								<li><a href="./blog.html">Корисні статті</a></li>
+								<li><a href="./about.html#documents">Ліцензії та сертифікати</a></li>
+								<li><a href="./contacts.html">Зв’язок</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="footer__col">
+						<button class="btn footer__toggle" type="button" aria-expanded="false" aria-controls="footer-contacts" data-footer-toggle>
+							<span>Контакти</span>
+							<svg class="plus footer__toggle-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+								<line x1="3" y1="8" x2="13" y2="8"></line>
+								<line x1="8" y1="3" x2="8" y2="13"></line>
+							</svg>
+						</button>
+						<div class="fold footer__panel" id="footer-contacts">
+							<div class="footer__contacts">
+								<div class="footer__contacts-text">
+									<p class="footer__phone"><a href="tel:+380996209957">099 620-99-57</a></p>
+									<p class="footer__address">м. Харків, вул. Максиміліанівська, 10<br>Пн–Сб 08:00–15:00</p>
+									<p><a href="mailto:diagnostika.pluss@gmail.com">diagnostika.pluss@gmail.com</a></p>
+								</div>
+								<ul class="footer__social">
+									<li>
+										<a href="#" aria-label="Facebook">
+											<img src="./images/ico-facebook.svg" width="24" height="24" loading="lazy" alt="">
+										</a>
+									</li>
+									<li>
+										<a href="#" aria-label="Instagram">
+											<img src="./images/ico-instagram.svg" width="24" height="24" loading="lazy" alt="">
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="footer__bottom">
+					<p>&copy; 2026 ТОВ «Діагностика плюс». Усі права захищено.</p>
+					<ul class="footer__legal">
+						<li><a href="#">Політика конфіденційності</a></li>
+						<li><a href="#">Публічна угода</a></li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+</body>
+</html>

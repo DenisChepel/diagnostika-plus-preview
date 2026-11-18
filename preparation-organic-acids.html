@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="format-detection" content="telephone=no" />
+	<title>Органічні кислоти в добовій сечі — Підготовка до аналізів — Діагностика плюс</title>
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/pages/article.css">
+  <script src="./js/main.js" defer></script>
+</head>
+<body>
+		<div class="topbar">
+			<div class="shell">
+				<div class="topbar__info">
+					<p class="topbar__hours">Пн–Сб 08:00–15:00</p>
+					<p class="topbar__address">м. Харків, вул. Максиміліанівська, 10</p>
+				</div>
+			</div>
+		</div>
+		<header class="header">
+			<div class="shell">
+				<div class="header__main">
+					<div class="header__brand logo">
+						<a href="./index.html">
+							<img src="./images/logo-diagnostikaplus.svg" width="238" height="49" alt="Діагностика плюс">
+						</a>
+					</div>
+					<div class="header__search-wrap">
+						<form class="header__search" id="site-search-form" action="./prices.html" role="search">
+							<label class="visually-hidden" for="site-search">Пошук аналізу</label>
+							<input id="site-search" type="search" name="q" placeholder="Пошук аналізу…" autocomplete="off" aria-controls="site-search-results" data-suggest-field>
+							<button class="btn" type="submit" aria-label="Search">
+								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+									<circle cx="11" cy="11" r="7"></circle>
+									<path d="M16.5 16.5 21 21"></path>
+								</svg>
+							</button>
+						</form>
+						<div class="header__suggest" id="site-search-results" data-suggest hidden>
+							<ul class="header__suggest-list" data-suggest-list></ul>
+							<p class="header__suggest-empty" data-suggest-empty>За запитом «<span data-suggest-query></span>» нічого не знайдено</p>
+							<div class="header__suggest-all" data-suggest-all>
+								<a href="./prices.html">
+									<span>Переглянути всі результати (<span data-suggest-count></span>)</span>
+								</a>
+							</div>
+							<template data-suggest-item>
+								<li>
+									<a href="./prices.html">
+										<span data-suggest-name></span>
+										<span class="header__suggest-price" data-suggest-price></span>
+									</a>
+								</li>
+							</template>
+						</div>
+					</div>
+					<div class="header__actions">
+						<div class="header__phone">
+							<p><a href="tel:+380996209957">099 620-99-57</a></p>
+							<span class="header__callback">Зв’язатися з нами</span>
+						</div>
+						<div class="header__cta">
+							<button class="btn btn--sm" type="button" data-modal-open>Записатись</button>
+							<a class="btn header__login" href="https://patient-docs.com/login" aria-label="Sign in">
+								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+									<circle cx="12" cy="8" r="4"></circle>
+									<path d="M4 21a8 8 0 0 1 16 0"></path>
+								</svg>
+							</a>
+						</div>
+						<div class="header__controls">
+							<button class="btn header__search-toggle" type="button" aria-controls="site-search-form" aria-expanded="false" aria-label="Open search" data-search-toggle>
+								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+									<circle cx="11" cy="11" r="7"></circle>
+									<path d="M16.5 16.5 21 21"></path>
+								</svg>
+							</button>
+							<button class="btn header__burger" type="button" aria-controls="site-menu" aria-expanded="false" aria-label="Menu" data-menu-toggle>
+								<span></span>
+								<span></span>
+								<span></span>
+							</button>
+						</div>
+					</div>
+				</div>
+				<nav class="header__nav" id="site-menu" aria-label="Main navigation">
+					<div class="header__menu">
+						<ul class="header__menu-list">
+							<li><a href="./index.html">Головна</a></li>
+							<li><a href="./doctors.html">Наші лікарі</a></li>
+							<li><a href="./appointment.html">Запис на прийом</a></li>
+							<li><a href="./prices.html">Аналізи та ціни</a></li>
+							<li>
+								<a href="#">Пацієнтам</a>
+								<ul class="header__submenu">
+									<li><a href="./points.html">Пункти прийому аналізів</a></li>
+									<li><a href="./preparation.html">Підготовка до аналізів</a></li>
+									<li><a href="https://patient-docs.com/login">Результати онлайн</a></li>
+									<li><a href="./faq.html">Питання та відповіді</a></li>
+									<li><a href="./blog.html">Корисні статті</a></li>
+								</ul>
+							</li>
+							<li><a href="./partners.html">Партнерам</a></li>
+							<li><a href="./contacts.html">Зв’язок</a></li>
+							<li>
+								<a href="#">Про компанію</a>
+								<ul class="header__submenu">
+									<li><a href="./about.html">Загальна інформація</a></li>
+									<li><a href="./mtm.html">Медичний центр МТМ</a></li>
+									<li><a href="./photos.html">Наше фото</a></li>
+									<li><a href="./vacancies.html">Вакансії</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<div class="header__nav-actions">
+						<div class="header__phone header__phone--menu">
+							<p><a href="tel:+380996209957">099 620-99-57</a></p>
+							<span class="header__callback">Зв’язатися з нами</span>
+						</div>
+						<div class="header__nav-buttons">
+							<button class="btn btn--sm" type="button" data-modal-open>Записатись</button>
+							<a class="btn btn--sm btn--outline header__login-menu" href="https://patient-docs.com/login">
+								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+									<circle cx="12" cy="8" r="4"></circle>
+									<path d="M4 21a8 8 0 0 1 16 0"></path>
+								</svg>
+								Увійти
+							</a>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</header>
+		<dialog class="modal" aria-labelledby="booking-title" data-modal>
+			<div class="modal__box">
+				<button class="btn modal__close" type="button" aria-label="Close dialog" data-modal-close>
+					<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+						<path d="m7 7 10 10M17 7 7 17"></path>
+					</svg>
+				</button>
+				<div class="modal__head">
+					<h2 id="booking-title">Запис на прийом</h2>
+					<p>Залиште контакти — ми передзвонимо в робочий час, підберемо аналізи та зручний час візиту.</p>
+				</div>
+				<form class="modal__form" action="#" method="post" data-validate>
+					<div class="modal__field">
+						<label for="booking-name">Ім’я</label>
+						<input type="text" id="booking-name" name="name" autocomplete="given-name" required minlength="2" maxlength="60" placeholder="Ваше ім’я">
+					</div>
+					<div class="modal__field">
+						<label for="booking-phone">Телефон</label>
+						<input type="tel" id="booking-phone" name="phone" autocomplete="tel" required maxlength="19" pattern="\+38 \(0\d{2}\) \d{3}-\d{2}-\d{2}" placeholder="+38 (0__) ___-__-__" data-phone>
+					</div>
+					<div class="modal__consent">
+						<input type="checkbox" id="booking-consent" name="consent" required>
+						<label for="booking-consent">Погоджуюсь на обробку персональних даних згідно з <a href="#">політикою конфіденційності</a></label>
+					</div>
+					<button class="btn" type="submit">Записатись</button>
+				</form>
+			</div>
+		</dialog>
+	
+		<main>
+			<section class="page-hero article-hero">
+				<div class="shell">
+					<div class="article-hero__back">
+						<a class="btn btn--outline btn--back" href="./preparation.html" data-menu-parent data-back>
+							<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+								<path d="M16 10H4M9 5l-5 5 5 5"></path>
+							</svg>
+							Повернутись
+						</a>
+					</div>
+					<div class="page-hero__text">
+						<h1>Органічні кислоти в сечі (добова сеча)</h1>
+						<p>Як підготуватися та зібрати добову сечу для дослідження метаболітів органічних кислот, щоб результат показав справжній стан обміну речовин.</p>
+					</div>
+				</div>
+			</section>
+			<section class="article-text">
+				<div class="shell">
+					<div class="article-text__body">
+						<h2>Що показує аналіз</h2>
+						<p>Органічні кислоти — проміжні продукти обміну речовин. Їхній рівень у сечі показує, як організм отримує енергію з їжі, як працюють кишкова мікрофлора та системи знешкодження токсинів, — і допомагає виявити функціональні метаболічні зміни ще до появи хвороби.</p>
+						<p>Саме тому результат дуже чутливий до харчування, ліків і добавок: підготовка тут важить не менше, ніж сам збір.</p>
+						<h3>Набір для збору</h3>
+						<p>Медичний центр видає коробку з усім потрібним: стерильну ємність для добової сечі, охолоджувальний елемент, пробірку, інструкцію та направлення. Велику ємність повертати не потрібно — у лабораторію приносять лише пробірку.</p>
+					</div>
+				</div>
+			</section>
+			<section class="article-dodont">
+				<div class="shell">
+					<div class="group-head">
+						<h2>За добу до збору</h2>
+					</div>
+					<div class="article-dodont__inner">
+						<div class="article-dodont__card">
+							<p class="article-dodont__title">Можна</p>
+							<ul class="article-dodont__list">
+								<li>Харчуватися як завжди, без нових дієт</li>
+								<li>Пити звичну кількість води</li>
+								<li>Приймати ліки, призначені лікарем, якщо він не радить інакше</li>
+							</ul>
+						</div>
+						<div class="article-dodont__card article-dodont__card--dont">
+							<p class="article-dodont__title">Не варто</p>
+							<ul class="article-dodont__list">
+								<li>Пити алкоголь, каву й енергетики</li>
+								<li>Їсти жирну та гостру їжу</li>
+								<li>Приймати вітаміни, особливо C і групи B, та харчові добавки без дозволу лікаря</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="article-steps">
+				<div class="shell">
+					<div class="group-head">
+						<h2>Як зібрати добову сечу</h2>
+					</div>
+					<ol class="article-steps__list">
+						<li>
+							<span class="eyebrow">Перший ранок</span>
+							<p class="article-steps__title">Першу порцію — в унітаз</p>
+							<p class="article-steps__text">Почніть зранку, наприклад о 7:00: спорожніть сечовий міхур в унітаз і запамʼятайте час. З цього моменту збирайте всю сечу протягом 24 годин.</p>
+						</li>
+						<li>
+							<span class="eyebrow">Протягом доби</span>
+							<p class="article-steps__title">Збирайте всю сечу в холодильнику</p>
+							<p class="article-steps__text">У чисту суху ємність на 1,5–2 літри або більше. Увесь час збору зберігайте її в холодильнику за +2…+8&nbsp;°C. Перед кожним сечовипусканням підмийтеся й витріться насухо: у сечу не мають потрапити вода, кров чи кал.</p>
+						</li>
+						<li>
+							<span class="eyebrow">Наступний ранок</span>
+							<p class="article-steps__title">Останню порцію — в ємність</p>
+							<p class="article-steps__text">Рівно через 24 години після початку. Потім обовʼязково ретельно перемішайте всю зібрану сечу — без цього проба не покаже середнього значення за добу.</p>
+						</li>
+						<li>
+							<span class="eyebrow">Відбір проби</span>
+							<p class="article-steps__title">20 мл у пробірку</p>
+							<p class="article-steps__text">Стерильним шприцом наберіть 20 мл сечі, перелийте в пробірку на 20 мл і щільно закрутіть кришку.</p>
+						</li>
+						<li>
+							<span class="eyebrow">Доставка</span>
+							<p class="article-steps__title">Протягом 2–3 годин</p>
+							<p class="article-steps__text">Якщо не встигаєте, заморозьте пробірку за −20&nbsp;°C до відправлення. Заморожувати сечу можна лише один раз.</p>
+						</li>
+					</ol>
+				</div>
+			</section>
+			<section class="article-note">
+				<div class="shell">
+					<div class="note note--warn">
+						<div class="tile note__icon">
+							<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+								<path d="M8 2.2 14.5 13.5h-13z"></path>
+								<path d="M8 6.5v3.2M8 11.6v.1"></path>
+							</svg>
+						</div>
+						<div class="note__text">
+							<p class="note__title">Що може вплинути на результат</p>
+							<p>Порушення функції нирок, сечогінні препарати, вальпроєва кислота, парацетамол і берберин. Антибіотики та інші ліки, що впливають на обмін речовин, за можливості скасуйте — але лише після консультації з лікарем. Жінкам не варто збирати сечу під час менструації.</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="article-text">
+				<div class="shell">
+					<div class="article-text__body">
+						<h2>Що вказати в направленні</h2>
+						<ul>
+							<li>Прізвище, імʼя, по батькові та дату народження.</li>
+							<li>Дату й час початку та завершення збору.</li>
+							<li>Жінкам — дату початку менструального циклу або період менопаузи.</li>
+						</ul>
+						<p>Якщо за добу зібралося менше 500 мл або понад 4 літри сечі, обовʼязково повідомте про це лабораторію.</p>
+					</div>
+				</div>
+			</section>
+			<section class="article-disclaimer">
+				<div class="shell">
+					<div class="article-disclaimer__text">
+						<p>Матеріал має довідковий характер і не замінює консультацію лікаря. Якщо лікар дав вам інші вказівки щодо підготовки — дотримуйтеся їх.</p>
+					</div>
+				</div>
+			</section>
+		</main>
+	
+		<footer class="footer">
+			<div class="shell">
+				<div class="footer__inner">
+					<div class="footer__brand">
+						<div class="logo">
+							<a href="./index.html">
+								<img src="./images/logo-diagnostikaplus-white.svg" width="218" height="44" loading="lazy" alt="Діагностика плюс">
+							</a>
+						</div>
+						<div class="footer__about">
+							<p>«Діагностика плюс» — клініка з власною лабораторією та пунктами прийому аналізів. Ліцензія МОЗ України, акредитація ISO 15189.</p>
+						</div>
+						<div class="footer__helsi">
+							<div class="footer__helsi-logo">
+								<img src="./images/logo-helsi.webp" width="428" height="274" loading="lazy" alt="Helsi">
+							</div>
+							<div class="footer__helsi-text">
+								<span>Ми в системі Helsi</span>
+								<span>Онлайн-запис на аналізи</span>
+							</div>
+						</div>
+					</div>
+					<div class="footer__col">
+						<button class="btn footer__toggle" type="button" aria-expanded="false" aria-controls="footer-sections" data-footer-toggle>
+							<span>Розділи</span>
+							<svg class="plus footer__toggle-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+								<line x1="3" y1="8" x2="13" y2="8"></line>
+								<line x1="8" y1="3" x2="8" y2="13"></line>
+							</svg>
+						</button>
+						<div class="fold footer__panel" id="footer-sections">
+							<ul class="footer__links">
+								<li><a href="./index.html">Головна</a></li>
+								<li><a href="./prices.html">Аналізи та ціни</a></li>
+								<li><a href="./doctors.html">Наші лікарі</a></li>
+								<li><a href="./appointment.html">Запис на прийом</a></li>
+								<li><a href="./about.html">Загальна інформація</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="footer__col">
+						<button class="btn footer__toggle" type="button" aria-expanded="false" aria-controls="footer-info" data-footer-toggle>
+							<span>Інформація</span>
+							<svg class="plus footer__toggle-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+								<line x1="3" y1="8" x2="13" y2="8"></line>
+								<line x1="8" y1="3" x2="8" y2="13"></line>
+							</svg>
+						</button>
+						<div class="fold footer__panel" id="footer-info">
+							<ul class="footer__links">
+								<li><a href="./partners.html">Партнерам</a></li>
+								<li><a href="./points.html">Пункти прийому аналізів</a></li>
+								<li><a href="./preparation.html">Підготовка до аналізів</a></li>
+								<li><a href="./blog.html">Корисні статті</a></li>
+								<li><a href="./about.html#documents">Ліцензії та сертифікати</a></li>
+								<li><a href="./contacts.html">Зв’язок</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="footer__col">
+						<button class="btn footer__toggle" type="button" aria-expanded="false" aria-controls="footer-contacts" data-footer-toggle>
+							<span>Контакти</span>
+							<svg class="plus footer__toggle-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+								<line x1="3" y1="8" x2="13" y2="8"></line>
+								<line x1="8" y1="3" x2="8" y2="13"></line>
+							</svg>
+						</button>
+						<div class="fold footer__panel" id="footer-contacts">
+							<div class="footer__contacts">
+								<div class="footer__contacts-text">
+									<p class="footer__phone"><a href="tel:+380996209957">099 620-99-57</a></p>
+									<p class="footer__address">м. Харків, вул. Максиміліанівська, 10<br>Пн–Сб 08:00–15:00</p>
+									<p><a href="mailto:diagnostika.pluss@gmail.com">diagnostika.pluss@gmail.com</a></p>
+								</div>
+								<ul class="footer__social">
+									<li>
+										<a href="#" aria-label="Facebook">
+											<img src="./images/ico-facebook.svg" width="24" height="24" loading="lazy" alt="">
+										</a>
+									</li>
+									<li>
+										<a href="#" aria-label="Instagram">
+											<img src="./images/ico-instagram.svg" width="24" height="24" loading="lazy" alt="">
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="footer__bottom">
+					<p>&copy; 2026 ТОВ «Діагностика плюс». Усі права захищено.</p>
+					<ul class="footer__legal">
+						<li><a href="#">Політика конфіденційності</a></li>
+						<li><a href="#">Публічна угода</a></li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+</body>
+</html>

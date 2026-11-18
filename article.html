@@ -39,6 +39,7 @@
 						</form>
 						<div class="header__suggest" id="site-search-results" data-suggest hidden>
 							<ul class="header__suggest-list" data-suggest-list></ul>
+							<p class="header__suggest-empty" data-suggest-empty>За запитом «<span data-suggest-query></span>» нічого не знайдено</p>
 							<div class="header__suggest-all" data-suggest-all>
 								<a href="./prices.html">
 									<span>Переглянути всі результати (<span data-suggest-count></span>)</span>
@@ -108,6 +109,7 @@
 									<li><a href="./about.html">Загальна інформація</a></li>
 									<li><a href="./mtm.html">Медичний центр МТМ</a></li>
 									<li><a href="./photos.html">Наше фото</a></li>
+									<li><a href="./vacancies.html">Вакансії</a></li>
 								</ul>
 							</li>
 						</ul>
@@ -164,7 +166,7 @@
 			<section class="page-hero article-hero">
 				<div class="shell">
 					<div class="article-hero__back">
-						<a class="btn btn--outline btn--back" href="./preparation.html" data-menu-parent>
+						<a class="btn btn--outline btn--back" href="./preparation.html" data-menu-parent data-back>
 							<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
 								<path d="M16 10H4M9 5l-5 5 5 5"></path>
 							</svg>
@@ -287,7 +289,7 @@
 					<div class="article-docs__track" role="region" aria-label="Documents" data-docs-track>
 						<ul class="article-docs__list">
 							<li>
-								<a class="article-docs__thumb" href="./images/mtm_license.webp">
+								<a class="article-docs__thumb" href="./images/mtm_license.webp" data-pswp-width="1654" data-pswp-height="2338">
 									<img src="./images/mtm_license.webp" width="1654" height="2338" loading="lazy" alt="Скан ліцензії МОЗ України на медичну практику ТОВ «Медичний центр МТМ»">
 								</a>
 								<div class="article-docs__head">
@@ -315,7 +317,7 @@
 								</a>
 							</li>
 							<li>
-								<a class="article-docs__thumb" href="./images/mtm_license_add.webp">
+								<a class="article-docs__thumb" href="./images/mtm_license_add.webp" data-pswp-width="1240" data-pswp-height="1754">
 									<img src="./images/mtm_license_add.webp" width="1240" height="1754" loading="lazy" alt="Скан витягу з наказу МОЗ України від 19.04.2018 № 762 щодо ТОВ «Медичний центр МТМ»">
 								</a>
 								<div class="article-docs__head">
@@ -339,7 +341,7 @@
 								</a>
 							</li>
 							<li>
-								<a class="article-docs__thumb" href="./images/mtm_sertificate.webp">
+								<a class="article-docs__thumb" href="./images/mtm_sertificate.webp" data-pswp-width="1240" data-pswp-height="1753">
 									<img src="./images/mtm_sertificate.webp" width="1240" height="1753" loading="lazy" alt="Скан свідоцтва про відповідність системи вимірювань вимогам ДСТУ ISO 10012:2005">
 								</a>
 								<div class="article-docs__head">
@@ -391,52 +393,52 @@
 					<ul class="article-gallery__list" data-gallery-list data-show-more-list>
 						<li>
 							<a class="article-gallery__photo" href="./images/img-14.webp" data-pswp-width="1840" data-pswp-height="1228">
-								<img src="./images/img-14.webp" width="1840" height="1228" loading="lazy" decoding="async" alt="Робоче місце лаборанта з центрифугою та мікроскопом">
+								<img src="./images/img-14.webp" width="1840" height="1228" decoding="async" alt="Робоче місце лаборанта з центрифугою та мікроскопом">
 							</a>
 						</li>
 						<li>
 							<a class="article-gallery__photo" href="./images/img-15.webp" data-pswp-width="1840" data-pswp-height="1228">
-								<img src="./images/img-15.webp" width="1840" height="1228" loading="lazy" decoding="async" alt="Ротор біохімічного аналізатора">
+								<img src="./images/img-15.webp" width="1840" height="1228" decoding="async" alt="Ротор біохімічного аналізатора">
 							</a>
 						</li>
 						<li>
 							<a class="article-gallery__photo" href="./images/img-16.webp" data-pswp-width="1840" data-pswp-height="1228">
-								<img src="./images/img-16.webp" width="1840" height="1228" loading="lazy" decoding="async" alt="Лаборантка працює з гематологічним аналізатором">
+								<img src="./images/img-16.webp" width="1840" height="1228" decoding="async" alt="Лаборантка працює з гематологічним аналізатором">
 							</a>
 						</li>
 						<li>
 							<a class="article-gallery__photo" href="./images/img-17.webp" data-pswp-width="1424" data-pswp-height="950">
-								<img src="./images/img-17.webp" width="1424" height="950" loading="lazy" decoding="async" alt="Аналізатор ШОЕ Cube 30 touch">
+								<img src="./images/img-17.webp" width="1424" height="950" decoding="async" alt="Аналізатор ШОЕ Cube 30 touch">
 							</a>
 						</li>
 						<li>
 							<a class="article-gallery__photo" href="./images/img-18.webp" data-pswp-width="1840" data-pswp-height="1228">
-								<img src="./images/img-18.webp" width="1840" height="1228" loading="lazy" decoding="async" alt="Мікроскоп">
+								<img src="./images/img-18.webp" width="1840" height="1228" decoding="async" alt="Мікроскоп">
 							</a>
 						</li>
 						<li>
 							<a class="article-gallery__photo" href="./images/img-19.webp" data-pswp-width="1840" data-pswp-height="1228">
-								<img src="./images/img-19.webp" width="1840" height="1228" loading="lazy" decoding="async" alt="Реєстрація пробірок сканером штрихкодів">
+								<img src="./images/img-19.webp" width="1840" height="1228" decoding="async" alt="Реєстрація пробірок сканером штрихкодів">
 							</a>
 						</li>
 						<li>
 							<a class="article-gallery__photo" href="./images/img-20.webp" data-pswp-width="1455" data-pswp-height="971">
-								<img src="./images/img-20.webp" width="1455" height="971" loading="lazy" decoding="async" alt="Бактеріологічний посів на чашці Петрі">
+								<img src="./images/img-20.webp" width="1455" height="971" decoding="async" alt="Бактеріологічний посів на чашці Петрі">
 							</a>
 						</li>
 						<li>
 							<a class="article-gallery__photo" href="./images/img-21.webp" data-pswp-width="1840" data-pswp-height="1228">
-								<img src="./images/img-21.webp" width="1840" height="1228" loading="lazy" decoding="async" alt="Бактеріологічний посів на чашці Петрі з жовтим середовищем">
+								<img src="./images/img-21.webp" width="1840" height="1228" decoding="async" alt="Бактеріологічний посів на чашці Петрі з жовтим середовищем">
 							</a>
 						</li>
 						<li>
 							<a class="article-gallery__photo" href="./images/img-22.webp" data-pswp-width="1652" data-pswp-height="1103">
-								<img src="./images/img-22.webp" width="1652" height="1103" loading="lazy" decoding="async" alt="Чашки Петрі з поживними середовищами">
+								<img src="./images/img-22.webp" width="1652" height="1103" decoding="async" alt="Чашки Петрі з поживними середовищами">
 							</a>
 						</li>
 						<li>
 							<a class="article-gallery__photo" href="./images/img-23.webp" data-pswp-width="1840" data-pswp-height="1228">
-								<img src="./images/img-23.webp" width="1840" height="1228" loading="lazy" decoding="async" alt="Пробірки з поживними середовищами в штативі">
+								<img src="./images/img-23.webp" width="1840" height="1228" decoding="async" alt="Пробірки з поживними середовищами в штативі">
 							</a>
 						</li>
 					</ul>
@@ -596,7 +598,7 @@
 			<section class="article-image">
 				<div class="shell">
 					<figure>
-						<img src="./images/img-07.webp" width="810" height="608" loading="lazy" alt="Капсули вітамінів і скибка лимона в мисці">
+						<img src="./images/img-07.webp" width="1800" height="1350" loading="lazy" alt="Капсули вітамінів і скибка лимона в мисці">
 						<figcaption>Забір крові з вени займає 2–3 хвилини. Перед процедурою посидьте спокійно 10–15 хвилин.</figcaption>
 					</figure>
 				</div>
@@ -604,7 +606,6 @@
 			<section class="article-image article-image--banner">
 				<div class="shell">
 					<figure>
-						<h2>Повний цикл досліджень</h2>
 						<img src="./images/img-13.webp" width="1800" height="600" loading="lazy" alt="Лаборантка за мікроскопом у лабораторії">
 					</figure>
 				</div>
@@ -691,7 +692,7 @@
 							</a>
 						</div>
 						<div class="footer__about">
-							<p>«Діагностика плюс» — лабораторні дослідження та пункт прийому аналізів. Ліцензія МОЗ України, акредитація ISO 15189.</p>
+							<p>«Діагностика плюс» — клініка з власною лабораторією та пунктами прийому аналізів. Ліцензія МОЗ України, акредитація ISO 15189.</p>
 						</div>
 						<div class="footer__helsi">
 							<div class="footer__helsi-logo">
@@ -717,7 +718,7 @@
 								<li><a href="./prices.html">Аналізи та ціни</a></li>
 								<li><a href="./doctors.html">Наші лікарі</a></li>
 								<li><a href="./appointment.html">Запис на прийом</a></li>
-								<li><a href="./about.html">Про компанію</a></li>
+								<li><a href="./about.html">Загальна інформація</a></li>
 							</ul>
 						</div>
 					</div>
@@ -731,8 +732,8 @@
 						</button>
 						<div class="fold footer__panel" id="footer-info">
 							<ul class="footer__links">
-								<li><a href="#">Пацієнтам</a></li>
 								<li><a href="./partners.html">Партнерам</a></li>
+								<li><a href="./points.html">Пункти прийому аналізів</a></li>
 								<li><a href="./preparation.html">Підготовка до аналізів</a></li>
 								<li><a href="./blog.html">Корисні статті</a></li>
 								<li><a href="./about.html#documents">Ліцензії та сертифікати</a></li>
