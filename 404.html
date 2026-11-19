@@ -2,10 +2,11 @@
 <html lang="uk">
 <head>
 	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, interactive-widget=resizes-content" />
 	<meta name="format-detection" content="telephone=no" />
-	<title>Результати онлайн — Діагностика плюс</title>
+	<title>Сторінку не знайдено — Діагностика плюс</title>
   <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/pages/404.css">
   <script src="./js/main.js" defer></script>
 </head>
 <body>
@@ -26,32 +27,34 @@
 						</a>
 					</div>
 					<div class="header__search-wrap">
-						<form class="header__search" id="site-search-form" action="./prices.html" role="search">
-							<label class="visually-hidden" for="site-search">Пошук аналізу</label>
-							<input id="site-search" type="search" name="q" placeholder="Пошук аналізу…" autocomplete="off" aria-controls="site-search-results" data-suggest-field>
-							<button class="btn" type="submit" aria-label="Search">
-								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-									<circle cx="11" cy="11" r="7"></circle>
-									<path d="M16.5 16.5 21 21"></path>
-								</svg>
-							</button>
-						</form>
-						<div class="header__suggest" id="site-search-results" data-suggest hidden>
-							<ul class="header__suggest-list" data-suggest-list></ul>
-							<p class="header__suggest-empty" data-suggest-empty>За запитом «<span data-suggest-query></span>» нічого не знайдено</p>
-							<div class="header__suggest-all" data-suggest-all>
-								<a href="./prices.html">
-									<span>Переглянути всі результати (<span data-suggest-count></span>)</span>
-								</a>
-							</div>
-							<template data-suggest-item>
-								<li>
+						<div class="header__search-panel">
+							<form class="header__search" id="site-search-form" action="./prices.html" role="search">
+								<label class="visually-hidden" for="site-search">Пошук аналізу</label>
+								<input id="site-search" type="search" name="q" placeholder="Пошук аналізу…" autocomplete="off" aria-controls="site-search-results" data-suggest-field>
+								<button class="btn" type="submit" aria-label="Search">
+									<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+										<circle cx="11" cy="11" r="7"></circle>
+										<path d="M16.5 16.5 21 21"></path>
+									</svg>
+								</button>
+							</form>
+							<div class="header__suggest" id="site-search-results" data-suggest hidden>
+								<ul class="header__suggest-list" data-suggest-list></ul>
+								<p class="header__suggest-empty" data-suggest-empty>За запитом «<span data-suggest-query></span>» нічого не знайдено</p>
+								<div class="header__suggest-all" data-suggest-all>
 									<a href="./prices.html">
-										<span data-suggest-name></span>
-										<span class="header__suggest-price" data-suggest-price></span>
+										<span>Переглянути всі результати (<span data-suggest-count></span>)</span>
 									</a>
-								</li>
-							</template>
+								</div>
+								<template data-suggest-item>
+									<li>
+										<a href="./prices.html">
+											<span data-suggest-name></span>
+											<span class="header__suggest-price" data-suggest-price></span>
+										</a>
+									</li>
+								</template>
+							</div>
 						</div>
 					</div>
 					<div class="header__actions">
@@ -162,10 +165,69 @@
 		</dialog>
 	
 		<main>
-			<section class="intro">
+			<section class="page-hero not-found-hero">
 				<div class="shell">
-					<h1>Результати онлайн</h1>
-					<p>Сторінка в роботі — тут буде вхід до кабінету з результатами.</p>
+					<div class="page-hero__text">
+						<span class="not-found-hero__code" aria-hidden="true">4<span>0</span>4</span>
+						<h1>Сторінку не знайдено</h1>
+						<p>Можливо, посилання застаріло або сторінку перенесли. Не хвилюйтеся&nbsp;— аналізи, ціни та контакти на своїх місцях.</p>
+					</div>
+					<div class="actions not-found-hero__actions">
+						<a class="btn" href="./index.html">На головну</a>
+					</div>
+				</div>
+			</section>
+			<section class="not-found-links">
+				<div class="shell">
+					<div class="group-head">
+						<h2>Можливо, ви шукали</h2>
+					</div>
+					<ul class="not-found-links__list">
+						<li>
+							<a class="link-card" href="./prices.html">
+								<span class="link-card__title">Аналізи та ціни</span>
+								<span class="link-card__text">Каталог досліджень із цінами.</span>
+								<span class="tile link-card__arrow">
+									<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+										<path d="M4 10h12M11 5l5 5-5 5"></path>
+									</svg>
+								</span>
+							</a>
+						</li>
+						<li>
+							<a class="link-card" href="./preparation.html">
+								<span class="link-card__title">Підготовка до аналізів</span>
+								<span class="link-card__text">Як правильно підготуватися.</span>
+								<span class="tile link-card__arrow">
+									<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+										<path d="M4 10h12M11 5l5 5-5 5"></path>
+									</svg>
+								</span>
+							</a>
+						</li>
+						<li>
+							<a class="link-card" href="./doctors.html">
+								<span class="link-card__title">Наші лікарі</span>
+								<span class="link-card__text">Консультації та запис на прийом.</span>
+								<span class="tile link-card__arrow">
+									<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+										<path d="M4 10h12M11 5l5 5-5 5"></path>
+									</svg>
+								</span>
+							</a>
+						</li>
+						<li>
+							<a class="link-card" href="./contacts.html">
+								<span class="link-card__title">Зв’язок</span>
+								<span class="link-card__text">Адреси, графік роботи, телефони.</span>
+								<span class="tile link-card__arrow">
+									<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+										<path d="M4 10h12M11 5l5 5-5 5"></path>
+									</svg>
+								</span>
+							</a>
+						</li>
+					</ul>
 				</div>
 			</section>
 		</main>
@@ -246,12 +308,12 @@
 								</div>
 								<ul class="footer__social">
 									<li>
-										<a href="#" aria-label="Facebook">
+										<a target="_blank" href="https://www.facebook.com/profile.php?id=100019253766138" aria-label="Facebook">
 											<img src="./images/ico-facebook.svg" width="24" height="24" loading="lazy" alt="">
 										</a>
 									</li>
 									<li>
-										<a href="#" aria-label="Instagram">
+										<a target="_blank" href="https://www.instagram.com/lab.diagnostika_plus/" aria-label="Instagram">
 											<img src="./images/ico-instagram.svg" width="24" height="24" loading="lazy" alt="">
 										</a>
 									</li>

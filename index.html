@@ -2,7 +2,7 @@
 <html lang="uk">
 <head>
 	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, interactive-widget=resizes-content" />
 	<meta name="format-detection" content="telephone=no" />
 	<title>Діагностика плюс — медична лабораторія</title>
   <link rel="stylesheet" href="./css/main.css">
@@ -27,32 +27,34 @@
 						</a>
 					</div>
 					<div class="header__search-wrap">
-						<form class="header__search" id="site-search-form" action="./prices.html" role="search">
-							<label class="visually-hidden" for="site-search">Пошук аналізу</label>
-							<input id="site-search" type="search" name="q" placeholder="Пошук аналізу…" autocomplete="off" aria-controls="site-search-results" data-suggest-field>
-							<button class="btn" type="submit" aria-label="Search">
-								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-									<circle cx="11" cy="11" r="7"></circle>
-									<path d="M16.5 16.5 21 21"></path>
-								</svg>
-							</button>
-						</form>
-						<div class="header__suggest" id="site-search-results" data-suggest hidden>
-							<ul class="header__suggest-list" data-suggest-list></ul>
-							<p class="header__suggest-empty" data-suggest-empty>За запитом «<span data-suggest-query></span>» нічого не знайдено</p>
-							<div class="header__suggest-all" data-suggest-all>
-								<a href="./prices.html">
-									<span>Переглянути всі результати (<span data-suggest-count></span>)</span>
-								</a>
-							</div>
-							<template data-suggest-item>
-								<li>
+						<div class="header__search-panel">
+							<form class="header__search" id="site-search-form" action="./prices.html" role="search">
+								<label class="visually-hidden" for="site-search">Пошук аналізу</label>
+								<input id="site-search" type="search" name="q" placeholder="Пошук аналізу…" autocomplete="off" aria-controls="site-search-results" data-suggest-field>
+								<button class="btn" type="submit" aria-label="Search">
+									<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+										<circle cx="11" cy="11" r="7"></circle>
+										<path d="M16.5 16.5 21 21"></path>
+									</svg>
+								</button>
+							</form>
+							<div class="header__suggest" id="site-search-results" data-suggest hidden>
+								<ul class="header__suggest-list" data-suggest-list></ul>
+								<p class="header__suggest-empty" data-suggest-empty>За запитом «<span data-suggest-query></span>» нічого не знайдено</p>
+								<div class="header__suggest-all" data-suggest-all>
 									<a href="./prices.html">
-										<span data-suggest-name></span>
-										<span class="header__suggest-price" data-suggest-price></span>
+										<span>Переглянути всі результати (<span data-suggest-count></span>)</span>
 									</a>
-								</li>
-							</template>
+								</div>
+								<template data-suggest-item>
+									<li>
+										<a href="./prices.html">
+											<span data-suggest-name></span>
+											<span class="header__suggest-price" data-suggest-price></span>
+										</a>
+									</li>
+								</template>
+							</div>
 						</div>
 					</div>
 					<div class="header__actions">
@@ -169,8 +171,17 @@
 						<div class="hero__slide" role="group" aria-roledescription="slide" aria-label="1 of 3">
 							<div class="shell">
 								<div class="hero__content">
+									<div class="hero__lab">
+										<div class="hero__lab-logo">
+											<img src="./images/logo-mtm.webp" width="418" height="233" alt="">
+										</div>
+										<div class="hero__lab-text">
+											<span class="hero__lab-label">Лабораторні дослідження&nbsp;виконує</span>
+											<span class="hero__lab-name">ТОВ «МЦ «МТМ»»</span>
+											<span class="hero__lab-badge">Акредитована лабораторія · ISO&nbsp;15189</span>
+										</div>
+									</div>
 									<div class="hero__text">
-										<span class="badge badge--dot">Акредитована лабораторія · ISO 15189</span>
 										<h1>Аналізи, результатам яких довіряють лікарі</h1>
 									</div>
 									<div class="hero__lead">
@@ -183,7 +194,7 @@
 									<ul class="hero__stats">
 										<li class="hero__stat"><span>1 100+</span><span>видів досліджень</span></li>
 										<li class="hero__stat hero__stat--green"><span>24 год</span><span>середній термін</span></li>
-										<li class="hero__stat hero__stat--red"><span>11 років</span><span>на ринку України</span></li>
+										<li class="hero__stat hero__stat--red"><span>14 років</span><span>на ринку України</span></li>
 									</ul>
 								</div>
 								<div class="hero__media">
@@ -557,8 +568,8 @@
 									<span>точність за міжнародним контролем якості</span>
 								</li>
 								<li class="about__stat about__stat--green">
-									<span class="about__value">4 роки</span>
-									<span>термін cito-досліджень</span>
+									<span class="about__value">4 год</span>
+									<span>у середньому на термінове дослідження</span>
 								</li>
 								<li class="about__stat about__stat--red">
 									<span class="about__value">180 000</span>
@@ -759,7 +770,7 @@
 									</h3>
 									<div class="fold" id="faq-answer-3">
 										<div class="faq__answer">
-											<p>Загальноклінічні — того ж дня, біохімія та гормони — до 24 годин, ПЛР і генетика — 2–5 робочих днів. Для cito-досліджень — 4 години.</p>
+											<p>Загальноклінічні — того ж дня, біохімія та гормони — до 24 годин, ПЛР і генетика — 2–5 робочих днів. Термінові дослідження — у середньому за 4 години.</p>
 										</div>
 									</div>
 								</li>
@@ -957,12 +968,12 @@
 								</div>
 								<ul class="footer__social">
 									<li>
-										<a href="#" aria-label="Facebook">
+										<a target="_blank" href="https://www.facebook.com/profile.php?id=100019253766138" aria-label="Facebook">
 											<img src="./images/ico-facebook.svg" width="24" height="24" loading="lazy" alt="">
 										</a>
 									</li>
 									<li>
-										<a href="#" aria-label="Instagram">
+										<a target="_blank" href="https://www.instagram.com/lab.diagnostika_plus/" aria-label="Instagram">
 											<img src="./images/ico-instagram.svg" width="24" height="24" loading="lazy" alt="">
 										</a>
 									</li>
